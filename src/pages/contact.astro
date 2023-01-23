@@ -1,0 +1,28 @@
+---
+// Component Imports
+import BaseHead from '../components/BaseHead.astro';
+import BlogHeader from '../components/BlogHeader.astro';
+import { SITE } from '../config';
+
+let { title } = SITE;
+let description = 'Specializing in high growth disruptive technologies';
+let permalink = 'https://example.com/'; // ADD URL HERE
+---
+<html lang="en">
+  <head>
+    <BaseHead {title} {description} {permalink} />
+  </head>
+  <body>
+    <BlogHeader />
+    <main>
+      <h1>Contact</h1>
+
+      <iframe
+      rel="preload"
+      src="https://www.calendly.com/decentralawyer"
+      title="Book an appointment with decentralawyer"
+      ></iframe>
+    </main>
+    
+  </body>
+</html>

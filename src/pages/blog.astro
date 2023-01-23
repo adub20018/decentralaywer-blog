@@ -1,0 +1,42 @@
+---
+// Component Imports
+import BaseHead from '../components/BaseHead.astro';
+import BlogHeader from '../components/BlogHeader.astro';
+import BlogPostPreview from '../components/BlogPostPreview.astro';
+import { SITE } from '../config';
+
+let { title } = SITE;
+let description = 'Specializing in high growth disruptive technologies';
+let permalink = 'https://example.com/'; // ADD URL HERE
+
+// Data Fetching: List all Markdown posts in the repo.
+let allPosts = await Astro.glob('./posts/*.md');
+allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
+---
+
+<style>
+.content {
+  margin-top: 6rem
+}
+</style>
+
+
+<html lang="en">
+  <head>
+    <BaseHead {title} {description} {permalink} />
+  </head>
+  <body>
+    <BlogHeader />
+    <div class="wrapper">
+        <main class="content">
+        <!-- <h1>Blog</h1> -->
+    <section aria-label="Blog post list">
+        {allPosts.map((p) => <BlogPostPreview post={p} />)}
+    </section>
+    </main>
+    <footer>
+			<a class="admin" href="/admin">Admin Dashboard 🔐</a>
+			</footer>
+    </div>
+  </body>
+</html>
