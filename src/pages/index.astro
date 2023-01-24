@@ -33,21 +33,18 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 			}
 
 			.main-heading {
-				letter-spacing: 6px;
-				font-size: 2.8rem;
+				font-size: 6rem;
 				font-weight: 700;
-				margin-bottom: 1rem;
+				margin-bottom: -0.5rem;
 			}
 
 			.main-bio {
+				font-size: 1rem;
 				margin-bottom: 2rem;
 			}
 
 
 			/* svg test styles */
-			.svg-container {
-
-			}
 			.img {
 				height: 1000px;
       		}
@@ -97,21 +94,31 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 				stroke: #df84a5;
 				stroke-width: 3px;
 			}
-			.popup-div {
+			.main-room-div-right {
 				display: none;
 				width: 20rem;
-				color: black;
 				position: absolute;
-				margin-top: 8rem;
-				transform: translateX(-2rem);
+				margin-top: 5.5rem;
+				transform: translateX(-3rem);
 			}
 			.popup-title {
-				font-size: 2.8rem;
+				text-decoration: underline;
+				font-size: 4.5rem;
 				color: var(--color-blue);
 			}
 			.popup-text {
-				margin-top: 10rem;
+				font-size: 0.8rem;
+				margin-top: 9rem;
 			}
+			.main-room-div-left {
+				display: none;
+				width: 18rem;
+				position: absolute;
+				z-index: 1;
+				top: 18rem;
+				left: 2rem;
+			}
+
 
 			.references {
 				position: absolute;
@@ -121,6 +128,8 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 				transform: translateY(14rem);
 				background-color: #090a14;
 			}
+
+
 		</style>
 	</head>
 
@@ -129,12 +138,11 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 		<div class="wrapper">
 			<main class="content">
 					<div class="title">
-						<h1 class="main-heading">The {title}</h1>
+						<h1 class="main-heading">THE DECENTRALAWYER</h1>
 						<p class="main-bio">{description}</p>
 					</div>
 
 					<!-- svg integration -->
-					<div class="svg-container">
 						<figure class="figure">
 						  <svg
 							class="svg"
@@ -165,32 +173,47 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 							  />
 							</g>
 						  </svg>
-						  <div class="popup-div">
+						  <div class="main-room-div-right">
 							<h1 class="popup-title">Skills</h1>
-							<p class="popup-text">We specialize in providing cutting-edge solutions for high growth disruptive technologies. Our team of experts is dedicated to helping our clients stay ahead of the curve and achieve their business goals.</p>
+							<p class="popup-text">We specialize in providing cutting-edge solutions for high growth disruptive technologies. Our team of experts is dedicated to helping our clients stay ahead of the curve and achieve their business goals</p>
+						  </div>
+						  <div class="main-room-div-left">
+							<p>If you are facing legal issues, Decentralawyer is here to help. Our attorneys have a wealth of knowledge in [practice areas] and will work tirelessly to ensure that your rights are protected
+							</p>
 						  </div>
 						</figure>
-					  </div>
+
 					  <!-- svg integration end -->
 					  <div class="references"></div>
 			</main>
 		</div>
 		<script>
+			// defines html elements as variables
 			var mainRoom = document.querySelector(".main-room");
-			var mainRoomDiv = document.querySelector(".popup-div");
-	  
+			var mainRoomDiv = document.querySelector(".main-room-div-right");
+			var mainRoomDivLeft = document.querySelector(".main-room-div-left")
+			
+			// selects the elements and listens for hover motions
 			mainRoom.addEventListener("mouseover", showPopup);
 			mainRoom.addEventListener("mouseout", hidePopup);
-	  
+			
+			// function to show the popup
 			function showPopup(evt) {
+			  // gets position and size of mainRoom
 			  var iconPos = mainRoom.getBoundingClientRect();
+			  
+			  // sets the position styles of the popup
 			  mainRoomDiv.style.left = iconPos.right + 20 + "px";
 			  mainRoomDiv.style.top = window.scrollY + iconPos.top - 60 + "px";
 			  mainRoomDiv.style.display = "block";
+
+			  mainRoomDivLeft.style.display = "block";
 			}
-	  
+			
+			// hides the popup
 			function hidePopup(evt) {
 			  mainRoomDiv.style.display = "none";
+			  mainRoomDivLeft.style.display = "none";
 			}
 		</script>
 	</body>
