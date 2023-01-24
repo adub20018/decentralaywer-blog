@@ -1,26 +1,33 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Source+Sans+Pro:wght@300;400;700&display=swap");
-/* font-family: 'Playfair Display', serif;
+/* @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Source+Sans+Pro:wght@300;400;700&display=swap");
+font-family: 'Playfair Display', serif;
 font-family: 'Source Sans Pro', sans-serif; */
+
+@font-face {
+  font-family: "Dogica";
+  src: url("../public/assets/DOGICA.woff2") format("woff2"),
+    url("../public/assets/DOGICAPIXELBOLD.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
 
 :root {
   --font-fallback: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
     sans-serif, Apple Color Emoji, Segoe UI Emoji;
-  --font-heading: "Playfair Display", serif, var(--font-fallback);
-  --font-body: "Source Sans Pro", sans-serif;
+  --font-heading: "Dogica", serif, var(--font-fallback);
+  --font-body: "Dogica", sans-serif;
   --font-mono: "IBM Plex Mono", Consolas, "Andale Mono WT", "Andale Mono",
     "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono",
     "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco,
     "Courier New", Courier, monospace;
 
-  --color-white: #fff;
+  --color-white: #ebede9;
   --color-black: #000014;
 
   --color-gray-50: #f9fafb;
   --color-gray-100: #f3f4f6;
   --color-gray-200: #e5e7eb;
   --color-gray-300: #d1d5db;
-  /*  --color-gray-400: #e0dbff8a;   */
-  --color-gray-400: black;
+  --color-gray-400: #e0dbff8a;
   --color-gray-500: #6b7280;
   --color-gray-600: #4b5563;
   --color-gray-700: #374151;
@@ -28,7 +35,7 @@ font-family: 'Source Sans Pro', sans-serif; */
   --color-gray-900: #111827;
   --color-gray-main: #8d8ba9;
 
-  --color-blue: #3894ff;
+  --color-blue: #73bed3;
   --color-blue-rgb: 56, 148, 255;
   --color-green: #17c083;
   --color-green-rgb: 23, 192, 131;
@@ -40,14 +47,7 @@ font-family: 'Source Sans Pro', sans-serif; */
   --color-red-rgb: 255, 22, 57;
   --color-yellow: #ffbe2d;
   --color-yellow-rgb: 255, 190, 45;
-  /* --color-theme-bg: radial-gradient(
-    circle,
-    rgba(32, 31, 46, 1) 0%,
-    rgba(47, 43, 75, 1) 0%,
-    rgba(32, 31, 46, 1) 100%
-  ); */
   --color-theme-bg: #10141f;
-  --color-text-gradient: linear-gradient(45deg, #3a7ec5, #ff57de);
 }
 
 :root {
@@ -57,7 +57,7 @@ font-family: 'Source Sans Pro', sans-serif; */
   --theme-accent-opacity: 0.1;
   --theme-divider: var(--color-gray-100);
   --theme-text: var(--color-gray-50);
-  --theme-text-light: var(--color-gray-400);
+  --theme-text-light: var(--color-blue);
   --theme-bg: var(--color-white);
   --theme-bg-offset: var(--color-gray-100);
   --theme-bg-accent: rgba(var(--theme-accent-rgb), var(--theme-accent-opacity));
@@ -76,7 +76,7 @@ body {
   --theme-accent-opacity: 0.3;
   --theme-divider: var(--color-gray-900);
   --theme-text: var(--color-gray-200);
-  --theme-text-light: var(--color-gray-400);
+  --theme-text-light: var(--color-blue);
   --theme-text-lighter: var(--color-gray-600);
   --theme-bg: var(--color-black);
   --theme-bg-offset: var(--color-gray-900);
@@ -118,7 +118,7 @@ body {
   background: var(--color-theme-bg);
 }
 
-main {
+.content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -128,7 +128,6 @@ main {
 .wrapper {
   margin-left: auto;
   margin-right: auto;
-  max-width: 65em;
   padding-left: 2rem;
   padding-right: 2rem;
   width: 100%;
@@ -158,9 +157,7 @@ h1 {
   font-size: clamp(2.488rem, 1.924rem + 1.41vw, 3.052rem);
   font-family: var(--font-heading);
   letter-spacing: 2px;
-  background: var(--color-text-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--color-white);
 }
 
 h2 {
@@ -181,6 +178,7 @@ h5 {
 
 p {
   color: var(--theme-text-light);
+  font-size: 0.85rem;
 }
 
 small,
@@ -189,7 +187,7 @@ small,
 }
 
 a {
-  color: var(--theme-accent);
+  color: var(--color-white);
   font-weight: 400;
   text-underline-offset: 0.08em;
   text-decoration: none;

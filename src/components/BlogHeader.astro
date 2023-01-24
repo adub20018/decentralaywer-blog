@@ -4,9 +4,11 @@ import { SITE } from '../config';
 <header class="wrapper">
 	<article>
 		<h1>
-			<a href="/" class="header-subitem">{SITE.title}</a>
-			<a class="header-subitem blog" href="/blog/">Blog</a>
+			<!-- <a href="/" class="header-subitem">{SITE.title}</a> -->
+			<a class="header-subitem">Skills</a>
+			<a class="header-subitem">Bio</a>
 			<a class="header-subitem" href="/contact/">Contact</a>
+			<a class="header-subitem blog" href="/blog/">Blog</a>
 		</h1>
 	</article>
 </header>
@@ -14,11 +16,14 @@ import { SITE } from '../config';
 <style>
 	.wrapper {
 		padding: 0;
-		margin-top: 20px;
+		margin: 0;
+		background-color: #090a14;
+		border-bottom: 2px solid #bec0be;
+		width: 100%;
 	}
 
 	.header-subitem {
-		padding: 1rem;
+		padding: 1.2rem;
 		font-family: var(--font-body);
 		font-weight: 700;
 	}
@@ -35,7 +40,6 @@ import { SITE } from '../config';
 		font-size: 1.1rem;
 		max-width: 100%;
 		display: flex;
-		flex-grow: 1;
-		justify-content: space-between;
+		justify-content: flex-end;
 	}
 </style>
