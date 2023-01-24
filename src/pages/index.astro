@@ -43,56 +43,34 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 				margin-bottom: 2rem;
 			}
 
-
-			/* svg test styles */
-			.img {
-				height: 1000px;
-      		}
 			.svg {
 				margin-top: 1.5rem;
        			width: 100%;
         		height: 600px;
       		}
-			.main-room {
+			.main-room, .blue-room, .pink-room {
 				fill: black;
 				opacity: 0.5;
 				stroke: transparent;
 				pointer-events: all;
+			}
+			.main-room:hover, .blue-room:hover, .pink-room:hover {
+				transition: ease 0.15s;
+				opacity: 1;
+				fill: none;
+				stroke-width: 3px;
 			}
 			.main-room:hover {
-				transition: ease 0.15s;
-				opacity: 1;
-				fill: none;
 				stroke: #73bed3;
-				stroke-width: 3px;
 			}
 
-			.blue-room {
-				fill: black;
-				opacity: 0.5;
-				stroke: transparent;
-				pointer-events: all;
-			}
 			.blue-room:hover {
-				transition: ease 0.15s;
-				opacity: 1;
-				fill: none;
 				stroke: #a4dddb;
-				stroke-width: 3px;
-			}
 
-			.pink-room {
-				fill: black;
-				opacity: 0.5;
-				stroke: transparent;
-				pointer-events: all;
-			}
+			} 
 			.pink-room:hover {
-				transition: ease 0.15s;
-				opacity: 1;
-				fill: none;
 				stroke: #df84a5;
-				stroke-width: 3px;
+
 			}
 			.main-room-div-right {
 				display: none;
@@ -118,7 +96,26 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 				top: 18rem;
 				left: 2rem;
 			}
-
+			.pink-room-popup {
+				display: none;
+				position: absolute;
+				top: 25rem;
+				left: 2rem;
+			}
+			.blue-room-popup {
+				display: none;
+				position: absolute;
+				z-index: 1;
+				top: 40rem;
+				right: 5rem;
+			}
+			.blue-room-popup-left {
+				display: none;
+				position: absolute;
+				z-index: 1;
+				top: 20rem;
+				left: 6rem;
+			}
 
 			.references {
 				position: absolute;
@@ -181,6 +178,20 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 							<p>If you are facing legal issues, Decentralawyer is here to help. Our attorneys have a wealth of knowledge in [practice areas] and will work tirelessly to ensure that your rights are protected
 							</p>
 						  </div>
+
+						  <div class="pink-room-popup">
+							<h1>Contact</h1>
+							<p>Email: email@email.com</p>
+							<p>Contact me here!</p>
+						  </div>
+
+						  <div class="blue-room-popup">
+							<h1>Bio</h1>
+							<p>La Di Da Di We Like To Party</p>
+						  </div>
+						  <div class="blue-room-popup-left">
+							<p>This is placeholder text</p>
+						  </div>
 						</figure>
 
 					  <!-- svg integration end -->
@@ -190,31 +201,68 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 		<script>
 			// defines html elements as variables
 			var mainRoom = document.querySelector(".main-room");
-			var mainRoomDiv = document.querySelector(".main-room-div-right");
-			var mainRoomDivLeft = document.querySelector(".main-room-div-left")
+			var mainRoomPopup = document.querySelectorAll(".main-room-div-right, .main-room-div-left");
 			
-			// selects the elements and listens for hover motions
-			mainRoom.addEventListener("mouseover", showPopup);
-			mainRoom.addEventListener("mouseout", hidePopup);
-			
-			// function to show the popup
-			function showPopup(evt) {
-			  // gets position and size of mainRoom
-			  var iconPos = mainRoom.getBoundingClientRect();
-			  
-			  // sets the position styles of the popup
-			  mainRoomDiv.style.left = iconPos.right + 20 + "px";
-			  mainRoomDiv.style.top = window.scrollY + iconPos.top - 60 + "px";
-			  mainRoomDiv.style.display = "block";
+			// pink-room variable definitions
+			var pinkRoom = document.querySelector(".pink-room");
+			var pinkRoomPopup = document.querySelector(".pink-room-popup")
 
-			  mainRoomDivLeft.style.display = "block";
-			}
-			
-			// hides the popup
-			function hidePopup(evt) {
-			  mainRoomDiv.style.display = "none";
-			  mainRoomDivLeft.style.display = "none";
-			}
+			var blueRoom = document.querySelector(".blue-room");
+			var blueRoomPopup = document.querySelectorAll(".blue-room-popup, .blue-room-popup-left")
+
+			// selects the elements and listens for hover motions
+			mainRoom.addEventListener("mouseover", function() {
+				showPopup(mainRoom, mainRoomPopup);
+			});
+			mainRoom.addEventListener("mouseout", function() {
+				hidePopup(mainRoomPopup);
+			});
+
+			blueRoom.addEventListener("mouseover", function() {
+				showPopup(blueRoom, blueRoomPopup);
+			});
+			blueRoom.addEventListener("mouseout", function() {
+				hidePopup(blueRoomPopup);
+			});
+
+			pinkRoom.addEventListener("mouseover", function() {
+				showPopup(pinkRoom, pinkRoomPopup);
+			});
+			pinkRoom.addEventListener("mouseout", function() {
+				hidePopup(pinkRoomPopup);
+			});
+						
+			// function to show the popup
+			function showPopup(room, popup) {
+				var iconPos = room.getBoundingClientRect();
+				if (popup instanceof NodeList) {
+					for (let i = 0; i < popup.length; i++) {
+					var popupElem = popup[i];
+					if (i === 0) {
+						// positioning styles for first instance of mainRoomPopup
+						popupElem.style.left = iconPos.right + 20 + "px";
+						popupElem.style.top = window.scrollY + iconPos.top - 60 + "px";
+					}
+					popupElem.style.display = "block";
+					}
+				} else {
+					// popup.style.left = iconPos.right + 20 + "px";
+					// popup.style.top = window.scrollY + iconPos.top - 60 + "px";
+					popup.style.display = "block";
+				}
+				}
+
+				function hidePopup(popup) {
+					if (popup instanceof NodeList) {
+						for (let i = 0; i < popup.length; i++) {
+							popup[i].style.display = "none";
+						}
+					} else {
+    					popup.style.display = "none";
+					}
+				}
+
+
 		</script>
 	</body>
 </html>
