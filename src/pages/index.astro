@@ -89,7 +89,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 			}
 			.main-room-div-left {
 				display: none;
-				width: 18rem;
+				width: 10rem;
 				position: absolute;
 				z-index: 1;
 				top: 18rem;
@@ -148,10 +148,10 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 				color: var(--color-blue);
 			}
 
-			@media screen and (max-height: 870px) {
+			@media screen and (max-height: 900px) {
 				.main-heading {
 					font-size: 4.5rem;
-					margin-top: -5rem;
+					margin-top: 0rem;
 				}
 				.main-bio {
 					font-size: 0.8rem;
@@ -159,12 +159,20 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 				.svg {
 					height: 500px;
 				}
-				
 				.main-room-div-left, .popup-text, .contact-text, #bio-p, #bio-p-left {
 					font-size: 0.7rem;
 				}
 				.blue-room-popup, .blue-room-popup-left {
 					margin-top: 5rem;
+				}
+				#contact-header {
+				margin-bottom: -0.5rem;
+			}
+			}
+
+			@media screen and (max-height: 770px) {
+				.main-heading {
+					margin-top: 3rem;
 				}
 			}
 		</style>
@@ -272,7 +280,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 				});
 			}
 
-			addPopupListeners(mainRoom, mainRoomPopup, 20, -10, -5, -870);
+			addPopupListeners(mainRoom, mainRoomPopup, 20, -10, -200, -800);
 			addPopupListeners(pinkRoom, pinkRoomPopup, 100, -550, null, null);
 			addPopupListeners(blueRoom, blueRoomPopup, 30, 60, -260, -700);
 						
