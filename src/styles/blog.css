@@ -1,20 +1,20 @@
 @font-face {
   font-family: "Dogica";
-  src: url("../public/assets/DOGICA.woff2") format("woff2");
+  src: url("/assets/DOGICA.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "DogicaBold";
-  src: url("../public/assets/DOGICAPIXELBOLD.woff2") format("woff2");
+  src: url("/assets/DOGICAPIXELBOLD.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "MotionControl";
-  src: url("../public/assets/MOTIONCONTROL-BOLD.woff2") format("woff2");
+  src: url("/assets/MOTIONCONTROL-BOLD.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
