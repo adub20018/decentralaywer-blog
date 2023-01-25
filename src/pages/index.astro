@@ -69,24 +69,23 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 
 			} 
 			.pink-room:hover {
-				stroke: #df84a5;
+				stroke: var(--color-pink);
 
 			}
 			.main-room-div-right {
 				display: none;
-				width: 20rem;
+				width: 15rem;
 				position: absolute;
-				margin-top: 5.5rem;
-				transform: translateX(-3rem);
 			}
 			.popup-title {
 				text-decoration: underline;
-				font-size: 4.5rem;
+				font-size: 4rem;
 				color: var(--color-blue);
 			}
 			.popup-text {
 				font-size: 0.8rem;
-				margin-top: 9rem;
+				margin-top: 12rem;
+				margin-left: -5rem;
 			}
 			.main-room-div-left {
 				display: none;
@@ -97,10 +96,19 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 				left: 2rem;
 			}
 			.pink-room-popup {
+				text-align: left;
 				display: none;
 				position: absolute;
 				top: 25rem;
 				left: 2rem;
+			}
+			#contact-header {
+				color: var(--color-pink);
+				text-decoration: underline;
+				font-size: 4rem;
+			}
+			.contact-text {
+				font-size: 0.8rem;
 			}
 			.blue-room-popup {
 				display: none;
@@ -113,8 +121,20 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 				display: none;
 				position: absolute;
 				z-index: 1;
-				top: 20rem;
-				left: 6rem;
+				width: 15rem;
+			}
+			#bio-header {
+				font-size: 4rem;
+				text-decoration: underline;
+			}
+			#bio-p {
+				margin-top: -20rem;
+				margin-bottom: 4rem;
+				width: 15rem;
+				margin-left: 8rem;
+			}
+			#bio-p-left, #bio-p, #bio-header {
+				color: #a4dddb;
 			}
 
 			.references {
@@ -126,6 +146,10 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 				background-color: #090a14;
 			}
 
+
+			.active-header {
+				color: var(--color-blue);
+			}
 
 		</style>
 	</head>
@@ -172,25 +196,37 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 						  </svg>
 						  <div class="main-room-div-right">
 							<h1 class="popup-title">Skills</h1>
-							<p class="popup-text">We specialize in providing cutting-edge solutions for high growth disruptive technologies. Our team of experts is dedicated to helping our clients stay ahead of the curve and achieve their business goals</p>
+							<p class="popup-text">Yeah, I heard of C500, he's a true disgrace
+								Trynna act like a king but he ain't got no taste
+								Can't compete with the real, he's a lukewarm fake
+								Can't even compare, he's just a silly mistake</p>
 						  </div>
 						  <div class="main-room-div-left">
-							<p>If you are facing legal issues, Decentralawyer is here to help. Our attorneys have a wealth of knowledge in [practice areas] and will work tirelessly to ensure that your rights are protected
+							<p>Frederick thinks he's top notch, but his rhymes are a flop,
+								He thinks he's a king, but he's a jester, with a mop.
+								His flow ain't the best, his lyrics are a mess,
+								He's so far behind, he won't pass the final test
 							</p>
 						  </div>
 
 						  <div class="pink-room-popup">
-							<h1>Contact</h1>
-							<p>Email: email@email.com</p>
-							<p>Contact me here!</p>
+							<h1 id="contact-header">Contact</h1>
+							<a class="contact-text" href="mailto: gaurav@decentralaw.ai">Email Me!</a> <br>
+							<a class="contact-text" href="https://calendly.com/decentralawyer">Book an appointment here!</a>
 						  </div>
 
 						  <div class="blue-room-popup">
-							<h1>Bio</h1>
-							<p>La Di Da Di We Like To Party</p>
+							  <p id="bio-p">C500 try to talk but it's just all hot air
+								He's just full of drivel, and his words ain't rare
+								He's never been able to string two words together
+								His rhymes are like a broken record, they sound worse than leather</p>
+							<h1 id="bio-header">Bio</h1>
 						  </div>
 						  <div class="blue-room-popup-left">
-							<p>This is placeholder text</p>
+							<p id="bio-p-left">Frederick, you think you can talk your way out of this?
+								You think your bars can hit like Jada's?
+								Your rhymes are stale, your lyrics are weak
+								You can try, but you'll never reach my peak</p>
 						  </div>
 						</figure>
 
@@ -211,46 +247,41 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 			var blueRoomPopup = document.querySelectorAll(".blue-room-popup, .blue-room-popup-left")
 
 			// selects the elements and listens for hover motions
-			mainRoom.addEventListener("mouseover", function() {
-				showPopup(mainRoom, mainRoomPopup);
-			});
-			mainRoom.addEventListener("mouseout", function() {
-				hidePopup(mainRoomPopup);
-			});
+			function addPopupListeners(room, popup, top, right, top2, right2) {
+				room.addEventListener("mouseover", function() {
+					showAndPositionPopup(room, popup, top, right, top2, right2);
+				});
+				room.addEventListener("mouseout", function() {
+					hidePopup(popup);
+				});
+			}
 
-			blueRoom.addEventListener("mouseover", function() {
-				showPopup(blueRoom, blueRoomPopup);
-			});
-			blueRoom.addEventListener("mouseout", function() {
-				hidePopup(blueRoomPopup);
-			});
-
-			pinkRoom.addEventListener("mouseover", function() {
-				showPopup(pinkRoom, pinkRoomPopup);
-			});
-			pinkRoom.addEventListener("mouseout", function() {
-				hidePopup(pinkRoomPopup);
-			});
+			addPopupListeners(mainRoom, mainRoomPopup, 20, -10, -5, -870);
+			addPopupListeners(pinkRoom, pinkRoomPopup, 100, -550, null, null);
+			addPopupListeners(blueRoom, blueRoomPopup, 30, 60, -260, -700);
 						
 			// function to show the popup
-			function showPopup(room, popup) {
+			function showAndPositionPopup(room, popup, top, right, top2, right2) {
 				var iconPos = room.getBoundingClientRect();
 				if (popup instanceof NodeList) {
 					for (let i = 0; i < popup.length; i++) {
-					var popupElem = popup[i];
-					if (i === 0) {
-						// positioning styles for first instance of mainRoomPopup
-						popupElem.style.left = iconPos.right + 20 + "px";
-						popupElem.style.top = window.scrollY + iconPos.top - 60 + "px";
-					}
-					popupElem.style.display = "block";
+						var popupElem = popup[i];
+						if (i === 0) {
+							popupElem.style.left = iconPos.right + right + "px";
+							popupElem.style.top = window.scrollY + iconPos.top + top + "px";
+						}
+						else if (i === 1) {
+							popupElem.style.left = iconPos.right + right2 + "px";
+							popupElem.style.top = window.scrollY + iconPos.top + top2 + "px";
+						}
+						popupElem.style.display = "block";
 					}
 				} else {
-					// popup.style.left = iconPos.right + 20 + "px";
-					// popup.style.top = window.scrollY + iconPos.top - 60 + "px";
+					popup.style.left = iconPos.right + right + "px";
+					popup.style.top = window.scrollY + iconPos.top + top + "px";
 					popup.style.display = "block";
 				}
-				}
+			}
 
 				function hidePopup(popup) {
 					if (popup instanceof NodeList) {
