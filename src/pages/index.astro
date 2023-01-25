@@ -113,9 +113,6 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 			.blue-room-popup {
 				display: none;
 				position: absolute;
-				z-index: 1;
-				top: 40rem;
-				right: 5rem;
 			}
 			.blue-room-popup-left {
 				display: none;
@@ -151,6 +148,25 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 				color: var(--color-blue);
 			}
 
+			@media screen and (max-height: 870px) {
+				.main-heading {
+					font-size: 4.5rem;
+					margin-top: -5rem;
+				}
+				.main-bio {
+					font-size: 0.8rem;
+				}
+				.svg {
+					height: 500px;
+				}
+				
+				.main-room-div-left, .popup-text, .contact-text, #bio-p, #bio-p-left {
+					font-size: 0.7rem;
+				}
+				.blue-room-popup, .blue-room-popup-left {
+					margin-top: 5rem;
+				}
+			}
 		</style>
 	</head>
 
@@ -202,7 +218,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 								Can't even compare, he's just a silly mistake</p>
 						  </div>
 						  <div class="main-room-div-left">
-							<p>Frederick thinks he's top notch, but his rhymes are a flop,
+							<p class="popup-text">Frederick thinks he's top notch, but his rhymes are a flop,
 								He thinks he's a king, but he's a jester, with a mop.
 								His flow ain't the best, his lyrics are a mess,
 								He's so far behind, he won't pass the final test
