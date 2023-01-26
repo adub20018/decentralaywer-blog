@@ -36,26 +36,26 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 						<figure class="figure">
 						  <svg
 							class="svg"
-							viewBox="0 0 1500 1200"
+							viewBox="0 0 1340 1200"
 							preserveAspectRatio="xMinYMin meet"
 						  >
-							<image
+							<image class="svg__img"
 							  xlink:href="/assets/DecentralawyerOfficeMain_smaller.png"
 							/>
 				  
-							<g class="hover-group">
+							<g class="svg__hover-group">
 							  <polygon
 								class="skills-room"
 								points="200, 275 745, 0 1340, 295 1340, 450 948, 647"
 							  />
 							</g>
-							<g class="hover-group">
+							<g class="svg__hover-group">
 							  <polygon
 								class="bio-room"
 								points="320, 840 320, 685 672, 511 1010, 678 1010, 830 660, 1005"
 							  />
 							</g>
-							<g class="hover-group">
+							<g class="svg__hover-group">
 							  <polygon
 								class="contact-room"
 								points="320, 840 320, 685 672, 510 380, 365 0, 550 0, 680  "
@@ -123,9 +123,9 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 				});
 			}
 
-			addPopupListeners(mainRoom, mainRoomPopup, 20, -10, -200, -800);
-			addPopupListeners(pinkRoom, pinkRoomPopup, 100, -550, null, null);
-			addPopupListeners(blueRoom, blueRoomPopup, 30, 60, -260, -700);
+			addPopupListeners(mainRoom, mainRoomPopup, 20, -10, -180, -850);
+			addPopupListeners(pinkRoom, pinkRoomPopup, 100, -600, null, null);
+			addPopupListeners(blueRoom, blueRoomPopup, 60, 50, -250, -770);
 						
 			// function to show the popup
 			function showAndPositionPopup(room, popup, top, right, top2, right2) {

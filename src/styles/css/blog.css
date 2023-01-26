@@ -97,7 +97,7 @@
 .main-heading__title {
   font-size: 6rem;
   font-weight: 700;
-  margin-bottom: -0.5rem;
+  margin-bottom: -1.3rem;
 }
 .main-heading__bio {
   font-size: 1rem;
@@ -109,7 +109,10 @@
   width: 100%;
   height: 600px;
 }
-
+.svg__img {
+  width: 100%;
+  height: 1000px;
+}
 .skills-room:hover {
   stroke: #73bed3;
 }
@@ -155,6 +158,7 @@
   text-decoration: underline;
 }
 .bio-room__popup-text {
+  font-size: 0.8rem;
   margin-top: -20rem;
   margin-bottom: 4rem;
   width: 15rem;
@@ -168,7 +172,6 @@
   stroke: #df84a5;
 }
 .contact-room__popup {
-  text-align: left;
   display: none;
   position: absolute;
   top: 25rem;
@@ -384,6 +387,7 @@ body {
   font-size: 1rem;
   line-height: 1.9;
   background: #10141f;
+  text-align: justify;
 }
 
 .content {

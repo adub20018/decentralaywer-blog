@@ -5,7 +5,7 @@
     &__title {
         font-size: 6rem;
         font-weight: 700;
-        margin-bottom: -0.5rem;
+        margin-bottom: -1.3rem;
     }
 
     &__bio {
@@ -18,6 +18,14 @@
     margin-top: 1.5rem;
     width: 100%;
     height: 600px;
+
+    &__img {
+        width: 100%;
+        height: 1000px;
+    }
+
+    &__hover-group {
+    }
   }
 
 .skills-room {
@@ -71,7 +79,8 @@
             text-decoration: underline;
         }
         &-text {
-            margin-top: -20rem;
+            font-size: 0.8rem;
+            margin-top: -20rem; // remove and adjust js position
             margin-bottom: 4rem;
             width: 15rem;
             margin-left: 8rem;
@@ -87,7 +96,6 @@
         stroke: $color-pink;
     }
     &__popup {
-        text-align: left;
         display: none;
         position: absolute;
         top: 25rem;
