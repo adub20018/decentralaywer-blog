@@ -207,6 +207,7 @@
   bottom: 0;
   transform: translateY(14rem);
   background-color: #090a14;
+  z-index: -1;
 }
 
 @media screen and (max-height: 900px) {
@@ -223,7 +224,13 @@
     font-size: 0.7rem;
   }
   .bio-room__popup-right, .bio-room__popup-left {
-    margin-top: 5rem;
+    margin-top: 2rem;
+  }
+  .skills-room__popup-title {
+    font-size: 3.5rem;
+  }
+  .skills-room__popup-left {
+    margin-top: -4rem;
   }
 }
 .admin-footer {
