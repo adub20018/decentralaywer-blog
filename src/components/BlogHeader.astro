@@ -1,46 +1,15 @@
 ---
 import { SITE } from '../config';
 ---
-<header class="wrapper">
+<header class="top-nav">
 	<article>
-		<h1>
+		<h1 class="top-nav__content">
 			<!-- <a href="/" class="header-subitem">{SITE.title}</a> -->
-			<a class="header-subitem">Skills</a>
-			<a class="header-subitem">Bio</a>
-			<a class="header-subitem" href="/contact/">Contact</a>
-			<a class="header-subitem blog" href="/blog/">Blog</a>
+			<a class="top-nav__subitem">Skills</a>
+			<a class="top-nav__subitem">Bio</a>
+			<a class="top-nav__subitem" href="/contact/">Contact</a>
+			<a class="top-nav__subitem" href="/blog/">Blog</a>
 		</h1>
 	</article>
 </header>
 
-<style>
-	.wrapper {
-		padding: 0;
-		margin: 0;
-		background-color: #090a14;
-		border-bottom: 2px solid #bec0be;
-		width: 100%;
-	}
-
-	.header-subitem {
-		font-family: var(--font-heading);
-		font-size: 2.2rem;
-		padding: 0.8rem;
-		font-weight: 700;
-	}
-
-	@media (max-width: 32em) {
-		.header-subitem {
-			display: none;
-		}
-	}
-
-
-	h1 {
-		margin: 0;
-		font-size: 1.1rem;
-		max-width: 100%;
-		display: flex;
-		justify-content: flex-end;
-	}
-</style>

@@ -12,6 +12,7 @@ let { title } = SITE;
 let description = 'Specializing in high growth disruptive technologies';
 let permalink = 'https://example.com/'; // ADD URL HERE
 
+
 // Data Fetching: List all Markdown posts in the repo.
 
 let allPosts = await Astro.glob('./posts/*.md');
@@ -21,170 +22,14 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 <html lang="en">
 	<head>
 		<BaseHead {title} {description} {permalink} />
-
-		<style>
-			.content {
-				height: 100vh;
-			}
-
-			.title {
-				margin-top: -8rem;
-				text-align: center;
-			}
-
-			.main-heading {
-				font-size: 6rem;
-				font-weight: 700;
-				margin-bottom: -0.5rem;
-			}
-
-			.main-bio {
-				font-size: 1rem;
-				margin-bottom: 2rem;
-			}
-
-			.svg {
-				margin-top: 1.5rem;
-       			width: 100%;
-        		height: 600px;
-      		}
-			.main-room, .blue-room, .pink-room {
-				fill: black;
-				opacity: 0.5;
-				stroke: transparent;
-				pointer-events: all;
-			}
-			.main-room:hover, .blue-room:hover, .pink-room:hover {
-				transition: ease 0.15s;
-				opacity: 1;
-				fill: none;
-				stroke-width: 3px;
-			}
-			.main-room:hover {
-				stroke: #73bed3;
-			}
-
-			.blue-room:hover {
-				stroke: #a4dddb;
-
-			} 
-			.pink-room:hover {
-				stroke: var(--color-pink);
-
-			}
-			.main-room-div-right {
-				display: none;
-				width: 15rem;
-				position: absolute;
-			}
-			.popup-title {
-				text-decoration: underline;
-				font-size: 4rem;
-				color: var(--color-blue);
-			}
-			.popup-text {
-				font-size: 0.8rem;
-				margin-top: 12rem;
-				margin-left: -5rem;
-			}
-			.main-room-div-left {
-				display: none;
-				width: 10rem;
-				position: absolute;
-				z-index: 1;
-				top: 18rem;
-				left: 2rem;
-			}
-			.pink-room-popup {
-				text-align: left;
-				display: none;
-				position: absolute;
-				top: 25rem;
-				left: 2rem;
-			}
-			#contact-header {
-				color: var(--color-pink);
-				text-decoration: underline;
-				font-size: 4rem;
-			}
-			.contact-text {
-				font-size: 0.8rem;
-			}
-			.blue-room-popup {
-				display: none;
-				position: absolute;
-			}
-			.blue-room-popup-left {
-				display: none;
-				position: absolute;
-				z-index: 1;
-				width: 15rem;
-			}
-			#bio-header {
-				font-size: 4rem;
-				text-decoration: underline;
-			}
-			#bio-p {
-				margin-top: -20rem;
-				margin-bottom: 4rem;
-				width: 15rem;
-				margin-left: 8rem;
-			}
-			#bio-p-left, #bio-p, #bio-header {
-				color: #a4dddb;
-			}
-
-			.references {
-				position: absolute;
-				height: 20rem;
-				width: 100%;
-				bottom: 0;
-				transform: translateY(14rem);
-				background-color: #090a14;
-			}
-
-
-			.active-header {
-				color: var(--color-blue);
-			}
-
-			@media screen and (max-height: 900px) {
-				.main-heading {
-					font-size: 4.5rem;
-					margin-top: 0rem;
-				}
-				.main-bio {
-					font-size: 0.8rem;
-				}
-				.svg {
-					height: 500px;
-				}
-				.main-room-div-left, .popup-text, .contact-text, #bio-p, #bio-p-left {
-					font-size: 0.7rem;
-				}
-				.blue-room-popup, .blue-room-popup-left {
-					margin-top: 5rem;
-				}
-				#contact-header {
-				margin-bottom: -0.5rem;
-			}
-			}
-
-			@media screen and (max-height: 770px) {
-				.main-heading {
-					margin-top: 3rem;
-				}
-			}
-		</style>
 	</head>
 
 	<body>
 		<BlogHeader />
-		<div class="wrapper">
 			<main class="content">
-					<div class="title">
-						<h1 class="main-heading">THE DECENTRALAWYER</h1>
-						<p class="main-bio">{description}</p>
+					<div class="main-heading">
+						<h1 class="main-heading__title">THE DECENTRALAWYER</h1>
+						<p class="main-heading__bio">{description}</p>
 					</div>
 
 					<!-- svg integration -->
@@ -195,59 +40,58 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 							preserveAspectRatio="xMinYMin meet"
 						  >
 							<image
-							  class="img"
 							  xlink:href="/assets/DecentralawyerOfficeMain_smaller.png"
 							/>
 				  
 							<g class="hover-group">
 							  <polygon
-								class="main-room"
+								class="skills-room"
 								points="200, 275 745, 0 1340, 295 1340, 450 948, 647"
 							  />
 							</g>
 							<g class="hover-group">
 							  <polygon
-								class="blue-room"
+								class="bio-room"
 								points="320, 840 320, 685 672, 511 1010, 678 1010, 830 660, 1005"
 							  />
 							</g>
 							<g class="hover-group">
 							  <polygon
-								class="pink-room"
+								class="contact-room"
 								points="320, 840 320, 685 672, 510 380, 365 0, 550 0, 680  "
 							  />
 							</g>
 						  </svg>
-						  <div class="main-room-div-right">
-							<h1 class="popup-title">Skills</h1>
-							<p class="popup-text">Yeah, I heard of C500, he's a true disgrace
+						  <div class="skills-room__popup-right">
+							<h1 class="skills-room__popup-title">Skills</h1>
+							<p class="skills-room__popup-text">Yeah, I heard of C500, he's a true disgrace
 								Trynna act like a king but he ain't got no taste
 								Can't compete with the real, he's a lukewarm fake
 								Can't even compare, he's just a silly mistake</p>
 						  </div>
-						  <div class="main-room-div-left">
-							<p class="popup-text">Frederick thinks he's top notch, but his rhymes are a flop,
+						  <div class="skills-room__popup-left">
+							<p class="skills-room__popup-text">Frederick thinks he's top notch, but his rhymes are a flop,
 								He thinks he's a king, but he's a jester, with a mop.
 								His flow ain't the best, his lyrics are a mess,
 								He's so far behind, he won't pass the final test
 							</p>
 						  </div>
 
-						  <div class="pink-room-popup">
-							<h1 id="contact-header">Contact</h1>
-							<a class="contact-text" href="mailto: gaurav@decentralaw.ai">Email Me!</a> <br>
-							<a class="contact-text" href="https://calendly.com/decentralawyer">Book an appointment here!</a>
+						  <div class="contact-room__popup">
+							<h1 class="contact-room__popup-header">Contact</h1>
+							<a class="contact-room__popup-text" href="mailto: gaurav@decentralaw.ai">Email Me!</a> <br>
+							<a class="contact-room__popup-text" href="https://calendly.com/decentralawyer">Book an appointment here!</a>
 						  </div>
 
-						  <div class="blue-room-popup">
-							  <p id="bio-p">C500 try to talk but it's just all hot air
+						  <div class="bio-room__popup-right">
+							  <p class="bio-room__popup-text">C500 try to talk but it's just all hot air
 								He's just full of drivel, and his words ain't rare
 								He's never been able to string two words together
 								His rhymes are like a broken record, they sound worse than leather</p>
-							<h1 id="bio-header">Bio</h1>
+							<h1 class="bio-room__popup-header">Bio</h1>
 						  </div>
-						  <div class="blue-room-popup-left">
-							<p id="bio-p-left">Frederick, you think you can talk your way out of this?
+						  <div class="bio-room__popup-left">
+							<p class="bio-room__popup-text-left">Frederick, you think you can talk your way out of this?
 								You think your bars can hit like Jada's?
 								Your rhymes are stale, your lyrics are weak
 								You can try, but you'll never reach my peak</p>
@@ -257,18 +101,17 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 					  <!-- svg integration end -->
 					  <div class="references"></div>
 			</main>
-		</div>
 		<script>
 			// defines html elements as variables
-			var mainRoom = document.querySelector(".main-room");
-			var mainRoomPopup = document.querySelectorAll(".main-room-div-right, .main-room-div-left");
+			var mainRoom = document.querySelector(".skills-room");
+			var mainRoomPopup = document.querySelectorAll(".skills-room__popup-right, .skills-room__popup-left");
 			
 			// pink-room variable definitions
-			var pinkRoom = document.querySelector(".pink-room");
-			var pinkRoomPopup = document.querySelector(".pink-room-popup")
+			var pinkRoom = document.querySelector(".contact-room");
+			var pinkRoomPopup = document.querySelector(".contact-room__popup")
 
-			var blueRoom = document.querySelector(".blue-room");
-			var blueRoomPopup = document.querySelectorAll(".blue-room-popup, .blue-room-popup-left")
+			var blueRoom = document.querySelector(".bio-room");
+			var blueRoomPopup = document.querySelectorAll(".bio-room__popup-right, .bio-room__popup-left")
 
 			// selects the elements and listens for hover motions
 			function addPopupListeners(room, popup, top, right, top2, right2) {

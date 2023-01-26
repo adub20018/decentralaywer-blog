@@ -1,0 +1,29 @@
+.blog-preview__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post-preview {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2rem;
+    border-bottom: 4px solid $theme-divider;
+    width: 90%;
+
+    &__header {
+        text-align: left;
+    }
+    &__title {
+        font-size: 2.8rem;
+        font-weight: 700;
+        color: $color-white;
+        text-align: left;
+    }
+    &__date {
+        margin-top: 1rem;
+        color: $color-white;
+    }
+}
+

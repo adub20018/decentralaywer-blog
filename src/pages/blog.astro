@@ -14,13 +14,6 @@ let allPosts = await Astro.glob('./posts/*.md');
 allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
 ---
 
-<style>
-.content {
-  margin-top: 6rem
-}
-</style>
-
-
 <html lang="en">
   <head>
     <BaseHead {title} {description} {permalink} />
@@ -30,7 +23,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
     <div class="wrapper">
         <main class="content">
         <!-- <h1>Blog</h1> -->
-    <section aria-label="Blog post list">
+    <section class="blog-preview__wrapper"aria-label="Blog post list">
         {allPosts.map((p) => <BlogPostPreview post={p} />)}
     </section>
     </main>

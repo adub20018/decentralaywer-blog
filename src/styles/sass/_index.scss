@@ -1,0 +1,150 @@
+
+.main-heading {
+    text-align: center;
+
+    &__title {
+        font-size: 6rem;
+        font-weight: 700;
+        margin-bottom: -0.5rem;
+    }
+
+    &__bio {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.svg {
+    margin-top: 1.5rem;
+    width: 100%;
+    height: 600px;
+  }
+
+.skills-room {
+    &:hover {
+        stroke: #73bed3;
+    }
+    &__popup {
+        &-right {
+            display: none;
+            width: 15rem;
+            position: absolute;
+        }
+        &-left {
+            display: none;
+            width: 10rem;
+            position: absolute;
+            z-index: 1;
+            top: 18rem;
+            left: 2rem;
+        }
+        &-title {
+            text-decoration: underline;
+            font-size: 4rem;
+            color: $color-blue;
+        }
+        &-text {
+            font-size: 0.8rem;
+            margin-top: 12rem;
+            margin-left: -5rem;
+        }
+    }
+}
+
+.bio-room {
+    &:hover {
+        stroke: #a4dddb;
+    } 
+    &__popup {
+        &-right {
+            display: none;
+            position: absolute;
+        }
+        &-left {
+            display: none;
+            position: absolute;
+            z-index: 1;
+            width: 15rem;
+        }
+        &-header {
+            font-size: 4rem;
+            text-decoration: underline;
+        }
+        &-text {
+            margin-top: -20rem;
+            margin-bottom: 4rem;
+            width: 15rem;
+            margin-left: 8rem;
+        }
+        &-text-left, &-text, &-header {
+            color: #a4dddb;
+        }
+    }
+}
+
+.contact-room {
+    &:hover {
+        stroke: $color-pink;
+    }
+    &__popup {
+        text-align: left;
+        display: none;
+        position: absolute;
+        top: 25rem;
+        left: 2rem;
+    
+        &-header {
+            color: $color-pink;
+            text-decoration: underline;
+            font-size: 4rem;
+        }
+        &-text {
+            font-size: 0.8rem;
+        }
+    }
+}
+
+.skills-room, .bio-room, .contact-room {
+    fill: black;
+    opacity: 0.5;
+    stroke: transparent;
+    pointer-events: all;
+}
+.skills-room:hover, .bio-room:hover, .contact-room:hover {
+    transition: ease 0.15s;
+    opacity: 1;
+    fill: none;
+    stroke-width: 3px;
+}
+
+
+.references {
+    position: absolute;
+    height: 20rem;
+    width: 100%;
+    bottom: 0;
+    transform: translateY(14rem);
+    background-color: #090a14;
+}
+
+
+@media screen and (max-height: 900px) {
+    .main-heading {
+        &__title {
+            font-size: 4.5rem;
+        }
+        &__bio {
+            font-size: 0.8rem;
+        }
+    }
+
+    .svg {
+        height: 500px;
+    }
+    .skills-room__popup-left, .skills-room__popup-text, .contact-room__text, .bio-room__popup-text, .bio-room__popup-text-left {
+        font-size: 0.7rem;
+    }
+    .bio-room__popup-right, .bio-room__popup-left {
+        margin-top: 5rem;
+    }
+}
