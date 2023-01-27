@@ -200,7 +200,9 @@
   stroke-width: 3px;
 }
 
-.references {
+.testimonials {
+  display: flex;
+  justify-content: center;
   position: absolute;
   height: 20rem;
   width: 100%;
@@ -208,6 +210,9 @@
   transform: translateY(14rem);
   background-color: #090a14;
   z-index: -1;
+}
+.testimonials h1 {
+  margin-top: 1rem;
 }
 
 @media screen and (max-width: 1250px) {
