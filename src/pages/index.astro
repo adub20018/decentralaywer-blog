@@ -2,6 +2,7 @@
 // Component Imports
 import BaseHead from '../components/BaseHead.astro';
 import BlogHeader from '../components/BlogHeader.astro';
+import Footer from '../components/Footer.astro'
 import { SITE } from '../config';
 
 // Component Script:
@@ -64,16 +65,13 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 						  </svg>
 						  <div class="skills-room__popup-right">
 							<h1 class="skills-room__popup-title">Skills</h1>
-							<p class="skills-room__popup-text">Yeah, I heard of C500, he's a true disgrace
-								Trynna act like a king but he ain't got no taste
-								Can't compete with the real, he's a lukewarm fake
-								Can't even compare, he's just a silly mistake</p>
+							<p class="skills-room__popup-text">
+								Welcome to TechLaw Firm, where we specialize in providing legal services to cutting edge technology companies. Our team has a deep understanding of the complex legal issues surrounding the latest advancements in the tech industry.
+							</p>
 						  </div>
 						  <div class="skills-room__popup-left">
-							<p class="skills-room__popup-text">Frederick thinks he's top notch, but his rhymes are a flop,
-								He thinks he's a king, but he's a jester, with a mop.
-								His flow ain't the best, his lyrics are a mess,
-								He's so far behind, he won't pass the final test
+							<p class="skills-room__popup-text">
+								From patent law to data privacy regulations, we have the expertise to protect your business and help you navigate the constantly evolving legal landscape.
 							</p>
 						  </div>
 
@@ -84,17 +82,15 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 						  </div>
 
 						  <div class="bio-room__popup-right">
-							  <p class="bio-room__popup-text">C500 try to talk but it's just all hot air
-								He's just full of drivel, and his words ain't rare
-								He's never been able to string two words together
-								His rhymes are like a broken record, they sound worse than leather</p>
+							  <p class="bio-room__popup-text">
+								Whether you're a startup or a well-established company, we have the knowledge and resources to help you succeed. Contact us today to schedule a consultation and learn how we can help your business thrive.
+							  </p>
 							<h1 class="bio-room__popup-header">Bio</h1>
 						  </div>
 						  <div class="bio-room__popup-left">
-							<p class="bio-room__popup-text">Frederick, you think you can talk your way out of this?
-								You think your bars can hit like Jada's?
-								Your rhymes are stale, your lyrics are weak
-								You can try, but you'll never reach my peak</p>
+							<p class="bio-room__popup-text">
+								Meet John Doe, a partner at TechLaw Firm. John has over a decade of experience in the tech industry and is a leading expert in patent law. He has successfully represented clients in a wide range of technology fields.
+							</p>
 						  </div>
 						</figure>
 
@@ -102,12 +98,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 					  <div class="testimonials">
 						<h1>Testimonials</h1>
 					  </div>
-					  <footer class="footer">
-						<h2 class="footer__content">
-							<a href="ToS.astro">Terms of Service</a>
-							<a href="privacy.astrp">Privacy Policy</a>
-						</h2>
-					  </footer>
+					  <Footer />
 			</main>
 		<script>
 			// defines html elements as variables

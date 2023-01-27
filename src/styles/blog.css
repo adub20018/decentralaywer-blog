@@ -91,6 +91,17 @@
   text-align: center;
 }
 
+.footer {
+  height: 20rem;
+}
+.footer__content {
+  font-family: "MotionControl", serif;
+  margin-top: 12rem;
+}
+.footer__content__subitem {
+  font-family: "MotionControl", serif;
+}
+
 .main-heading {
   text-align: center;
 }

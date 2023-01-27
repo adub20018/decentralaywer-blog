@@ -1,5 +1,8 @@
 .footer {
+    height: 20rem;
     &__content {
+        font-family: $font-heading;
+        margin-top: 12rem;
         &__subitem {
             font-family: $font-heading;
 
