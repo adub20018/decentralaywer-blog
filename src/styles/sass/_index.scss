@@ -107,6 +107,7 @@
         }
         &-text {
             font-size: 0.8rem;
+            text-align: justify;
         }
     }
 }
@@ -237,5 +238,15 @@
         height: 425px;
     }
 
+    .skills-room {
+        &__popup {
 
+            &-title {
+            }
+            &-left {
+                margin-left: 15rem;
+            }
+        }
+
+    }
 }

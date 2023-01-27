@@ -183,6 +183,7 @@
 }
 .contact-room__popup-text {
   font-size: 0.8rem;
+  text-align: justify;
 }
 
 .skills-room, .bio-room, .contact-room {
@@ -272,6 +273,9 @@
   }
   .svg {
     height: 425px;
+  }
+  .skills-room__popup-left {
+    margin-left: 15rem;
   }
 }
 .admin-footer {
