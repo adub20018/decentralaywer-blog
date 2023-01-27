@@ -91,7 +91,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 							<h1 class="bio-room__popup-header">Bio</h1>
 						  </div>
 						  <div class="bio-room__popup-left">
-							<p class="bio-room__popup-text-left">Frederick, you think you can talk your way out of this?
+							<p class="bio-room__popup-text">Frederick, you think you can talk your way out of this?
 								You think your bars can hit like Jada's?
 								Your rhymes are stale, your lyrics are weak
 								You can try, but you'll never reach my peak</p>
@@ -125,7 +125,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 
 			addPopupListeners(mainRoom, mainRoomPopup, 0, -10, -100, -820);
 			addPopupListeners(pinkRoom, pinkRoomPopup, 100, -600, null, null);
-			addPopupListeners(blueRoom, blueRoomPopup, 60, 50, -250, -770);
+			addPopupListeners(blueRoom, blueRoomPopup, -200, 50, -225, -850);
 						
 			// function to show the popup
 			function showAndPositionPopup(room, popup, top, right, top2, right2) {

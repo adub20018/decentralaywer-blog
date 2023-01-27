@@ -80,12 +80,11 @@
         }
         &-text {
             font-size: 0.8rem;
-            margin-top: -20rem; // remove and adjust js position
             margin-bottom: 4rem;
             width: 15rem;
             margin-left: 8rem;
         }
-        &-text-left, &-text, &-header {
+        &-text, &-header {
             color: #a4dddb;
         }
     }
@@ -132,10 +131,57 @@
     width: 100%;
     bottom: 0;
     transform: translateY(14rem);
-    background-color: #090a14;
+    background-color: $color-black;
     z-index: -1;
 }
 
+@media screen and (max-width: 1250px) {
+    .skills-room {
+        &__popup {
+
+            &-left {
+                margin-top: -4rem;
+                margin-left: 5rem;
+                width: 9rem;
+            }
+            &-right {
+                margin-left: -5rem;
+            }
+            &-text {
+                background-color: $color-black;
+                opacity: 0.8;
+                padding: 1rem;
+            }
+        }
+    }
+
+    .bio-room {
+        &__popup {
+            &-left {
+                margin-left: 4rem;
+            }
+            &-right {
+                margin-left: -6rem;
+            }
+            &-text {
+                background-color: $color-black;
+                opacity: 0.8;
+                padding: 1rem;                
+            }
+        }
+    }
+
+    .contact-room {
+        &__popup {
+            margin-left: 4rem;
+            &-text {
+            background-color: $color-black;
+            opacity: 0.8;
+            padding: 1rem;   
+            }
+        }
+    }
+}
 
 @media screen and (max-height: 900px) {
     .main-heading {
@@ -148,9 +194,9 @@
     }
 
     .svg {
-        height: 500px;
+        height: 550px;
     }
-    .skills-room__popup-left, .skills-room__popup-text, .contact-room__text, .bio-room__popup-text, .bio-room__popup-text-left {
+    .skills-room__popup-left, .skills-room__popup-text, .contact-room__popup-text, .bio-room__popup-text, .bio-room__popup-text {
         font-size: 0.7rem;
     }
     .bio-room__popup-right, .bio-room__popup-left {
@@ -161,7 +207,6 @@
         &__popup {
 
             &-title {
-                font-size: 3.5rem
             }
             &-left {
                 margin-top: -4rem;
@@ -176,4 +221,21 @@
             }
         }
     }
+}
+
+@media screen and (max-height: 800px) {
+    .main-heading {
+        &__title {
+            font-size: 4rem;
+        }
+        &__bio {
+            font-size: 0.7rem;
+        }
+    }
+
+    .svg {
+        height: 425px;
+    }
+
+
 }
