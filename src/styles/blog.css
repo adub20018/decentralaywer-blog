@@ -91,12 +91,8 @@
   text-align: center;
 }
 
-.footer {
-  height: 20rem;
-}
 .footer__content {
   font-family: "MotionControl", serif;
-  margin-top: 12rem;
 }
 .footer__content__subitem {
   font-family: "MotionControl", serif;
@@ -229,11 +225,11 @@
 @media screen and (max-width: 1250px) {
   .skills-room__popup-left {
     margin-top: -4rem;
-    margin-left: 5rem;
+    margin-left: 6.5rem;
     width: 9rem;
   }
   .skills-room__popup-right {
-    margin-left: -5rem;
+    margin-left: -7rem;
   }
   .skills-room__popup-text {
     background-color: #090a14;
@@ -241,10 +237,10 @@
     padding: 1rem;
   }
   .bio-room__popup-left {
-    margin-left: 4rem;
+    margin-left: 6rem;
   }
   .bio-room__popup-right {
-    margin-left: -6rem;
+    margin-left: -8rem;
   }
   .bio-room__popup-text {
     background-color: #090a14;
@@ -252,32 +248,13 @@
     padding: 1rem;
   }
   .contact-room__popup {
-    margin-left: 4rem;
+    margin-top: 5rem;
+    margin-left: 9rem;
   }
   .contact-room__popup-text {
     background-color: #090a14;
     opacity: 0.8;
     padding: 1rem;
-  }
-}
-@media screen and (max-height: 900px) {
-  .main-heading__title {
-    font-size: 4.5rem;
-  }
-  .main-heading__bio {
-    font-size: 0.8rem;
-  }
-  .svg {
-    height: 550px;
-  }
-  .skills-room__popup-left, .skills-room__popup-text, .contact-room__popup-text, .bio-room__popup-text, .bio-room__popup-text {
-    font-size: 0.7rem;
-  }
-  .bio-room__popup-right, .bio-room__popup-left {
-    margin-top: 2rem;
-  }
-  .skills-room__popup-left {
-    margin-top: -4rem;
   }
 }
 @media screen and (max-height: 800px) {
@@ -292,6 +269,60 @@
   }
   .skills-room__popup-left {
     margin-left: 15rem;
+  }
+}
+@media screen and (max-width: 950px) {
+  .svg {
+    display: none;
+  }
+  .skills-room__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .skills-room__popup {
+    margin: 0;
+  }
+  .skills-room__popup-right {
+    position: relative;
+    display: block;
+    width: 30rem;
+    margin: 0;
+  }
+  .skills-room__popup-left {
+    position: relative;
+    display: block;
+    width: 30rem;
+    margin: 0;
+    top: 0;
+    left: 0;
+  }
+  .skills-room__popup-title {
+    margin: 0;
+  }
+  .skills-room__popup-text {
+    margin: 0;
+  }
+  .bio-room__popup-right {
+    display: block;
+    position: absolute;
+  }
+  .bio-room__popup-left {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    width: 15rem;
+  }
+  .bio-room__popup-header {
+    margin: 0;
+  }
+  .contact-room__popup {
+    display: block;
+    position: relative;
+    margin: 0;
+    top: 0;
+    left: 0;
   }
 }
 .admin-footer {

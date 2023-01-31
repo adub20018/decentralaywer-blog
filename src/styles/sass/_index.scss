@@ -147,11 +147,11 @@
 
             &-left {
                 margin-top: -4rem;
-                margin-left: 5rem;
+                margin-left: 6.5rem;
                 width: 9rem;
             }
             &-right {
-                margin-left: -5rem;
+                margin-left: -7rem;
             }
             &-text {
                 background-color: $color-black;
@@ -164,10 +164,10 @@
     .bio-room {
         &__popup {
             &-left {
-                margin-left: 4rem;
+                margin-left: 6rem;
             }
             &-right {
-                margin-left: -6rem;
+                margin-left: -8rem;
             }
             &-text {
                 background-color: $color-black;
@@ -179,51 +179,12 @@
 
     .contact-room {
         &__popup {
-            margin-left: 4rem;
+            margin-top: 5rem;
+            margin-left: 9rem;
             &-text {
             background-color: $color-black;
             opacity: 0.8;
             padding: 1rem;   
-            }
-        }
-    }
-}
-
-@media screen and (max-height: 900px) {
-    .main-heading {
-        &__title {
-            font-size: 4.5rem;
-        }
-        &__bio {
-            font-size: 0.8rem;
-        }
-    }
-
-    .svg {
-        height: 550px;
-    }
-    .skills-room__popup-left, .skills-room__popup-text, .contact-room__popup-text, .bio-room__popup-text, .bio-room__popup-text {
-        font-size: 0.7rem;
-    }
-    .bio-room__popup-right, .bio-room__popup-left {
-        margin-top: 2rem;
-    }
-
-    .skills-room {
-        &__popup {
-
-            &-title {
-            }
-            &-left {
-                margin-top: -4rem;
-            }
-        }
-
-    }
-
-    .bio-room {
-        &__popup {
-            &-left {
             }
         }
     }
@@ -255,3 +216,88 @@
 
     }
 }
+
+
+
+// Mobile integration
+@media screen and (max-width: 950px) {
+.svg {
+    display: none;
+}
+
+    .skills-room {
+        &__container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+        &__popup {
+            margin: 0;
+
+            &-right {
+                position: relative;
+                display: block;
+                width: 30rem;
+                margin: 0;
+
+            }
+            &-left {
+                position: relative;
+                display: block;
+                width: 30rem;
+                margin: 0;
+                top: 0;
+                left: 0;
+            }
+            &-title {
+                margin: 0;
+
+            }
+            &-text {
+                margin: 0;
+            }
+        }
+    }
+    
+    .bio-room {
+
+        &__popup {
+            &-right {
+                display: block;
+                position: absolute;
+            }
+            &-left {
+                display: block;
+                position: absolute;
+                z-index: 1;
+                width: 15rem;
+            }
+            &-header {
+                margin: 0;
+
+            }
+            &-text {
+
+            }
+        }
+    }
+    
+    .contact-room {
+        &__popup {
+            display: block;
+            position: relative;
+            margin: 0;
+            top: 0;
+            left: 0;
+        
+            &-header {
+            }
+            &-text {
+            }
+        }
+    }
+
+}
+
