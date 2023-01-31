@@ -278,7 +278,6 @@
   .skills-room__container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
   }
   .skills-room__popup {
@@ -304,17 +303,24 @@
   .skills-room__popup-text {
     margin: 0;
   }
+  .bio-room__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+  }
   .bio-room__popup-right {
     display: block;
-    position: absolute;
+    width: 30rem;
   }
   .bio-room__popup-left {
     display: block;
-    position: absolute;
-    z-index: 1;
-    width: 15rem;
+    width: 30rem;
   }
   .bio-room__popup-header {
+    margin: 0;
+  }
+  .bio-room__popup-text {
     margin: 0;
   }
   .contact-room__popup {

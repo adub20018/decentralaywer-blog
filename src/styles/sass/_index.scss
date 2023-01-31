@@ -229,12 +229,12 @@
         &__container {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
             align-items: center;
 
         }
         &__popup {
             margin: 0;
+            
 
             &-right {
                 position: relative;
@@ -262,24 +262,27 @@
     }
     
     .bio-room {
-
+        &__container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5rem;
+        }
         &__popup {
             &-right {
                 display: block;
-                position: absolute;
+                width: 30rem;
             }
             &-left {
                 display: block;
-                position: absolute;
-                z-index: 1;
-                width: 15rem;
+                width: 30rem;
             }
             &-header {
                 margin: 0;
 
             }
             &-text {
-
+                margin: 0;
             }
         }
     }
