@@ -275,6 +275,11 @@
   .svg {
     display: none;
   }
+  .popup-content {
+    display: grid;
+    grid-template-rows: 1fr 1.2fr 1fr;
+    grid-template-columns: 100%;
+  }
   .skills-room__container {
     display: flex;
     flex-direction: column;
