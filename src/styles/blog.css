@@ -132,6 +132,7 @@
   grid-area: 2/2/3/3;
   justify-self: center;
 }
+
 .skills-room:hover {
   stroke: #73bed3;
 }
@@ -159,6 +160,7 @@
   font-size: 4rem;
   color: #73bed3;
 }
+
 .bio-room:hover {
   stroke: #a4dddb;
 }
@@ -174,12 +176,8 @@
   justify-self: flex-end;
   max-width: 20rem;
 }
-.bio-room__popup-right {
+.bio-room__popup-right, .bio-room__popup-left {
   display: none;
-}
-.bio-room__popup-left {
-  display: none;
-  z-index: 1;
 }
 .bio-room__popup-header {
   font-size: 4rem;
@@ -199,7 +197,7 @@
 .contact-room__popup {
   display: none;
   grid-area: 2/1/3/2;
-  justify-self: flex-start;
+  justify-self: flex-end;
   align-self: flex-end;
   width: 20rem;
   position: absolute;
@@ -251,10 +249,7 @@
     opacity: 0.8;
     padding: 1rem;
   }
-  .bio-room__popup-left {
-    margin: 0;
-  }
-  .bio-room__popup-right {
+  .bio-room__popup-left, .bio-room__popup-right {
     margin: 0;
   }
   .bio-room__popup-text {
@@ -269,6 +264,34 @@
     background-color: #090a14;
     opacity: 0.8;
     padding: 1rem;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .svg {
+    position: absolute;
+    width: 550px;
+  }
+  .popup-content {
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-rows: 2fr 3fr 2fr;
+  }
+  .skills-room__popup-left, .skills-room__popup-right {
+    width: 15rem;
+  }
+  .skills-room__popup-text {
+    font-size: 0.65rem;
+  }
+  .bio-room__popup-left, .bio-room__popup-right {
+    width: 15rem;
+  }
+  .bio-room__popup-text {
+    font-size: 0.65rem;
+  }
+  .contact-room__popup {
+    width: 15rem;
+  }
+  .contact-room__popup-text {
+    font-size: 0.65rem;
   }
 }
 .admin-footer {
