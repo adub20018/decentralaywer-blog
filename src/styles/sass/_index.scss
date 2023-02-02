@@ -13,15 +13,28 @@
         margin-bottom: 2rem;
     }
 }
+.grid {
+}
+
+.popup-content {
+    margin-top: 3rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 90vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.5fr 3fr 1.5fr;
+    grid-template-rows: 1.5fr 3fr 1.5fr;
+    z-index: -1;
+}
 
 .svg {
-    margin-top: 1.5rem;
-    width: 100%;
-    height: 600px;
-
+    width: 700px;
+    grid-area: 2/2/3/3;
+    justify-self: center;
+    
     &__img {
-        width: 100%;
-        height: 1000px;
     }
 
     &__hover-group {
@@ -32,19 +45,25 @@
     &:hover {
         stroke: #73bed3;
     }
+    &__container-right {
+        /* grid-area: (grid-row-start) / (grid-column-start) / (grid-row-end) / (grid-column-end) */
+        grid-area: 2/3/3/4;
+        justify-self: flex-start;
+    }
+    &__container-left {
+        grid-area: 2/1/3/2;
+        justify-self: flex-end
+    }
     &__popup {
+
         &-right {
             display: none;
-            width: 15rem;
-            position: absolute;
+            max-width: 20rem;
         }
         &-left {
             display: none;
-            width: 10rem;
-            position: absolute;
-            z-index: 1;
-            top: 18rem;
-            left: 2rem;
+            max-width: 20rem;
+
         }
         &-title {
             text-decoration: underline;
@@ -52,9 +71,6 @@
             color: $color-blue;
         }
         &-text {
-            font-size: 0.8rem;
-            margin-top: 12rem;
-            margin-left: -5rem;
         }
     }
 }
@@ -63,16 +79,27 @@
     &:hover {
         stroke: #a4dddb;
     } 
+    &__container {
+        &-right {
+            grid-area: 2/3/3/4;
+            justify-self: flex-start;
+            max-width: 20rem;
+        }
+        &-left {
+            grid-area: 2/1/3/2;
+            justify-self: flex-end;
+            max-width: 20rem;
+
+        }
+    }
     &__popup {
         &-right {
             display: none;
-            position: absolute;
         }
         &-left {
             display: none;
-            position: absolute;
             z-index: 1;
-            width: 15rem;
+
         }
         &-header {
             font-size: 4rem;
@@ -81,8 +108,7 @@
         &-text {
             font-size: 0.8rem;
             margin-bottom: 4rem;
-            width: 15rem;
-            margin-left: 8rem;
+
         }
         &-text, &-header {
             color: #a4dddb;
@@ -96,9 +122,9 @@
     }
     &__popup {
         display: none;
-        position: absolute;
-        top: 25rem;
-        left: 2rem;
+        grid-area: 2/1/3/2;
+        justify-self: flex-end;
+        align-self: flex-end;
     
         &-header {
             color: $color-pink;
@@ -106,6 +132,7 @@
             font-size: 4rem;
         }
         &-text {
+            width: 20rem;
             font-size: 0.8rem;
             text-align: justify;
         }
@@ -141,171 +168,226 @@
         }
 }
 
-@media screen and (max-width: 1250px) {
-    .skills-room {
-        &__popup {
-
-            &-left {
-                margin-top: -4rem;
-                margin-left: 6.5rem;
-                width: 9rem;
-            }
-            &-right {
-                margin-left: -7rem;
-            }
-            &-text {
-                background-color: $color-black;
-                opacity: 0.8;
-                padding: 1rem;
-            }
-        }
-    }
-
-    .bio-room {
-        &__popup {
-            &-left {
-                margin-left: 6rem;
-            }
-            &-right {
-                margin-left: -8rem;
-            }
-            &-text {
-                background-color: $color-black;
-                opacity: 0.8;
-                padding: 1rem;                
-            }
-        }
-    }
-
-    .contact-room {
-        &__popup {
-            margin-top: 5rem;
-            margin-left: 9rem;
-            &-text {
-            background-color: $color-black;
-            opacity: 0.8;
-            padding: 1rem;   
-            }
-        }
-    }
-}
-
-@media screen and (max-height: 800px) {
-    .main-heading {
-        &__title {
-            font-size: 4rem;
-        }
-        &__bio {
-            font-size: 0.7rem;
-        }
-    }
+@media screen and (max-width: 1550px) {
 
     .svg {
-        height: 425px;
+        width: 90%;
     }
 
-    .skills-room {
-        &__popup {
-
-            &-title {
-            }
-            &-left {
-                margin-left: 15rem;
-            }
-        }
-
+    .popup-content {
     }
-}
 
-
-
-// Mobile integration
-@media screen and (max-width: 950px) {
-.svg {
-    display: none;
-}
-
-.popup-content {
-    display: grid;
-    grid-template-rows: 1fr 1.2fr 1fr;
-    grid-template-columns: 100%;
-}
     .skills-room {
         &__container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
+            &-right {
+            }
         }
-        &__popup {
-            margin: 0;
+                &__popup {
+                    &-left {
+                    }
+                    &-right {
+                    }
+                    &-text {
+                        background-color: $color-black;
+                        opacity: 0.8;
+                        padding: 1rem;
+                    }
+                }
+            }
+        
+            .bio-room {
+                &__popup {
+                    &-left {
+                    }
+                    &-right {
+                    }
+                    &-text {
+                        background-color: $color-black;
+                        opacity: 0.8;
+                        padding: 1rem;                
+                    }
+                }
+            }
+        
+            .contact-room {
+                &__popup {
+
+                    &-text {
+                    background-color: $color-black;
+                    opacity: 0.8;
+                    padding: 1rem;   
+                    }
+                }
+            }
+}
+
+
+
+// @media screen and (max-width: 1250px) {
+//     .skills-room {
+//         &__popup {
+
+//             &-left {
+//                 margin-top: -4rem;
+//                 margin-left: 6.5rem;
+//                 width: 9rem;
+//             }
+//             &-right {
+//                 margin-left: -7rem;
+//             }
+//             &-text {
+//                 background-color: $color-black;
+//                 opacity: 0.8;
+//                 padding: 1rem;
+//             }
+//         }
+//     }
+
+//     .bio-room {
+//         &__popup {
+//             &-left {
+//                 margin-left: 6rem;
+//             }
+//             &-right {
+//                 margin-left: -8rem;
+//             }
+//             &-text {
+//                 background-color: $color-black;
+//                 opacity: 0.8;
+//                 padding: 1rem;                
+//             }
+//         }
+//     }
+
+//     .contact-room {
+//         &__popup {
+//             margin-top: 5rem;
+//             margin-left: 9rem;
+//             &-text {
+//             background-color: $color-black;
+//             opacity: 0.8;
+//             padding: 1rem;   
+//             }
+//         }
+//     }
+// }
+
+// @media screen and (max-height: 800px) {
+//     .main-heading {
+//         &__title {
+//             font-size: 4rem;
+//         }
+//         &__bio {
+//             font-size: 0.7rem;
+//         }
+//     }
+
+//     .svg {
+//         height: 425px;
+//     }
+
+//     .skills-room {
+//         &__popup {
+
+//             &-title {
+//             }
+//             &-left {
+//                 margin-left: 15rem;
+//             }
+//         }
+
+//     }
+// }
+
+
+
+// // Mobile integration
+// @media screen and (max-width: 950px) {
+// .svg {
+//     display: none;
+// }
+
+// .popup-content {
+//     display: grid;
+//     grid-template-rows: 1fr 1.2fr 1fr;
+//     grid-template-columns: 100%;
+// }
+//     .skills-room {
+//         &__container {
+//             display: flex;
+//             flex-direction: column;
+//             align-items: center;
+
+//         }
+//         &__popup {
+//             margin: 0;
             
 
-            &-right {
-                position: relative;
-                display: block;
-                width: 30rem;
-                margin: 0;
+//             &-right {
+//                 position: relative;
+//                 display: block;
+//                 width: 30rem;
+//                 margin: 0;
 
-            }
-            &-left {
-                position: relative;
-                display: block;
-                width: 30rem;
-                margin: 0;
-                top: 0;
-                left: 0;
-            }
-            &-title {
-                margin: 0;
+//             }
+//             &-left {
+//                 position: relative;
+//                 display: block;
+//                 width: 30rem;
+//                 margin: 0;
+//                 top: 0;
+//                 left: 0;
+//             }
+//             &-title {
+//                 margin: 0;
 
-            }
-            &-text {
-                margin: 0;
-            }
-        }
-    }
+//             }
+//             &-text {
+//                 margin: 0;
+//             }
+//         }
+//     }
     
-    .bio-room {
-        &__container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5rem;
-        }
-        &__popup {
-            &-right {
-                display: block;
-                width: 30rem;
-            }
-            &-left {
-                display: block;
-                width: 30rem;
-            }
-            &-header {
-                margin: 0;
+//     .bio-room {
+//         &__container {
+//             display: flex;
+//             flex-direction: column;
+//             align-items: center;
+//             gap: 5rem;
+//         }
+//         &__popup {
+//             &-right {
+//                 display: block;
+//                 width: 30rem;
+//             }
+//             &-left {
+//                 display: block;
+//                 width: 30rem;
+//             }
+//             &-header {
+//                 margin: 0;
 
-            }
-            &-text {
-                margin: 0;
-            }
-        }
-    }
+//             }
+//             &-text {
+//                 margin: 0;
+//             }
+//         }
+//     }
     
-    .contact-room {
-        &__popup {
-            display: block;
-            position: relative;
-            margin: 0;
-            top: 0;
-            left: 0;
+//     .contact-room {
+//         &__popup {
+//             display: block;
+//             position: relative;
+//             margin: 0;
+//             top: 0;
+//             left: 0;
         
-            &-header {
-            }
-            &-text {
-            }
-        }
-    }
+//             &-header {
+//             }
+//             &-text {
+//             }
+//         }
+//     }
 
-}
+// }
 

@@ -1,5 +1,8 @@
 .footer {
     &__content {
+        position: absolute;
+        bottom: 0;
+        right: 0;
         font-family: $font-heading;
         &__subitem {
             font-family: $font-heading;

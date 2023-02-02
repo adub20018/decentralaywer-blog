@@ -34,8 +34,13 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 					</div>
 
 					<!-- svg integration -->
+
 						<figure class="figure">
-						  <svg
+
+						  <div class="popup-content">
+
+							<!-- TEST BEGIN -->
+							<svg
 							class="svg"
 							viewBox="0 0 1340 1200"
 							preserveAspectRatio="xMinYMin meet"
@@ -63,15 +68,17 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 							  />
 							</g>
 						  </svg>
-
-						  <div class="popup-content">
-							<div class="skills-room__container">
+						<!-- svg integration end -->
+							<!-- TEST END -->
+							<div class="skills-room__container-right">
 								<div class="skills-room__popup-right">
 									<h1 class="skills-room__popup-title">Skills</h1>
 									<p class="skills-room__popup-text">
 										Welcome to TechLaw Firm, where we specialize in providing legal services to cutting edge technology companies. Our team has a deep understanding of the complex legal issues surrounding the latest advancements in the tech industry.
 									</p>
 								</div>
+							</div>
+							<div class="skills-room__container-left">
 								<div class="skills-room__popup-left">
 									<p class="skills-room__popup-text">
 										From patent law to data privacy regulations, we have the expertise to protect your business and help you navigate the constantly evolving legal landscape.
@@ -79,20 +86,21 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 								</div>
 							</div>
 
-								<div class="bio-room__container">
+								<div class="bio-room__container-right">
 									<div class="bio-room__popup-right">
 										<p class="bio-room__popup-text">
 											Whether you're a startup or a well-established company, we have the knowledge and resources to help you succeed. Contact us today to schedule a consultation and learn how we can help your business thrive.
 										</p>
 										<h1 class="bio-room__popup-header">Bio</h1>
 									</div>
+								</div>
+								<div class="bio-room__container-left">
 									<div class="bio-room__popup-left">
 										<p class="bio-room__popup-text">
 											Meet John Doe, a partner at TechLaw Firm. John has over a decade of experience in the tech industry and is a leading expert in patent law. He has successfully represented clients in a wide range of technology fields.
 										</p>
 									</div>
 								</div>
-
 								<div class="contact-room__popup">
 									<h1 class="contact-room__popup-header">Contact</h1>
 									<a class="contact-room__popup-text" href="mailto: gaurav@decentralaw.ai">Email Me!</a> <br>
@@ -102,7 +110,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 							</div>
 						</figure>
 
-					  <!-- svg integration end -->
+
 					  <div class="testimonials">
 						<h1>Testimonials</h1>
 					  </div>
@@ -121,38 +129,28 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 			var blueRoomPopup = document.querySelectorAll(".bio-room__popup-right, .bio-room__popup-left")
 
 			// selects the elements and listens for hover motions
-			function addPopupListeners(room, popup, top, right, top2, right2) {
+			function addPopupListeners(room, popup) {
 				room.addEventListener("mouseover", function() {
-					showAndPositionPopup(room, popup, top, right, top2, right2);
+					showPopup(room, popup);
 				});
 				room.addEventListener("mouseout", function() {
 					hidePopup(popup);
 				});
 			}
 
-			addPopupListeners(mainRoom, mainRoomPopup, 0, -10, -100, -820);
-			addPopupListeners(pinkRoom, pinkRoomPopup, 100, -600, null, null);
-			addPopupListeners(blueRoom, blueRoomPopup, -250, 50, -225, -850);
+			addPopupListeners(mainRoom, mainRoomPopup);
+			addPopupListeners(pinkRoom, pinkRoomPopup);
+			addPopupListeners(blueRoom, blueRoomPopup);
 						
 			// function to show the popup
-			function showAndPositionPopup(room, popup, top, right, top2, right2) {
+			function showPopup(room, popup) {
 				var iconPos = room.getBoundingClientRect();
 				if (popup instanceof NodeList) {
 					for (let i = 0; i < popup.length; i++) {
 						var popupElem = popup[i];
-						if (i === 0) {
-							popupElem.style.left = iconPos.right + right + "px";
-							popupElem.style.top = window.scrollY + iconPos.top + top + "px";
-						}
-						else if (i === 1) {
-							popupElem.style.left = iconPos.right + right2 + "px";
-							popupElem.style.top = window.scrollY + iconPos.top + top2 + "px";
-						}
 						popupElem.style.display = "block";
 					}
 				} else {
-					popup.style.left = iconPos.right + right + "px";
-					popup.style.top = window.scrollY + iconPos.top + top + "px";
 					popup.style.display = "block";
 				}
 			}
