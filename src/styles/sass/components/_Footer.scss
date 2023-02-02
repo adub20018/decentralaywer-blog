@@ -1,8 +1,11 @@
 .footer {
-    &__content {
+    &__container {
+        height: 10rem;
         position: absolute;
         bottom: 0;
-        right: 0;
+        right: 29rem;
+    }
+    &__content {
         font-family: $font-heading;
         &__subitem {
             font-family: $font-heading;

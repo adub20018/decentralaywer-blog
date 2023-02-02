@@ -33,13 +33,9 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 						<p class="main-heading__bio">{description}</p>
 					</div>
 
-					<!-- svg integration -->
-
-						<figure class="figure">
-
-						  <div class="popup-content">
-
-							<!-- TEST BEGIN -->
+					<figure class="figure">
+						<div class="popup-content">
+						  <!-- svg integration -->
 							<svg
 							class="svg"
 							viewBox="0 0 1340 1200"
@@ -69,7 +65,6 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 							</g>
 						  </svg>
 						<!-- svg integration end -->
-							<!-- TEST END -->
 							<div class="skills-room__container-right">
 								<div class="skills-room__popup-right">
 									<h1 class="skills-room__popup-title">Skills</h1>
@@ -113,9 +108,10 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 
 					  <div class="testimonials">
 						<h1>Testimonials</h1>
-					  </div>
-					  <Footer />
+						<Footer />
+					</div>
 					</main>
+
 		<script>
 			// defines html elements as variables
 			var mainRoom = document.querySelector(".skills-room");
