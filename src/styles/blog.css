@@ -297,6 +297,19 @@
     font-size: 0.65rem;
   }
 }
+@media screen and (max-height: 860px) {
+  .svg {
+    margin-top: 1rem;
+    width: 500px;
+    justify-self: center;
+  }
+}
+@media screen and (max-height: 720px) {
+  .svg {
+    margin-top: 2rem;
+    width: 400px;
+  }
+}
 @media screen and (max-width: 750px) {
   .testimonials {
     display: none;
