@@ -162,6 +162,11 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 						nav.style.textDecoration = "";
 					}
 				});
+
+				nav.addEventListener("click", function() {
+					showPopup(room, popup, nav);
+					nav.style.color = color
+				});
 			}
 
 
@@ -201,13 +206,13 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 
 				// hides the given popup
 				function hidePopup(popup) {
-					// loops through elements and sets display to none
+					// loops through elements and sets display to none & checks that screen is in desktop view
 					if (popup instanceof NodeList && window.innerWidth >= 750) {
 						for (let i = 0; i < popup.length; i++) {
 							popup[i].style.display = "none";
 						}
 					} else {
-						// display for single element contact room 
+						// display for single element contact room & checks that screen is in desktop view
 						if (window.innerWidth >= 750) {
     					popup.style.display = "none";
 						}
