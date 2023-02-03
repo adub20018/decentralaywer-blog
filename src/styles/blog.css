@@ -328,6 +328,7 @@
     margin-bottom: 2rem;
   }
   .popup-content {
+    grid-template-columns: 1fr;
     grid-template-rows: 150px 430px 300px 450px 270px 250px 500px;
   }
   .svg {
