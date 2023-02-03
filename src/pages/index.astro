@@ -126,15 +126,20 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 
 			let clickedRoom = null;
 
-			// selects the elements and listens for hover motions
+			// adds event listeners to the given room and popup elements
 			function addPopupListeners(room, popup) {
+				// detects hover
 				room.addEventListener("mouseover", function() {
 					showPopup(room, popup);
 				});
+
+				// detects click
 				room.addEventListener("click", function () {
 					showPopup(room, popup);
 					room.classList.toggle("clicked")
 				});
+
+				// detects mouse off unless room is clicked
 				room.addEventListener("mouseout", function() {
 					if (!room.classList.contains("clicked")) {
 						hidePopup(popup);
@@ -142,29 +147,44 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 				});
 			}
 
+			// calls the popup listeners with each room and their corresponding popups
 			addPopupListeners(mainRoom, mainRoomPopup);
 			addPopupListeners(pinkRoom, pinkRoomPopup);
 			addPopupListeners(blueRoom, blueRoomPopup);
 						
-			// function to show the popup
+			// function to show the popup to the corresponding room
 			function showPopup(room, popup) {
-				var iconPos = room.getBoundingClientRect();
+				// if a room is clicked and hover moves to new room, popup is hidden 
+				if (clickedRoom !== null && clickedRoom !== room) {
+					hidePopup(clickedRoom.popup);
+					clickedRoom.classList.remove("clicked");
+				}
+
+				// updates the clicked room to display only the new text
+				clickedRoom = room;
+				room.popup = popup;
+
+				// loops through popup elements and sets display to block
 				if (popup instanceof NodeList) {
 					for (let i = 0; i < popup.length; i++) {
 						var popupElem = popup[i];
 						popupElem.style.display = "block";
 					}
 				} else {
+					// display for contact room due to single element
 					popup.style.display = "block";
 				}
 			}
 
+				// hides the given popup
 				function hidePopup(popup) {
+					// loops through elements and sets display to none
 					if (popup instanceof NodeList) {
 						for (let i = 0; i < popup.length; i++) {
 							popup[i].style.display = "none";
 						}
 					} else {
+						// display for single element contact room 
     					popup.style.display = "none";
 					}
 				}
