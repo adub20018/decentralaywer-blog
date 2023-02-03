@@ -32,7 +32,7 @@
   }
 
 .skills-room {
-    &:hover {
+    &:hover, &:checked {
         stroke: #73bed3;
     }
     &__container {
@@ -153,6 +153,10 @@
         h1 {
             margin-top: 1rem;
         }
+}
+
+.clicked {
+    opacity: 0;
 }
 
 @media screen and (max-width: 1550px) {

@@ -136,7 +136,7 @@
   justify-self: center;
 }
 
-.skills-room:hover {
+.skills-room:hover, .skills-room:checked {
   stroke: #73bed3;
 }
 .skills-room__container-right {
@@ -241,6 +241,10 @@
 }
 .testimonials h1 {
   margin-top: 1rem;
+}
+
+.clicked {
+  opacity: 0;
 }
 
 @media screen and (max-width: 1550px) {
