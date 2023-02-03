@@ -129,8 +129,14 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 				room.addEventListener("mouseover", function() {
 					showPopup(room, popup);
 				});
+				room.addEventListener("click", function () {
+					showPopup(room, popup);
+					room.classList.toggle("clicked")
+				});
 				room.addEventListener("mouseout", function() {
-					hidePopup(popup);
+					if (!room.classList.contains("clicked")) {
+						hidePopup(popup);
+					}
 				});
 			}
 
