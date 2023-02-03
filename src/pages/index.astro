@@ -114,23 +114,30 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 
 		<script>
 			// defines html elements as variables
-			var mainRoom = document.querySelector(".skills-room");
-			var mainRoomPopup = document.querySelectorAll(".skills-room__popup-right, .skills-room__popup-left");
+			const mainRoom = document.querySelector(".skills-room");
+			const mainRoomPopup = document.querySelectorAll(".skills-room__popup-right, .skills-room__popup-left");
 			
 			// pink-room variable definitions
-			var pinkRoom = document.querySelector(".contact-room");
-			var pinkRoomPopup = document.querySelector(".contact-room__popup")
+			const pinkRoom = document.querySelector(".contact-room");
+			const pinkRoomPopup = document.querySelector(".contact-room__popup")
 
-			var blueRoom = document.querySelector(".bio-room");
-			var blueRoomPopup = document.querySelectorAll(".bio-room__popup-right, .bio-room__popup-left")
+			const blueRoom = document.querySelector(".bio-room");
+			const blueRoomPopup = document.querySelectorAll(".bio-room__popup-right, .bio-room__popup-left")
+
+			// nav variables
+			const skillsNav = document.querySelector(".skillsNav");
+			const bioNav = document.querySelector(".bioNav");
+			const contactNav = document.querySelector(".contactNav");
 
 			let clickedRoom = null;
 
 			// adds event listeners to the given room and popup elements
-			function addPopupListeners(room, popup) {
+			function addPopupListeners(room, popup, nav, color) {
 				// detects hover
 				room.addEventListener("mouseover", function() {
 					showPopup(room, popup);
+					nav.style.color = color;
+					nav.style.textDecoration = "underline";
 				});
 
 				// detects click
@@ -143,14 +150,16 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 				room.addEventListener("mouseout", function() {
 					if (!room.classList.contains("clicked")) {
 						hidePopup(popup);
+						nav.style.color = "";
+						nav.style.textDecoration = "";
 					}
 				});
 			}
 
 			// calls the popup listeners with each room and their corresponding popups
-			addPopupListeners(mainRoom, mainRoomPopup);
-			addPopupListeners(pinkRoom, pinkRoomPopup);
-			addPopupListeners(blueRoom, blueRoomPopup);
+			addPopupListeners(mainRoom, mainRoomPopup, skillsNav, "#73bed3");
+			addPopupListeners(pinkRoom, pinkRoomPopup, contactNav, "#df84a5");
+			addPopupListeners(blueRoom, blueRoomPopup, bioNav, "#a4dddb");
 						
 			// function to show the popup to the corresponding room
 			function showPopup(room, popup) {
