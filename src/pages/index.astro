@@ -130,20 +130,28 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 			const contactNav = document.querySelector(".contactNav");
 
 			let clickedRoom = null;
+			let clickedNav = null;
 
 			// adds event listeners to the given room and popup elements
 			function addPopupListeners(room, popup, nav, color) {
 				// detects hover
 				room.addEventListener("mouseover", function() {
-					showPopup(room, popup);
+					showPopup(room, popup, nav);
 					nav.style.color = color;
 					nav.style.textDecoration = "underline";
 				});
 
 				// detects click
 				room.addEventListener("click", function () {
-					showPopup(room, popup);
+					showPopup(room, popup, nav);
 					room.classList.toggle("clicked")
+
+					  // reset previously clicked nav element
+					if (clickedNav !== null && clickedNav !== nav) {
+						clickedNav.style.color = "";
+						clickedNav.style.textDecoration = "";
+					}
+					clickedNav = nav;
 				});
 
 				// detects mouse off unless room is clicked
@@ -162,16 +170,21 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 			addPopupListeners(blueRoom, blueRoomPopup, bioNav, "#a4dddb");
 						
 			// function to show the popup to the corresponding room
-			function showPopup(room, popup) {
+			function showPopup(room, popup, nav) {
 				// if a room is clicked and hover moves to new room, popup is hidden 
 				if (clickedRoom !== null && clickedRoom !== room) {
 					hidePopup(clickedRoom.popup);
 					clickedRoom.classList.remove("clicked");
+					clickedNav.style.color = "";
+    				clickedNav.style.textDecoration = "";
 				}
 
-				// updates the clicked room to display only the new text
+				// updates the clicked room/nav to display only the new text
 				clickedRoom = room;
 				room.popup = popup;
+				clickedNav = nav;
+				nav.style.color = room.color;
+				nav.style.textDecoration = "underline";
 
 				// loops through popup elements and sets display to block
 				if (popup instanceof NodeList) {
