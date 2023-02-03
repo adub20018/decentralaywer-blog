@@ -164,6 +164,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 				});
 			}
 
+
 			// calls the popup listeners with each room and their corresponding popups
 			addPopupListeners(mainRoom, mainRoomPopup, skillsNav, "#73bed3");
 			addPopupListeners(pinkRoom, pinkRoomPopup, contactNav, "#df84a5");
@@ -201,13 +202,15 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 				// hides the given popup
 				function hidePopup(popup) {
 					// loops through elements and sets display to none
-					if (popup instanceof NodeList) {
+					if (popup instanceof NodeList && window.innerWidth >= 750) {
 						for (let i = 0; i < popup.length; i++) {
 							popup[i].style.display = "none";
 						}
 					} else {
 						// display for single element contact room 
+						if (window.innerWidth >= 750) {
     					popup.style.display = "none";
+						}
 					}
 				}
 		</script>
