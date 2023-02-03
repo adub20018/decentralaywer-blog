@@ -128,20 +128,13 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 
 			// selects the elements and listens for hover motions
 			function addPopupListeners(room, popup) {
+				room.addEventListener("mouseover", function() {
+					showPopup(room, popup);
+				});
 				room.addEventListener("click", function () {
 					showPopup(room, popup);
-					room.classList.add("clicked");
-					clickedRoom = room;
+					room.classList.toggle("clicked")
 				});
-
-				room.addEventListener("mouseover", function() {
-					if (clickedRoom && clickedRoom !== room) {
-						clickedRoom.classList.remove("clicked");
-						hidePopup(popup);
-					}
-					showPopup(room, popup);
-				});
-
 				room.addEventListener("mouseout", function() {
 					if (!room.classList.contains("clicked")) {
 						hidePopup(popup);
