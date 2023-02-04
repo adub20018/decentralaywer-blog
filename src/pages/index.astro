@@ -166,7 +166,8 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 				nav.addEventListener("click", function() {
 					showPopup(room, popup, nav);
 					nav.style.color = color
-					room.style.opacity = "0";
+					room.style.fill = "transparent";
+					clickedRoom.style.stroke = color;
 				});
 			}
 
@@ -184,7 +185,8 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 					clickedRoom.classList.remove("clicked");
 					clickedNav.style.color = "";
     				clickedNav.style.textDecoration = "";
-					clickedRoom.style.opacity = "";
+					clickedRoom.style.fill = "";
+					clickedRoom.style.stroke = "";
 
 				}
 
