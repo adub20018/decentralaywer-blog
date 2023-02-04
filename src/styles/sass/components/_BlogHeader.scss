@@ -42,6 +42,15 @@ span {
     color: #df84a5;
 }
 
+
+@media screen and (max-width: 750px) {
+    .top-nav {
+        &__subitem, &__title {
+            font-size: 1.7rem;
+        }
+    }
+}
+
 @media (max-width: 32em) {
     .top-nav {
         display: none;
