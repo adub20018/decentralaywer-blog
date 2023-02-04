@@ -603,6 +603,10 @@ blockquote .source {
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Dogica", sans-serif;
   font-size: 1rem;

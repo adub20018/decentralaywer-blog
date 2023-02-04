@@ -4,12 +4,16 @@
   margin: 0;
 }
 
+html {
+scroll-behavior: smooth;
+}
+
 body {
   font-family: $font-dogica;
   font-size: 1rem;
   line-height: 1.9;
   background: $color-theme-bg;
-  text-align: justify ;
+  text-align: justify;
 }
 
 .content {
