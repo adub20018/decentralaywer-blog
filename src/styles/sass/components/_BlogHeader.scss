@@ -4,20 +4,32 @@
     background-color: #090a14;
     border-bottom: 2px solid #bec0be;
 
-   .top-nav__content {
-        margin: 0;
-        font-size: 1.1rem;
-        max-width: 100%;
-        display: flex;
-        justify-content: flex-end;
+   &__content {
+            margin: 0;
+            font-size: 1.1rem;
+            max-width: 100%;
+            text-align: right;
+            margin-left: 1rem;
+            margin-right: 1rem;
     }
 
-    .top-nav__subitem {
+    &__subitem {
         font-family: $font-heading;
+        font-size: 2.2rem;
+        padding: 0.8rem 1rem;
+        font-weight: 700;
+        display: inline-block; 
+    }
+
+    &__title {
         font-size: 2.2rem;
         padding: 0.8rem;
         font-weight: 700;
+        display: inline-block;
     }
+}
+span {
+    float: left;
 }
 
 

@@ -1,10 +1,11 @@
 ---
 import { SITE } from '../config';
+let { title } = SITE;
 ---
 <header class="top-nav">
 	<article>
 		<h1 class="top-nav__content">
-			<a href="/" class="top-nav__subitem">Home</a>
+			<span><a href="/" class="top-nav__title">{title}</a></span>
 			<a class="top-nav__subitem skillsNav">Skills</a>
 			<a class="top-nav__subitem bioNav">Bio</a>
 			<a class="top-nav__subitem contactNav">Contact</a>
