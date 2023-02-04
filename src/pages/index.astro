@@ -166,6 +166,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 				nav.addEventListener("click", function() {
 					showPopup(room, popup, nav);
 					nav.style.color = color
+					room.style.opacity = "0";
 				});
 			}
 
@@ -183,6 +184,8 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 					clickedRoom.classList.remove("clicked");
 					clickedNav.style.color = "";
     				clickedNav.style.textDecoration = "";
+					clickedRoom.style.opacity = "";
+
 				}
 
 				// updates the clicked room/nav to display only the new text
@@ -191,6 +194,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 				clickedNav = nav;
 				nav.style.color = room.color;
 				nav.style.textDecoration = "underline";
+				room.style.opacity = "";
 
 				// loops through popup elements and sets display to block
 				if (popup instanceof NodeList) {
