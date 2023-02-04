@@ -49,6 +49,18 @@ span {
   float: left;
 }
 
+.skillsNav:hover {
+  color: #73bed3;
+}
+
+.bioNav:hover {
+  color: #a4dddb;
+}
+
+.contactNav:hover {
+  color: #df84a5;
+}
+
 @media (max-width: 32em) {
   .top-nav {
     display: none;
