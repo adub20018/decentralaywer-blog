@@ -65,7 +65,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 							</g>
 						  </svg>
 						<!-- svg integration end -->
-							<div class="skills-room__container-right">
+							<div class="skills-room__container-right" id="skillsID">
 								<div class="skills-room__popup-right">
 									<h1 class="skills-room__popup-title">Skills</h1>
 									<p class="skills-room__popup-text">
@@ -81,7 +81,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 								</div>
 							</div>
 
-								<div class="bio-room__container-right">
+								<div class="bio-room__container-right" id="bioID">
 									<div class="bio-room__popup-right">
 										<p class="bio-room__popup-text">
 											Whether you're a startup or a well-established company, we have the knowledge and resources to help you succeed. Contact us today to schedule a consultation and learn how we can help your business thrive.
@@ -96,7 +96,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 										</p>
 									</div>
 								</div>
-								<div class="contact-room__popup">
+								<div class="contact-room__popup" id="contactID">
 									<h1 class="contact-room__popup-title">Contact</h1>
 									<a class="contact-room__popup-text" href="mailto: gaurav@decentralaw.ai">Email Me!</a> <br>
 									<a class="contact-room__popup-text" href="https://calendly.com/decentralawyer">Book an appointment</a>
@@ -113,6 +113,8 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 					</main>
 
 		<script>
+import { LEGACY_ASTRO_CONFIG_KEYS } from "astro/dist/core/config/config";
+
 			// defines html elements as variables
 			const mainRoom = document.querySelector(".skills-room");
 			const mainRoomPopup = document.querySelectorAll(".skills-room__popup-right, .skills-room__popup-left");
@@ -131,6 +133,8 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 
 			let clickedRoom = null;
 			let clickedNav = null;
+
+			// 
 
 			// adds event listeners to the given room and popup elements
 			function addPopupListeners(room, popup, nav, color) {
@@ -169,13 +173,25 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 					room.style.fill = "transparent";
 					clickedRoom.style.stroke = color;
 				});
+				
 			}
-
+			
+			function mobileScreenListener (nav, id) {
+				if (window.innerWidth <= 750) {
+					nav.setAttribute("href", id);
+				} else {
+					nav.removeAttribute("href");
+  }
+			}
 
 			// calls the popup listeners with each room and their corresponding popups
 			addPopupListeners(mainRoom, mainRoomPopup, skillsNav, "#73bed3");
 			addPopupListeners(pinkRoom, pinkRoomPopup, contactNav, "#df84a5");
 			addPopupListeners(blueRoom, blueRoomPopup, bioNav, "#a4dddb");
+
+			mobileScreenListener(skillsNav, "#skillsID");
+			mobileScreenListener(contactNav, "#contactID");
+			mobileScreenListener(bioNav, "#bioID");
 						
 			// function to show the popup to the corresponding room
 			function showPopup(room, popup, nav) {
@@ -187,7 +203,6 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
     				clickedNav.style.textDecoration = "";
 					clickedRoom.style.fill = "";
 					clickedRoom.style.stroke = "";
-
 				}
 
 				// updates the clicked room/nav to display only the new text
@@ -224,6 +239,8 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 						}
 					}
 				}
+
+
 		</script>
 	</body>
 </html>
