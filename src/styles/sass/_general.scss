@@ -8,6 +8,10 @@ html {
 scroll-behavior: smooth;
 }
 
+a {
+  text-decoration: none !important;
+}
+
 body {
   font-family: $font-dogica;
   font-size: 1rem;

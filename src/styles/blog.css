@@ -51,6 +51,7 @@ span {
 
 .skillsNav:hover {
   color: #73bed3;
+  transition: ease-in-out 0.3s;
 }
 
 .bioNav:hover {
@@ -610,6 +611,10 @@ blockquote .source {
 
 html {
   scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none !important;
 }
 
 body {
