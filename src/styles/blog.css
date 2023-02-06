@@ -22,6 +22,7 @@
   margin: 0;
   background-color: #090a14;
   border-bottom: 2px solid #bec0be;
+  height: auto;
 }
 .top-nav__content {
   margin: 0;
@@ -30,6 +31,7 @@
   text-align: right;
   margin-left: 1rem;
   margin-right: 1rem;
+  line-height: 35px;
 }
 .top-nav__subitem {
   font-family: "MotionControl", serif;
@@ -37,6 +39,17 @@
   padding: 0.8rem 1rem;
   font-weight: 700;
   display: inline-block;
+}
+.top-nav__subitem:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #73bed3;
+  transition: width 0.3s;
+}
+.top-nav__subitem:hover::after {
+  width: 100%;
 }
 .top-nav__title {
   font-size: 2.2rem;
@@ -51,7 +64,6 @@ span {
 
 .skillsNav:hover {
   color: #73bed3;
-  transition: ease-in-out 0.3s;
 }
 
 .bioNav:hover {
