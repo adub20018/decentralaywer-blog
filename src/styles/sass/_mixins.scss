@@ -1,0 +1,15 @@
+// styles for the nav slider animation
+@mixin nav-slider-animation($color) {
+    &:after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 3px;
+      background: $color;
+      transition: width 0.3s;
+    }
+    // displays slider animation on hover
+    &:hover::after {
+      width: 100%;
+    }
+  }

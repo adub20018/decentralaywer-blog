@@ -21,21 +21,7 @@
         padding: 0.8rem 1rem;
         font-weight: 700;
         display: inline-block; 
-        
-    // styles for the nav slider animation
-    &:after {
-        content: '';
-        display: block;
-        width: 0;
-        height: 3px;
-        background: $color-blue;
-        transition: width 0.3s;
-      }
-  
-      // displays slider animation on hover
-      &:hover::after {
-        width: 100%;
-      }
+        @include nav-slider-animation($color-blue);
     }
 
     &__title {

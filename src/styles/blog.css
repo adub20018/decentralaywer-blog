@@ -151,12 +151,19 @@ span {
 .footer__content {
   font-family: "Dogica", sans-serif;
   font-size: 1rem;
-  padding: 1rem 2rem;
+  padding: 1rem 1.5rem;
 }
-.footer__content__subitem {
+.footer__content:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #ebede9;
+  transition: width 0.3s;
+}
+.footer__content:hover::after {
   width: 100%;
 }
-
 .main-heading {
   text-align: center;
 }

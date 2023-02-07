@@ -8,14 +8,13 @@
         align-items: flex-end;
         height: 6rem;
         background-color: $color-blue;
-
     }
     &__content {
         font-family: $font-dogica;
         font-size: 1rem;
-        padding: 1rem 2rem;
-        &__subitem {
-            width: 100%;
-        }
+        padding: 1rem 1.5rem;
+        @include nav-slider-animation($color-white);
+    }
+    &__subitem {
     }
 }
