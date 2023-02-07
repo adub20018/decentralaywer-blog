@@ -64,14 +64,17 @@ span {
 
 .skillsNav:hover {
   color: #73bed3;
+  cursor: pointer;
 }
 
 .bioNav:hover {
   color: #a4dddb;
+  cursor: pointer;
 }
 
 .contactNav:hover {
   color: #df84a5;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 750px) {

@@ -22,7 +22,7 @@
         font-weight: 700;
         display: inline-block; 
         
-            // styles for the nav orange slider animation
+    // styles for the nav slider animation
     &:after {
         content: '';
         display: block;
@@ -51,12 +51,15 @@ span {
 
 .skillsNav:hover {
     color: #73bed3 ;
+    cursor: pointer;
 }
 .bioNav:hover {
     color: #a4dddb ;
+    cursor: pointer;
 }
 .contactNav:hover {
     color: #df84a5;
+    cursor: pointer;
 }
 
 
