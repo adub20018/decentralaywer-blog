@@ -136,17 +136,25 @@ span {
   text-align: center;
 }
 
+.footer {
+  width: 100%;
+  position: relative;
+  bottom: -70rem;
+}
 .footer__container {
-  height: 10rem;
-  position: absolute;
-  bottom: 0;
-  right: 29rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 6rem;
+  background-color: #73bed3;
 }
 .footer__content {
-  font-family: "MotionControl", serif;
+  font-family: "Dogica", sans-serif;
+  font-size: 1rem;
+  padding: 1rem 2rem;
 }
 .footer__content__subitem {
-  font-family: "MotionControl", serif;
+  width: 100%;
 }
 
 .main-heading {
@@ -277,10 +285,10 @@ span {
   display: flex;
   justify-content: center;
   position: absolute;
-  height: 20rem;
+  height: 32.4rem;
+  border-bottom: 2px solid #ebede9;
   width: 100%;
-  bottom: 0;
-  transform: translateY(14rem);
+  transform: translateY(48rem);
   background-color: #090a14;
   z-index: -1;
 }
