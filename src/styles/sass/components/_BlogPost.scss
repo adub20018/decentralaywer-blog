@@ -1,18 +1,30 @@
 
 .blog-post {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     &__header {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 75vw;
+        width: 60vw;
         padding-bottom: 2rem;
         margin-top: 3rem;
         margin-bottom: 2rem;
         border-bottom: 4px solid $theme-divider;
     }
     &__content {
-        width: 75vw;
+        max-width: 50vw;
         margin-bottom: 2rem;
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        p {
+            padding: 0.8rem;
+        }
     }
     &__date {
         color: $color-blue;

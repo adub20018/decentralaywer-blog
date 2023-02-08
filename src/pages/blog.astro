@@ -23,7 +23,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
     <div class="wrapper">
         <main class="content">
         <!-- <h1>Blog</h1> -->
-    <section class="blog-preview__wrapper"aria-label="Blog post list">
+    <section class="blog-preview__wrapper" aria-label="Blog post list">
         {allPosts.map((p) => <BlogPostPreview post={p} />)}
     </section>
     </main>

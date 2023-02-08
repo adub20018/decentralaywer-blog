@@ -115,19 +115,31 @@ span {
   color: #ebede9;
 }
 
+.blog-post__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .blog-post__header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 75vw;
+  width: 60vw;
   padding-bottom: 2rem;
   margin-top: 3rem;
   margin-bottom: 2rem;
   border-bottom: 4px solid #ebede9;
 }
 .blog-post__content {
-  width: 75vw;
+  max-width: 50vw;
   margin-bottom: 2rem;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.blog-post__content p {
+  padding: 0.8rem;
 }
 .blog-post__date {
   color: #73bed3;
