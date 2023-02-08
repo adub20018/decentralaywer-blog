@@ -712,8 +712,9 @@ html {
   scroll-behavior: smooth;
 }
 
-a {
+a, a:focus {
   text-decoration: none !important;
+  outline: 0;
 }
 
 body {
