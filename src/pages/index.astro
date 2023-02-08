@@ -113,8 +113,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf()
 					</main>
 
 		<script>
-import { LEGACY_ASTRO_CONFIG_KEYS } from "astro/dist/core/config/config";
-
+		window.onload = function() {
 			// defines html elements as variables
 			const mainRoom = document.querySelector(".skills-room");
 			const mainRoomPopup = document.querySelectorAll(".skills-room__popup-right, .skills-room__popup-left");
@@ -237,7 +236,7 @@ import { LEGACY_ASTRO_CONFIG_KEYS } from "astro/dist/core/config/config";
 						}
 					}
 				}
-
+			}
 
 		</script>
 	</body>
