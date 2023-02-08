@@ -12,5 +12,5 @@ const { post } = Astro.props;
 		<a href={post.url}><h1 class="post-preview__title">{post.frontmatter.title}</h1></a>
 	</header>
 	<p>{post.frontmatter.description}</p>
-	<a href={post.url}>Read more</a>
+	<a class="read-more" href={post.url}>Read more</a>
 </article>

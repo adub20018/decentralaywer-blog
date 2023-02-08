@@ -9,8 +9,8 @@
     display: flex;
     flex-direction: column;
     padding-bottom: 2rem;
-    border-bottom: 4px solid $theme-divider;
-    width: 90%;
+    border-bottom: 3px solid $theme-divider;
+    width: 60vw;
 
     &__header {
         text-align: left;
@@ -27,3 +27,9 @@
     }
 }
 
+.read-more {
+    margin-top: 1rem;
+    @include nav-slider-animation($color-blue);
+    width: 9rem;
+    margin-bottom: -1.5rem;
+}

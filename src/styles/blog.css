@@ -98,8 +98,8 @@ span {
   display: flex;
   flex-direction: column;
   padding-bottom: 2rem;
-  border-bottom: 4px solid #ebede9;
-  width: 90%;
+  border-bottom: 3px solid #ebede9;
+  width: 60vw;
 }
 .post-preview__header {
   text-align: left;
@@ -113,6 +113,23 @@ span {
 .post-preview__date {
   margin-top: 1rem;
   color: #ebede9;
+}
+
+.read-more {
+  margin-top: 1rem;
+  width: 9rem;
+  margin-bottom: -1.5rem;
+}
+.read-more:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #73bed3;
+  transition: width 0.3s;
+}
+.read-more:hover::after {
+  width: 100%;
 }
 
 .blog-post__container {
