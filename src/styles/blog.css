@@ -141,7 +141,7 @@ span {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 60vw;
+  width: 70vw;
   padding-bottom: 2rem;
   margin-top: 3rem;
   margin-bottom: 2rem;
@@ -165,6 +165,11 @@ span {
   text-align: center;
 }
 
+@media screen and (max-width: 900px) {
+  .blog-post__content {
+    max-width: 70vw;
+  }
+}
 .footer {
   width: 100%;
   position: relative;
@@ -175,7 +180,7 @@ span {
   justify-content: flex-end;
   align-items: flex-end;
   height: 6rem;
-  background-color: #73bed3;
+  background-color: #090a14;
 }
 .footer__content {
   font-family: "Dogica", sans-serif;
