@@ -164,6 +164,41 @@ span {
 .footer__content:hover::after {
   width: 100%;
 }
+@media screen and (max-width: 815px) {
+  .footer {
+    bottom: -68.1rem;
+  }
+}
+@media screen and (max-width: 750px) {
+  .footer {
+    bottom: -132rem;
+  }
+}
+@media screen and (max-width: 625px) {
+  .footer {
+    bottom: -128rem;
+  }
+}
+@media screen and (max-width: 570px) {
+  .footer {
+    bottom: -120rem;
+  }
+}
+@media screen and (max-width: 512px) {
+  .footer {
+    bottom: -128rem;
+  }
+}
+@media screen and (max-width: 486px) {
+  .footer {
+    bottom: -122rem;
+  }
+}
+@media screen and (max-width: 420px) {
+  .footer {
+    bottom: -120rem;
+  }
+}
 .main-heading {
   text-align: center;
 }
