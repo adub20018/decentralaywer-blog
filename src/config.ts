@@ -1,3 +1,3 @@
 export const SITE = {
-  title: "Decentralawyer",
+  title: "Decentralawyer - Web3 Law Firm",
 };
