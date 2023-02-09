@@ -1,7 +1,7 @@
 .footer {
     width: 100%;
     position: relative;
-    bottom: -70rem;
+    bottom: -65.4vh;
     &__container {
         display: flex;
         justify-content: flex-end;
@@ -16,11 +16,6 @@
         @include nav-slider-animation($color-white);
     }
     &__subitem {
-    }
-}
-@media screen and (max-width: 815px) {
-    .footer {
-        bottom: -68.1rem
     }
 }
 

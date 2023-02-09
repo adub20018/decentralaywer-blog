@@ -173,7 +173,7 @@ span {
 .footer {
   width: 100%;
   position: relative;
-  bottom: -70rem;
+  bottom: -65.4vh;
 }
 .footer__container {
   display: flex;
@@ -197,11 +197,6 @@ span {
 }
 .footer__content:hover::after {
   width: 100%;
-}
-@media screen and (max-width: 815px) {
-  .footer {
-    bottom: -68.1rem;
-  }
 }
 @media screen and (max-width: 750px) {
   .footer {
@@ -357,21 +352,6 @@ span {
   stroke-width: 3px;
 }
 
-.testimonials {
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  height: 32.4rem;
-  border-bottom: 2px solid #ebede9;
-  width: 100%;
-  transform: translateY(48rem);
-  background-color: #090a14;
-  z-index: -1;
-}
-.testimonials h1 {
-  margin-top: 1rem;
-}
-
 .clicked {
   opacity: 0;
 }
@@ -442,9 +422,6 @@ span {
   }
 }
 @media screen and (max-width: 750px) {
-  .testimonials {
-    display: none;
-  }
   .main-heading {
     text-align: center;
   }
