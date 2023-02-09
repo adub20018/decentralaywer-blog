@@ -50,14 +50,9 @@ span {
 
 @media screen and (max-width: 750px) {
     .top-nav {
+        display: none;
         &__subitem, &__title {
             font-size: 1.7rem;
         }
-    }
-}
-
-@media (max-width: 32em) {
-    .top-nav {
-        display: none;
     }
 }

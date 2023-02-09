@@ -78,13 +78,11 @@ span {
 }
 
 @media screen and (max-width: 750px) {
-  .top-nav__subitem, .top-nav__title {
-    font-size: 1.7rem;
-  }
-}
-@media (max-width: 32em) {
   .top-nav {
     display: none;
+  }
+  .top-nav__subitem, .top-nav__title {
+    font-size: 1.7rem;
   }
 }
 .blog-preview__wrapper {
