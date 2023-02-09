@@ -11,14 +11,7 @@ import { SITE } from '../config';
 // All variables are available to use in the HTML template below.
 let { title } = SITE;
 let description = 'Specializing in high growth disruptive technologies';
-let permalink = 'https://example.com/'; // ADD URL HERE
-
-
-// Data Fetching: List all Markdown posts in the repo.
-
-let allPosts = await Astro.glob('./posts/*.md');
-allPosts = allPosts.sort((a, b) => new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf());
-
+let permalink = 'https://decentralawyer.netlify.app/'; // ADD URL HERE
 ---
 <html lang="en">
 	<head>

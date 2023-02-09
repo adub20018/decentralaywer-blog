@@ -1,13 +1,26 @@
+---
+// Component Imports
+import BaseHead from '../components/BaseHead.astro';
+import BlogHeader from '../components/BlogHeader.astro';
+import Footer from '../components/Footer.astro'
+import { SITE } from '../config';
+
+// Component Script:
+// You can write any JavaScript/TypeScript that you'd like here.
+// It will run during the build, but never in the browser.
+// All variables are available to use in the HTML template below.
+let { title } = SITE;
+let description = 'Specializing in high growth disruptive technologies';
+let permalink = 'https://decentralawyer.netlify.app/'; // ADD URL HERE
+---
 <html lang="en">
   <head>
     <BaseHead {title} {description} {permalink} />
   </head>
   <body>
     <BlogHeader />
-    <div class="wrapper">
         <main class="content">
         <h1>Terms of Service</h1>
     </main>
-    </div>
   </body>
 </html>
