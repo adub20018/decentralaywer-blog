@@ -1,7 +1,7 @@
 .footer {
     width: 100%;
     position: relative;
-    bottom: -65.4vh;
+    bottom: -65.6vh;
     &__container {
         display: flex;
         justify-content: flex-end;
@@ -19,38 +19,26 @@
     }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-height:905px) {
     .footer {
-        bottom: -132rem;
+        bottom: -63.7vh;
     }
 }
 
-@media screen and (max-width: 625px) {
+@media screen and (max-width:750px) {
     .footer {
-        bottom: -128rem
+        bottom: -138rem;
     }
 }
 
-@media screen and (max-width: 570px) {
+@media screen and (max-width:570px) {
     .footer {
-        bottom: -120rem
+        bottom: -130rem;
     }
 }
 
-@media screen and (max-width: 512px) {
+@media screen and (max-width:487px) {
     .footer {
-        bottom: -128rem
-    }
-}
-
-@media screen and (max-width: 486px) {
-    .footer {
-        bottom: -122rem
-    }
-}
-
-@media screen and (max-width: 420px) {
-    .footer {
-        bottom: -120rem
+        bottom: -122rem;
     }
 }
