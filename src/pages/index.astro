@@ -162,7 +162,7 @@ let permalink = 'https://decentralawyer.netlify.app/'; // ADD URL HERE
 			}
 			
 			function mobileScreenListener (nav, id) {
-				if (window.innerWidth <= 750) {
+				if (window.innerWidth <= 765) {
 					nav.setAttribute("href", id);
 				} else {
 					nav.removeAttribute("href");
@@ -213,13 +213,13 @@ let permalink = 'https://decentralawyer.netlify.app/'; // ADD URL HERE
 				// hides the given popup
 				function hidePopup(popup) {
 					// loops through elements and sets display to none & checks that screen is in desktop view
-					if (popup instanceof NodeList && window.innerWidth >= 750) {
+					if (popup instanceof NodeList && window.innerWidth >= 765) {
 						for (let i = 0; i < popup.length; i++) {
 							popup[i].style.display = "none";
 						}
 					} else {
 						// display for single element contact room & checks that screen is in desktop view
-						if (window.innerWidth >= 750) {
+						if (window.innerWidth >= 765) {
     					popup.style.display = "none";
 						}
 					}
