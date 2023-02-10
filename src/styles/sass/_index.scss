@@ -355,20 +355,13 @@
     }
 
     .popup-content {
-
         grid-template-rows: 150px 300px 300px 450px 270px 250px 500px;
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 486px) {
     .popup-content {
-        
-    }
-    .skills-room {
-        &__container {
-            &-left {
-            }
-        }
+        grid-template-rows: 240px 320px 300px 450px 270px 250px 500px;
     }
 }
 
@@ -385,6 +378,6 @@
     .popup-content {
         height: 100rem;
         grid-template-columns: 1fr;
-        grid-template-rows: 150px 250px 300px 450px 270px 250px 500px;
+        grid-template-rows: 250px 290px 300px 450px 270px 250px 500px;
     }
 }
