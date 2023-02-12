@@ -131,6 +131,7 @@ let permalink = 'https://decentralawyer.netlify.app/'; // ADD URL HERE
 				});
 
 				// detects click
+			if (window.innerWidth >= 765) {
 				room.addEventListener("click", function () {
 					showPopup(room, popup, nav);
 					room.classList.toggle("clicked")
@@ -142,6 +143,7 @@ let permalink = 'https://decentralawyer.netlify.app/'; // ADD URL HERE
 					}
 					clickedNav = nav;
 				});
+			}
 
 				// detects mouse off unless room is clicked
 				room.addEventListener("mouseout", function() {
@@ -174,9 +176,9 @@ let permalink = 'https://decentralawyer.netlify.app/'; // ADD URL HERE
 			addPopupListeners(pinkRoom, pinkRoomPopup, contactNav, "#df84a5");
 			addPopupListeners(blueRoom, blueRoomPopup, bioNav, "#a4dddb");
 
-			mobileScreenListener(skillsNav, "#skillsID");
-			mobileScreenListener(contactNav, "#contactID");
-			mobileScreenListener(bioNav, "#bioID");
+			mobileScreenListener(skillsNav, "#skillsID", mainRoom);
+			mobileScreenListener(contactNav, "#contactID", pinkRoom);
+			mobileScreenListener(bioNav, "#bioID", blueRoom);
 						
 			// function to show the popup to the corresponding room
 			function showPopup(room, popup, nav) {

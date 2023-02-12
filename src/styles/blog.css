@@ -313,9 +313,9 @@
     bottom: -126rem;
   }
 }
-@media screen and (max-width: 487px) {
+@media screen and (max-width: 420px) {
   .footer {
-    bottom: -125rem;
+    bottom: -122rem;
   }
 }
 .main-heading {
@@ -614,6 +614,9 @@
   .popup-content {
     grid-template-rows: 240px 320px 300px 450px 270px 250px 500px;
   }
+  .main-heading__title {
+    margin-top: 1rem;
+  }
 }
 @media screen and (max-width: 420px) {
   .svg {
@@ -625,7 +628,7 @@
   .popup-content {
     height: 100rem;
     grid-template-columns: 1fr;
-    grid-template-rows: 180px 290px 300px 450px 270px 250px 500px;
+    grid-template-rows: 200px 290px 300px 450px 270px 250px 500px;
   }
 }
 .admin-footer {
