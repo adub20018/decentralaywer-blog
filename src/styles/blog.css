@@ -510,10 +510,6 @@
   .svg {
     width: 500px;
   }
-  .skills-room, .bio-room, .contact-room {
-    pointer-events: none;
-    opacity: 0;
-  }
 }
 @media screen and (max-width: 765px) {
   .main-heading {
@@ -526,6 +522,9 @@
     margin-top: 0.8rem;
     font-size: 0.8rem;
     margin-bottom: 2rem;
+  }
+  .skills-room, .bio-room, .contact-room {
+    opacity: 0;
   }
   .popup-content {
     grid-template-columns: 1fr;

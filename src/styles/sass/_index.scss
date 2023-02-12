@@ -244,10 +244,6 @@
     .svg {
         width: 500px;
     }
-    .skills-room, .bio-room, .contact-room {
-        pointer-events: none;
-        opacity: 0;
-    }
 }
 
 @media screen and (max-width: 765px) {
@@ -261,6 +257,9 @@
             font-size: 0.8rem;
             margin-bottom: 2rem;
         }
+    }
+    .skills-room, .bio-room, .contact-room {
+        opacity: 0;
     }
     
     .popup-content {
