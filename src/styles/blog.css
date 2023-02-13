@@ -443,6 +443,9 @@
   width: 44px;
   margin-right: 1rem;
 }
+.contact-room__popup-img-email {
+  height: 26px;
+}
 
 .blue {
   color: #73bed3;

@@ -130,13 +130,18 @@
             height: 40px;
             width: 44px;
             margin-right: 1rem;
+            &-email {
+                height: 26px;
+            }
         }
     }
+
 }
 
 .blue {
     color: $color-blue;
 }
+
 
 .skills-room, .bio-room, .contact-room {
     fill: black;
