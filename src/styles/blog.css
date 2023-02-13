@@ -600,6 +600,7 @@
     text-align: center;
     width: 320px;
     margin-top: -7rem;
+    margin-left: 0;
   }
   .bio-room__container-right {
     grid-area: 6/1/7/2;
@@ -625,6 +626,7 @@
     width: 320px;
     text-align: center;
     margin-top: -22.2rem;
+    margin-left: 0;
   }
   .contact-room__popup {
     display: block;
