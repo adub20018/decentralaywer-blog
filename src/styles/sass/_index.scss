@@ -123,7 +123,7 @@
             display: flex;
             &-container {
                 @include nav-slider-animation($color-pink);
-                margin-bottom: -3rem;
+                margin-bottom: -20px;
             }
         }
         &-img {
@@ -157,18 +157,16 @@
 
 
 @media screen and (max-width: 1550px) {
-
     .svg {
         width: 90%;
     }
-
+    .popup-content {
+        grid-template-columns: 2fr 3fr 2fr;
+        grid-template-rows: 2fr 3fr 2fr;
+    }
     .skills-room {
                 &__popup {
-                    &-text {
-                        background-color: $color-black;
-                        opacity: 0.8;
-                        padding: 1rem;
-                    }
+
                 }
             }
         
@@ -178,9 +176,7 @@
                         margin: 0;
                     }
                     &-text {
-                        background-color: $color-black;
-                        opacity: 0.8;
-                        padding: 1rem;         
+     
                     }
                 }
             }
@@ -188,23 +184,18 @@
             .contact-room {
                 &__popup {
                     &-text {
-                    background-color: $color-black;
-                    opacity: 0.8;
-                    padding: 1rem;
+    
                     }
                 }
             }
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1350px) {
     .svg {
         position: absolute;
         width: 550px;
     }
-    .popup-content {
-        grid-template-columns: 2fr 2fr 2fr;
-        grid-template-rows: 2fr 3fr 2fr;
-    }
+
 
     .skills-room {
         &__popup {
@@ -213,6 +204,9 @@
                 width: 15rem;
             }
             &-text {
+                background-color: $color-black;
+                opacity: 0.8;
+                padding: 1rem;
                 font-size: 0.65rem;
             }
         }
@@ -225,6 +219,9 @@
             }
             &-text {
                 font-size: 0.65rem;
+                background-color: $color-black;
+                opacity: 0.8;
+                padding: 1rem;    
             }
         }
     }
@@ -233,6 +230,9 @@
         &__popup {
             &-text {
                 font-size: 0.65rem;
+                background-color: $color-black;
+                opacity: 0.8;
+                padding: 1rem;
             }
             &-title {
 
@@ -241,12 +241,16 @@
     }
 }
 
-
+@media screen and (max-width: 900px) {
+    .popup-content {
+        grid-template-columns: 2fr 2fr 2fr;
+        grid-template-rows: 2fr 3fr 2fr;
+    }
+}
 
 @media screen and (max-height: 900px) {
     .svg {
         width: 550px;
-        justify-self: center;
     }
 }
 
@@ -276,7 +280,7 @@
     
     .popup-content {
         grid-template-columns: 1fr;
-        grid-template-rows: 150px 430px 450px 450px 270px 250px 500px;
+        grid-template-rows: 150px 380px 450px 450px 270px 250px 500px;
     }
     .svg {
         grid-area: 2/1/3/2;
@@ -378,12 +382,16 @@
 
 @media screen and (max-width: 486px) {
     .popup-content {
-        grid-template-rows: 240px 320px 450px 450px 270px 250px 500px;
+        grid-template-rows: 200px 280px 450px 450px 270px 250px 500px;
     }
 
     .main-heading {
         &__title {
             margin-top: 1rem;
+            line-height: 60px;
+        }
+        &__bio {
+            margin-top: 1.2rem;
         }
     }
 }
@@ -401,6 +409,6 @@
     .popup-content {
         height: 100rem;
         grid-template-columns: 1fr;
-        grid-template-rows: 200px 290px 450px 450px 270px 250px 500px;
+        grid-template-rows: 200px 260px 450px 450px 270px 250px 500px;
     }
 }

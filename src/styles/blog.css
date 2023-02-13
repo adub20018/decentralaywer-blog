@@ -425,7 +425,7 @@
   display: flex;
 }
 .contact-room__popup-text-container {
-  margin-bottom: -3rem;
+  margin-bottom: -20px;
 }
 .contact-room__popup-text-container:after {
   content: "";
@@ -470,38 +470,26 @@
   .svg {
     width: 90%;
   }
-  .skills-room__popup-text {
-    background-color: #090a14;
-    opacity: 0.8;
-    padding: 1rem;
+  .popup-content {
+    grid-template-columns: 2fr 3fr 2fr;
+    grid-template-rows: 2fr 3fr 2fr;
   }
   .bio-room__popup-left, .bio-room__popup-right {
     margin: 0;
   }
-  .bio-room__popup-text {
-    background-color: #090a14;
-    opacity: 0.8;
-    padding: 1rem;
-  }
-  .contact-room__popup-text {
-    background-color: #090a14;
-    opacity: 0.8;
-    padding: 1rem;
-  }
 }
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1350px) {
   .svg {
     position: absolute;
     width: 550px;
-  }
-  .popup-content {
-    grid-template-columns: 2fr 2fr 2fr;
-    grid-template-rows: 2fr 3fr 2fr;
   }
   .skills-room__popup-left, .skills-room__popup-right {
     width: 15rem;
   }
   .skills-room__popup-text {
+    background-color: #090a14;
+    opacity: 0.8;
+    padding: 1rem;
     font-size: 0.65rem;
   }
   .bio-room__popup-left, .bio-room__popup-right {
@@ -509,15 +497,26 @@
   }
   .bio-room__popup-text {
     font-size: 0.65rem;
+    background-color: #090a14;
+    opacity: 0.8;
+    padding: 1rem;
   }
   .contact-room__popup-text {
     font-size: 0.65rem;
+    background-color: #090a14;
+    opacity: 0.8;
+    padding: 1rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .popup-content {
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-rows: 2fr 3fr 2fr;
   }
 }
 @media screen and (max-height: 900px) {
   .svg {
     width: 550px;
-    justify-self: center;
   }
 }
 @media screen and (max-height: 770px) {
@@ -543,7 +542,7 @@
   }
   .popup-content {
     grid-template-columns: 1fr;
-    grid-template-rows: 150px 430px 450px 450px 270px 250px 500px;
+    grid-template-rows: 150px 380px 450px 450px 270px 250px 500px;
   }
   .svg {
     grid-area: 2/1/3/2;
@@ -628,10 +627,14 @@
 }
 @media screen and (max-width: 486px) {
   .popup-content {
-    grid-template-rows: 240px 320px 450px 450px 270px 250px 500px;
+    grid-template-rows: 200px 280px 450px 450px 270px 250px 500px;
   }
   .main-heading__title {
     margin-top: 1rem;
+    line-height: 60px;
+  }
+  .main-heading__bio {
+    margin-top: 1.2rem;
   }
 }
 @media screen and (max-width: 420px) {
@@ -644,7 +647,7 @@
   .popup-content {
     height: 100rem;
     grid-template-columns: 1fr;
-    grid-template-rows: 200px 290px 450px 450px 270px 250px 500px;
+    grid-template-rows: 200px 260px 450px 450px 270px 250px 500px;
   }
 }
 .admin-footer {
