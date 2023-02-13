@@ -420,6 +420,7 @@
   justify-self: flex-end;
   align-self: flex-end;
   position: absolute;
+  margin-bottom: -6rem;
 }
 .contact-room__popup-title {
   color: #df84a5;
@@ -512,6 +513,9 @@
   }
   .bio-room__popup-title {
     margin-left: -2rem;
+  }
+  .contact-room__popup {
+    margin-bottom: -8rem;
   }
   .contact-room__popup-text {
     font-size: 0.65rem;

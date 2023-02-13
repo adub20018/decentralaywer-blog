@@ -118,6 +118,7 @@
         justify-self: flex-end;
         align-self: flex-end;
         position: absolute;
+        margin-bottom: -6rem;
     
         &-title {
             color: $color-pink;
@@ -242,6 +243,7 @@
 
     .contact-room {
         &__popup {
+            margin-bottom: -8rem;
             &-text {
                 font-size: 0.65rem;
                 background-color: $color-black;
