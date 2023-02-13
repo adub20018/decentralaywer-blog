@@ -353,7 +353,7 @@
   justify-self: center;
 }
 
-.skills-room:hover, .skills-room:checked {
+.skills-room:hover {
   stroke: #73bed3;
 }
 .skills-room__container-right {

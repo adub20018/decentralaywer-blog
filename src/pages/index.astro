@@ -125,20 +125,19 @@ let permalink = 'https://decentralawyer.netlify.app/'; // ADD URL HERE
 			function addPopupListeners(room, popup, nav, color) {
 				// detects hover
 				room.addEventListener("mouseover", function() {
-					showPopup(room, popup, nav);
+					showPopup(room, popup, nav, color);
 					nav.style.color = color;
-					nav.style.textDecoration = "underline";
+					room.classList.add("clicked")
 				});
 
 				// detects click
 				room.addEventListener("click", function () {
-					showPopup(room, popup, nav);
+					showPopup(room, popup, nav, color);
 					room.classList.toggle("clicked")
 
 					  // reset previously clicked nav element
 					if (clickedNav !== null && clickedNav !== nav) {
 						clickedNav.style.color = "";
-						clickedNav.style.textDecoration = "";
 					}
 					clickedNav = nav;
 				});
@@ -154,7 +153,7 @@ let permalink = 'https://decentralawyer.netlify.app/'; // ADD URL HERE
 
 				nav.addEventListener("click", function() {
 					if (window.innerWidth >= 765) {
-					showPopup(room, popup, nav);
+					showPopup(room, popup, nav, color);
 					nav.style.color = color
 					room.style.fill = "transparent";
 					clickedRoom.style.stroke = color;
@@ -181,7 +180,7 @@ let permalink = 'https://decentralawyer.netlify.app/'; // ADD URL HERE
 			mobileScreenListener(bioNav, "#bioID");
 						
 			// function to show the popup to the corresponding room
-			function showPopup(room, popup, nav) {
+			function showPopup(room, popup, nav, color) {
 				// if a room is clicked and hover moves to new room, popup is hidden 
 				if (clickedRoom !== null && clickedRoom !== room) {
 					hidePopup(clickedRoom.popup);
