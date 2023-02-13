@@ -289,6 +289,14 @@
     .svg {
         width: 500px;
     }
+    
+    .skills-room {
+        &__popup {
+            &-title {
+                margin-top: -12rem;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 765px) {
