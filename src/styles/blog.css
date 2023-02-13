@@ -268,7 +268,7 @@
 .footer {
   width: 100%;
   position: relative;
-  bottom: -65.6vh;
+  bottom: -70vh;
 }
 .footer__container {
   display: flex;
@@ -300,7 +300,7 @@
 }
 @media screen and (max-width: 765px) {
   .footer {
-    bottom: -134rem;
+    bottom: -112rem;
   }
   .footer__content {
     font-size: 0.8rem;
@@ -308,17 +308,12 @@
 }
 @media screen and (max-width: 570px) {
   .footer {
-    bottom: -124rem;
-  }
-}
-@media screen and (max-width: 487px) {
-  .footer {
-    bottom: -126rem;
+    bottom: -110rem;
   }
 }
 @media screen and (max-width: 420px) {
   .footer {
-    bottom: -122rem;
+    bottom: -108rem;
   }
 }
 .main-heading {
