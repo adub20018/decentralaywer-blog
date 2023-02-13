@@ -1,9 +1,8 @@
-![Astro + Netlify CMS](https://raw.githubusercontent.com/delucis/astro-netlify-cms/HEAD/header.png)
+<h1 align="center">Decentralawyer Blog</h1>
 
-<h1 align="center">Astro Blog Starter with Netlify CMS</h1>
+This site is built for [Decentralawyer][twitter].
 
-This example is based on [the basic Astro blog starter kit][starter], and
-adds [the Astro Netlify CMS integration][integration].
+The blog uses [Delucid's Astro Netlify CMS starter template][template] where it is managed and hosted
 
 ## Quick deploy
 
@@ -31,8 +30,9 @@ All commands are run from the root of the project, from a terminal:
 > These commands are using [`pnpm`][pnpm], a fast and efficient package manager.
 > You can choose to use `npm` or `yarn` instead if you prefer, but remember to update the config in [`netlify.toml`](netlify.toml) to match.
 
-[starter]: https://astro.new/blog?on=github
-[integration]: https://github.com/delucis/astro-netlify-cms
+[twitter]: https://twitter.com/Decentralawyer?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor
+[template]: https://github.com/delucis/astro-netlify-cms-starter
+[pagespeedtest]: 
 [deploy]: https://app.netlify.com/start/deploy?repository=https://github.com/delucis/astro-netlify-cms-starter
 [identity]: https://docs.netlify.com/visitor-access/identity/
 [gateway]: https://docs.netlify.com/visitor-access/git-gateway/
