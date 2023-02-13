@@ -352,7 +352,6 @@
   stroke: #73bed3;
 }
 .skills-room__container-right {
-  /* grid-area: (grid-row-start) / (grid-column-start) / (grid-row-end) / (grid-column-end) */
   grid-area: 2/3/3/4;
   justify-self: flex-start;
   position: absolute;
@@ -414,7 +413,6 @@
   grid-area: 2/1/3/2;
   justify-self: flex-end;
   align-self: flex-end;
-  width: 20rem;
   position: absolute;
 }
 .contact-room__popup-title {
@@ -424,6 +422,30 @@
 }
 .contact-room__popup-text {
   font-size: 0.8rem;
+  display: flex;
+}
+.contact-room__popup-text-container {
+  margin-bottom: -3rem;
+}
+.contact-room__popup-text-container:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #df84a5;
+  transition: width 0.3s;
+}
+.contact-room__popup-text-container:hover::after {
+  width: 100%;
+}
+.contact-room__popup-img {
+  height: 40px;
+  width: 44px;
+  margin-right: 1rem;
+}
+
+.blue {
+  color: #73bed3;
 }
 
 .skills-room, .bio-room, .contact-room {
@@ -461,9 +483,6 @@
     opacity: 0.8;
     padding: 1rem;
   }
-  .contact-room__popup {
-    margin-left: 4rem;
-  }
   .contact-room__popup-text {
     background-color: #090a14;
     opacity: 0.8;
@@ -490,9 +509,6 @@
   }
   .bio-room__popup-text {
     font-size: 0.65rem;
-  }
-  .contact-room__popup {
-    width: 15rem;
   }
   .contact-room__popup-text {
     font-size: 0.65rem;
