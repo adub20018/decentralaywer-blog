@@ -401,6 +401,7 @@
 .bio-room__popup-title {
   font-size: 4rem;
   text-decoration: underline;
+  margin-left: -8rem;
 }
 .bio-room__popup-text {
   font-size: 0.8rem;
@@ -509,6 +510,9 @@
     opacity: 0.8;
     padding: 1rem;
   }
+  .bio-room__popup-title {
+    margin-left: -2rem;
+  }
   .contact-room__popup-text {
     font-size: 0.65rem;
     background-color: #090a14;
@@ -524,6 +528,9 @@
   .skills-room__popup-title {
     margin-top: -13rem;
     margin-left: -1rem;
+  }
+  .bio-room__popup-title {
+    margin-left: 2rem;
   }
 }
 @media screen and (max-height: 900px) {
