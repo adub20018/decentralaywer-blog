@@ -16,7 +16,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 90vh;
+    height: 50rem;
     width: 100%;
     display: grid;
     grid-template-columns: 1.5fr 3fr 1.5fr;
@@ -39,7 +39,9 @@
         &-right {
             grid-area: 2/3/3/4;
             justify-self: flex-start;
+            align-self: flex-end;
             position: absolute;
+            margin-bottom: -8rem;
         }
         &-left {
             grid-area: 2/1/3/2;
@@ -61,6 +63,9 @@
             text-decoration: underline;
             font-size: 4rem;
             color: $color-blue;
+            position: absolute;
+            margin-top: -15rem;
+            margin-left: -7rem;
         }
     }
 }
@@ -198,7 +203,7 @@
 @media screen and (max-width: 1350px) {
     .svg {
         position: absolute;
-        width: 550px;
+        width: 650px;
     }
 
 
@@ -251,6 +256,14 @@
         grid-template-columns: 2fr 2fr 2fr;
         grid-template-rows: 2fr 3fr 2fr;
     }
+    .skills-room {
+        &__popup {
+            &-title {
+                margin-top: -13rem;
+                margin-left: -1rem;
+            }
+        }
+    }
 }
 
 @media screen and (max-height: 900px) {
@@ -289,6 +302,7 @@
     }
     .svg {
         grid-area: 2/1/3/2;
+        width: 550px;
     }
     .skills-room {
         &__container {
@@ -322,6 +336,7 @@
                 color: $color-blue;
                 text-align: center;
                 width: 320px;
+                margin-top: -7rem;
             }
         }
     }
