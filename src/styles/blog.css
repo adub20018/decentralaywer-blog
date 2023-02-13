@@ -302,6 +302,9 @@
   .footer {
     bottom: -134rem;
   }
+  .footer__content {
+    font-size: 0.8rem;
+  }
 }
 @media screen and (max-width: 570px) {
   .footer {
