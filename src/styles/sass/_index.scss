@@ -167,7 +167,8 @@
 .feature-text {
     text-align: left;
     font-weight: 800;
-    font-size: 1.1rem;
+    font-size: 1rem;
+    text-decoration: underline;
 }
 
 .blue {
@@ -198,12 +199,12 @@
         width: 650px;
     }
     .popup-content {
-        grid-template-columns: 1.7fr 3fr 1.7fr;
+        grid-template-columns: 1.5fr 3fr 1.5fr;
         grid-template-rows: 2fr 3fr 2fr;
     }
 }
 
-@media screen and (max-width: 1350px) {
+@media screen and (max-width: 1375px) {
     .svg {
         position: absolute;
         width: 650px;
