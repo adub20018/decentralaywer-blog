@@ -204,14 +204,6 @@
         position: absolute;
         width: 650px;
     }
-    .skills-room {
-        &__popup {
-            &-title {
-                margin-left: -15rem;
-                margin-top: -11rem;
-            }
-        }
-    }
     .svg-pointer {
         margin-left: -10rem;
         margin-top: -18rem;
@@ -219,7 +211,7 @@
     .skills-room {
         &__popup {
             &-title {
-                margin-left: 0rem;
+                margin-left: -10rem;
                 margin-top: -14rem;
             }
             &-left {
@@ -227,6 +219,7 @@
             } 
             &-right {
                 margin-left: -5rem;
+                margin-bottom: 5rem;
             }
             &-text {
                 background-color: $color-black;
@@ -295,21 +288,21 @@
 
 @media screen and (max-height: 900px) {
     .svg {
-        width: 550px;
-        margin-top: 2rem;
+        width: 600px;
+        margin-top: 0rem;
     }
     .popup-content {
         height: 45rem;
     }
     .svg-pointer {
-        margin-left: -12rem;
-        margin-top: -15.3rem;
+        margin-left: -18rem;
+        margin-top: -14.2rem;
     }
     .skills-room {
         &__popup {
             &-title {
                 margin-left: -8rem;
-                margin-top: -11rem;
+                margin-top: -10rem;
             }
         }
     }
@@ -317,13 +310,13 @@
 
 @media screen and (max-height: 770px) {
     .svg {
-        width: 500px;
+        width: 550px;
     }
     
     .skills-room {
         &__popup {
             &-title {
-                margin-top: -12rem;
+                margin-top: -10rem;
             }
         }
     }
@@ -345,6 +338,9 @@
     }
     .skills-room, .bio-room, .contact-room {
         opacity: 0;
+    }
+    .svg-pointer {
+        display: none;
     }
     
     .popup-content {
@@ -377,6 +373,9 @@
             &-right, &-left {
                 display: block;
                 z-index: 1;
+            }
+            &-right {
+                margin: 0;
             }
             &-text {
                 width: 320px;

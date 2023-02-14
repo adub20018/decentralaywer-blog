@@ -509,16 +509,12 @@
     position: absolute;
     width: 650px;
   }
-  .skills-room__popup-title {
-    margin-left: -15rem;
-    margin-top: -11rem;
-  }
   .svg-pointer {
     margin-left: -10rem;
     margin-top: -18rem;
   }
   .skills-room__popup-title {
-    margin-left: 0rem;
+    margin-left: -10rem;
     margin-top: -14rem;
   }
   .skills-room__popup-left {
@@ -526,6 +522,7 @@
   }
   .skills-room__popup-right {
     margin-left: -5rem;
+    margin-bottom: 5rem;
   }
   .skills-room__popup-text {
     background-color: #090a14;
@@ -570,27 +567,27 @@
 }
 @media screen and (max-height: 900px) {
   .svg {
-    width: 550px;
-    margin-top: 2rem;
+    width: 600px;
+    margin-top: 0rem;
   }
   .popup-content {
     height: 45rem;
   }
   .svg-pointer {
-    margin-left: -12rem;
-    margin-top: -15.3rem;
+    margin-left: -18rem;
+    margin-top: -14.2rem;
   }
   .skills-room__popup-title {
     margin-left: -8rem;
-    margin-top: -11rem;
+    margin-top: -10rem;
   }
 }
 @media screen and (max-height: 770px) {
   .svg {
-    width: 500px;
+    width: 550px;
   }
   .skills-room__popup-title {
-    margin-top: -12rem;
+    margin-top: -10rem;
   }
 }
 @media screen and (max-width: 765px) {
@@ -608,6 +605,9 @@
   }
   .skills-room, .bio-room, .contact-room {
     opacity: 0;
+  }
+  .svg-pointer {
+    display: none;
   }
   .popup-content {
     grid-template-columns: 1fr;
@@ -635,6 +635,9 @@
   .skills-room__popup-right, .skills-room__popup-left {
     display: block;
     z-index: 1;
+  }
+  .skills-room__popup-right {
+    margin: 0;
   }
   .skills-room__popup-text {
     width: 320px;
