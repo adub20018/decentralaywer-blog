@@ -326,6 +326,9 @@
 }
 .main-heading__bio {
   font-size: 1rem;
+  color: #73bed3;
+  padding: 0;
+  margin: 0;
 }
 
 .popup-content {
@@ -365,6 +368,7 @@
 }
 .skills-room__popup-right {
   display: none;
+  text-align: justify;
   max-width: 20rem;
 }
 .skills-room__popup-left {
@@ -376,8 +380,21 @@
   font-size: 4rem;
   color: #73bed3;
   position: absolute;
-  margin-top: -15rem;
+  margin-top: -12rem;
   margin-left: -7rem;
+}
+.skills-room__popup-text {
+  width: 20rem;
+}
+
+.svg-pointer {
+  stroke-width: 3px;
+  height: 180px;
+  stroke: #73bed3;
+  position: absolute;
+  margin-left: -17.5rem;
+  margin-top: -16.2rem;
+  transform: rotate(-90deg);
 }
 
 .bio-room:hover {
@@ -452,6 +469,12 @@
 }
 .contact-room__popup-img-email {
   height: 26px;
+}
+
+.feature-text {
+  font-size: 1rem;
+  color: #73bed3;
+  text-decoration: underline;
 }
 
 .blue {
@@ -689,14 +712,6 @@
   margin-bottom: 1.38rem;
   font-weight: 400;
   line-height: 1.3;
-}
-
-:is(h1, h2) {
-  max-width: 40ch;
-}
-
-:is(h2, h3):not(:first-child) {
-  margin-top: 3rem;
 }
 
 h1 {
