@@ -443,6 +443,10 @@
 .contact-room__popup-text {
   font-size: 0.8rem;
   display: flex;
+  justify-content: space-between;
+  background-color: #090a14;
+  opacity: 0.8;
+  padding: 1rem;
 }
 .contact-room__popup-text-container {
   margin-bottom: -20px;
@@ -459,12 +463,12 @@
   width: 100%;
 }
 .contact-room__popup-img {
-  height: 40px;
-  width: 44px;
+  height: 30px;
+  width: 33px;
   margin-right: 1rem;
 }
 .contact-room__popup-img-email {
-  height: 26px;
+  height: 20px;
 }
 
 .feature-text {
@@ -500,7 +504,7 @@
     width: 650px;
   }
   .popup-content {
-    grid-template-columns: 2fr 3fr 2fr;
+    grid-template-columns: 1.7fr 3fr 1.7fr;
     grid-template-rows: 2fr 3fr 2fr;
   }
 }

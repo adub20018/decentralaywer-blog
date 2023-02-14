@@ -143,17 +143,21 @@
         &-text {
             font-size: 0.8rem;
             display: flex;
+            justify-content: space-between;
+            background-color: $color-black;
+            opacity: 0.8;
+            padding: 1rem;
             &-container {
                 @include nav-slider-animation($color-pink);
                 margin-bottom: -20px;
             }
         }
         &-img {
-            height: 40px;
-            width: 44px;
+            height: 30px;
+            width: 33px;
             margin-right: 1rem;
             &-email {
-                height: 26px;
+                height: 20px;
             }
         }
     }
@@ -193,7 +197,7 @@
         width: 650px;
     }
     .popup-content {
-        grid-template-columns: 2fr 3fr 2fr;
+        grid-template-columns: 1.7fr 3fr 1.7fr;
         grid-template-rows: 2fr 3fr 2fr;
     }
 }
