@@ -56,7 +56,6 @@
 
         &-right {
             display: none;
-            text-align: justify;
             max-width: 20rem;
         }
         &-left {
@@ -162,9 +161,8 @@
 }
 
 .feature-text {
-    font-size: 1rem;
-    color: $color-blue;
-    text-decoration: underline;
+    font-weight: 800;
+    font-size: 1.1rem;
 }
 
 .blue {
@@ -193,36 +191,12 @@
 
 @media screen and (max-width: 1550px) {
     .svg {
-        width: 90%;
+        width: 650px;
     }
     .popup-content {
         grid-template-columns: 2fr 3fr 2fr;
         grid-template-rows: 2fr 3fr 2fr;
     }
-    .skills-room {
-                &__popup {
-
-                }
-            }
-        
-            .bio-room {
-                &__popup {
-                    &-left, &-right {
-                        margin: 0;
-                    }
-                    &-text {
-     
-                    }
-                }
-            }
-        
-            .contact-room {
-                &__popup {
-                    &-text {
-    
-                    }
-                }
-            }
 }
 
 @media screen and (max-width: 1350px) {
@@ -230,13 +204,29 @@
         position: absolute;
         width: 650px;
     }
-
-
     .skills-room {
         &__popup {
-
-            &-left, &-right {
-                width: 15rem;
+            &-title {
+                margin-left: -15rem;
+                margin-top: -11rem;
+            }
+        }
+    }
+    .svg-pointer {
+        margin-left: -10rem;
+        margin-top: -18rem;
+    }
+    .skills-room {
+        &__popup {
+            &-title {
+                margin-left: 0rem;
+                margin-top: -14rem;
+            }
+            &-left {
+                margin-right: -5rem;
+            } 
+            &-right {
+                margin-left: -5rem;
             }
             &-text {
                 background-color: $color-black;
@@ -244,6 +234,7 @@
                 padding: 1rem;
                 font-size: 0.65rem;
             }
+
         }
     }
 
@@ -305,6 +296,22 @@
 @media screen and (max-height: 900px) {
     .svg {
         width: 550px;
+        margin-top: 2rem;
+    }
+    .popup-content {
+        height: 45rem;
+    }
+    .svg-pointer {
+        margin-left: -12rem;
+        margin-top: -15.3rem;
+    }
+    .skills-room {
+        &__popup {
+            &-title {
+                margin-left: -8rem;
+                margin-top: -11rem;
+            }
+        }
     }
 }
 

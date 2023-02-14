@@ -295,7 +295,7 @@
 }
 @media screen and (max-height: 905px) {
   .footer {
-    bottom: -38rem;
+    bottom: -38.5rem;
   }
 }
 @media screen and (max-width: 765px) {
@@ -368,7 +368,6 @@
 }
 .skills-room__popup-right {
   display: none;
-  text-align: justify;
   max-width: 20rem;
 }
 .skills-room__popup-left {
@@ -469,9 +468,8 @@
 }
 
 .feature-text {
-  font-size: 1rem;
-  color: #73bed3;
-  text-decoration: underline;
+  font-weight: 800;
+  font-size: 1.1rem;
 }
 
 .blue {
@@ -499,14 +497,11 @@
 
 @media screen and (max-width: 1550px) {
   .svg {
-    width: 90%;
+    width: 650px;
   }
   .popup-content {
     grid-template-columns: 2fr 3fr 2fr;
     grid-template-rows: 2fr 3fr 2fr;
-  }
-  .bio-room__popup-left, .bio-room__popup-right {
-    margin: 0;
   }
 }
 @media screen and (max-width: 1350px) {
@@ -514,8 +509,23 @@
     position: absolute;
     width: 650px;
   }
-  .skills-room__popup-left, .skills-room__popup-right {
-    width: 15rem;
+  .skills-room__popup-title {
+    margin-left: -15rem;
+    margin-top: -11rem;
+  }
+  .svg-pointer {
+    margin-left: -10rem;
+    margin-top: -18rem;
+  }
+  .skills-room__popup-title {
+    margin-left: 0rem;
+    margin-top: -14rem;
+  }
+  .skills-room__popup-left {
+    margin-right: -5rem;
+  }
+  .skills-room__popup-right {
+    margin-left: -5rem;
   }
   .skills-room__popup-text {
     background-color: #090a14;
@@ -561,6 +571,18 @@
 @media screen and (max-height: 900px) {
   .svg {
     width: 550px;
+    margin-top: 2rem;
+  }
+  .popup-content {
+    height: 45rem;
+  }
+  .svg-pointer {
+    margin-left: -12rem;
+    margin-top: -15.3rem;
+  }
+  .skills-room__popup-title {
+    margin-left: -8rem;
+    margin-top: -11rem;
   }
 }
 @media screen and (max-height: 770px) {
