@@ -168,7 +168,9 @@ let permalink = 'https://decentralawyer.netlify.app/'; // ADD URL HERE
 					clickedRoom.style.stroke = color;
 					}
 				});
-				
+				nav.addEventListener("mouseover", function() {
+					nav.style.borderBottom = "";
+				});
 			}
 			
 			function mobileScreenListener (nav, id) {
@@ -176,7 +178,7 @@ let permalink = 'https://decentralawyer.netlify.app/'; // ADD URL HERE
 					nav.setAttribute("href", id);
 				} else {
 					nav.removeAttribute("href");
-  }
+				  }
 			}
 
 			// calls the popup listeners with each room and their corresponding popups
@@ -197,7 +199,7 @@ let permalink = 'https://decentralawyer.netlify.app/'; // ADD URL HERE
 					clickedNav.style.color = "";
 					clickedRoom.style.fill = "";
 					clickedRoom.style.stroke = "";
-					clickedNav.style.borderBottom = "";
+					clickedNav.style.borderBottom = "none";
 				}
 
 				// updates the clicked room/nav to display only the new text
