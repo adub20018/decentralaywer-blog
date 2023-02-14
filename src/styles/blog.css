@@ -511,11 +511,11 @@
   }
   .svg-pointer {
     margin-left: -10rem;
-    margin-top: -18rem;
+    margin-top: -13.5rem;
   }
   .skills-room__popup-title {
-    margin-left: -10rem;
-    margin-top: -14rem;
+    margin-left: -6rem;
+    margin-top: -9.5rem;
   }
   .skills-room__popup-left {
     margin-right: -5rem;
@@ -557,9 +557,13 @@
     grid-template-columns: 2fr 2fr 2fr;
     grid-template-rows: 2fr 3fr 2fr;
   }
+  .svg-pointer {
+    margin-top: -15rem;
+    margin-left: -6rem;
+  }
   .skills-room__popup-title {
-    margin-top: -13rem;
-    margin-left: -1rem;
+    margin-top: -11rem;
+    margin-left: 1rem;
   }
   .bio-room__popup-title {
     margin-left: 2rem;
