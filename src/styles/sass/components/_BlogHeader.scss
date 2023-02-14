@@ -62,19 +62,23 @@
         overflow: hidden;
     }
     
-    &-button, &-button::before, &-button::after {
-        display: block;
-        background-color: $color-white;
+    &-button::before, &-button::after {
         position: absolute;
-        height: 4px;
+        display: block;
         width: 30px;
-        transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
-        border-radius: 2px;
+        height: 2px;
+        background-color: $color-white;
+        transition: all 0.2s cubic-bezier(0.1, 0.82, 0.76, 0.965);
     }
     &-button {
+        margin-bottom: 0;
+        height: 2px;
+        width: 30px;
+        background-color: transparent;
+        padding-top: 4px;
+        padding-bottom: 6px;
         &-container {
             display: none;
-            height: 100%;
             width: 30px;
             cursor: pointer;
             flex-direction: column;
@@ -83,11 +87,11 @@
         }
         &::before {
             content: '';
-            margin-top: -8px;
+            margin-top: -6px;
         }
         &::after {
             content: '';
-            margin-top: 8px;
+            margin-top: 6px;
         }
     }
 }
@@ -99,11 +103,11 @@
     }
     &:checked + .menu-button-container .menu-button::before {
         margin-top: 0px;
-        transform: rotate(405deg);
+        transform: rotate(45deg);
     }
     &:checked + .menu-button-container .menu-button::after {
         margin-top: 0px;
-        transform: rotate(-405deg);
+        transform: rotate(-45deg);
     }
 }
   
