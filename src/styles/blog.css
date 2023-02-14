@@ -300,7 +300,7 @@
 }
 @media screen and (max-width: 765px) {
   .footer {
-    bottom: -118rem;
+    bottom: -125rem;
   }
   .footer__content {
     font-size: 0.8rem;
@@ -308,12 +308,12 @@
 }
 @media screen and (max-width: 570px) {
   .footer {
-    bottom: -117rem;
+    bottom: -124rem;
   }
 }
 @media screen and (max-width: 420px) {
   .footer {
-    bottom: -113rem;
+    bottom: -118rem;
   }
 }
 .main-heading {
@@ -615,7 +615,7 @@
   }
   .popup-content {
     grid-template-columns: 1fr;
-    grid-template-rows: 150px 380px 450px 450px 270px 250px 500px;
+    grid-template-rows: 150px 380px 400px 450px 220px 400px 500px;
   }
   .svg {
     grid-area: 2/1/3/2;
@@ -678,7 +678,7 @@
   .bio-room__popup-title {
     width: 320px;
     text-align: center;
-    margin-top: -22.2rem;
+    margin-top: -27rem;
     margin-left: 0;
   }
   .contact-room__popup {
@@ -702,12 +702,12 @@
     width: 400px;
   }
   .popup-content {
-    grid-template-rows: 150px 300px 450px 450px 270px 250px 500px;
+    grid-template-rows: 150px 300px 410px 420px 220px 400px 500px;
   }
 }
 @media screen and (max-width: 486px) {
   .popup-content {
-    grid-template-rows: 200px 280px 450px 450px 270px 250px 500px;
+    grid-template-rows: 200px 280px 410px 450px 220px 400px 500px;
   }
   .main-heading__title {
     margin-top: 1rem;
@@ -727,7 +727,7 @@
   .popup-content {
     height: 100rem;
     grid-template-columns: 1fr;
-    grid-template-rows: 200px 260px 450px 450px 270px 250px 500px;
+    grid-template-rows: 200px 220px 400px 450px 220px 400px 500px;
   }
 }
 .admin-footer {

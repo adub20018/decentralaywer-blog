@@ -348,7 +348,7 @@
     
     .popup-content {
         grid-template-columns: 1fr;
-        grid-template-rows: 150px 380px 450px 450px 270px 250px 500px;
+        grid-template-rows: 150px 380px 400px 450px 220px 400px 500px;
     }
     .svg {
         grid-area: 2/1/3/2;
@@ -421,7 +421,7 @@
             &-title {
                 width: 320px;
                 text-align: center;
-                margin-top: -22.2rem;
+                margin-top: -27rem;
                 margin-left: 0;
             }
         }
@@ -451,13 +451,13 @@
     }
 
     .popup-content {
-        grid-template-rows: 150px 300px 450px 450px 270px 250px 500px;
+        grid-template-rows: 150px 300px 410px 420px 220px 400px 500px;
     }
 }
 
 @media screen and (max-width: 486px) {
     .popup-content {
-        grid-template-rows: 200px 280px 450px 450px 270px 250px 500px;
+        grid-template-rows: 200px 280px 410px 450px 220px 400px 500px;
     }
 
     .main-heading {
@@ -484,6 +484,6 @@
     .popup-content {
         height: 100rem;
         grid-template-columns: 1fr;
-        grid-template-rows: 200px 260px 450px 450px 270px 250px 500px;
+        grid-template-rows: 200px 220px 400px 450px 220px 400px 500px;
     }
 }
