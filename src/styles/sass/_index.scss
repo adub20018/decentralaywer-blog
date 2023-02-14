@@ -35,9 +35,7 @@
   }
 
 .skills-room {
-    &:hover {
-        stroke: #73bed3;
-    }
+
     &__container {
         &-right {
             grid-area: 2/3/3/4;
@@ -67,8 +65,8 @@
             font-size: 4rem;
             color: $color-blue;
             position: absolute;
-            margin-top: -12rem;
-            margin-left: -7rem;
+            margin-top: -11.9rem;
+            margin-left: -8rem;
         }
         &-text {
             width: 20rem;
@@ -86,9 +84,6 @@
 }
 
 .bio-room {
-    // &:hover {
-    //     stroke: #a4dddb;
-    // } 
     &__container {
         &-right {
             position: absolute;
@@ -124,9 +119,6 @@
 }
 
 .contact-room {
-    &:hover {
-        stroke: $color-pink;
-    }
     &__popup {
         display: none;
         grid-area: 2/1/3/2;
@@ -175,7 +167,9 @@
     color: $color-blue;
 }
 
-
+.shadow {
+    box-shadow: 5px 5px 5px $color-blue;
+}
 .skills-room, .bio-room, .contact-room {
     fill: black;
     opacity: 0.5;
