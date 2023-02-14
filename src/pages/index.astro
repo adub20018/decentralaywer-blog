@@ -134,6 +134,7 @@ let permalink = 'https://decentralawyer.netlify.app/'; // ADD URL HERE
 				// detects hover
 				room.addEventListener("mouseover", function() {
 					showPopup(room, popup, nav, color);
+					nav.style.borderBottom = "2px solid " + color;
 					nav.style.color = color;
 					room.classList.add("clicked")
 					room.style.stroke = color;
@@ -156,7 +157,6 @@ let permalink = 'https://decentralawyer.netlify.app/'; // ADD URL HERE
 					if (!room.classList.contains("clicked")) {
 						hidePopup(popup);
 						nav.style.color = "";
-						nav.style.textDecoration = "";
 					}
 				});
 
@@ -195,9 +195,9 @@ let permalink = 'https://decentralawyer.netlify.app/'; // ADD URL HERE
 					hidePopup(clickedRoom.popup);
 					clickedRoom.classList.remove("clicked");
 					clickedNav.style.color = "";
-    				clickedNav.style.textDecoration = "";
 					clickedRoom.style.fill = "";
 					clickedRoom.style.stroke = "";
+					clickedNav.style.borderBottom = "";
 				}
 
 				// updates the clicked room/nav to display only the new text
@@ -205,7 +205,7 @@ let permalink = 'https://decentralawyer.netlify.app/'; // ADD URL HERE
 				room.popup = popup;
 				clickedNav = nav;
 				nav.style.color = room.color;
-				nav.style.textDecoration = "underline";
+				clickedNav.style.borderBottom = "2px solid " + room.color;
 
 				// loops through popup elements and sets display to block
 				if (popup instanceof NodeList) {
