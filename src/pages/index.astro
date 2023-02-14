@@ -135,6 +135,7 @@ let permalink = 'https://decentralawyer.netlify.app/'; // ADD URL HERE
 					showPopup(room, popup, nav, color);
 					nav.style.color = color;
 					room.classList.add("clicked")
+					room.style.stroke = color;
 				});
 
 				// detects click
@@ -204,7 +205,6 @@ let permalink = 'https://decentralawyer.netlify.app/'; // ADD URL HERE
 				clickedNav = nav;
 				nav.style.color = room.color;
 				nav.style.textDecoration = "underline";
-				room.style.opacity = "";
 
 				// loops through popup elements and sets display to block
 				if (popup instanceof NodeList) {

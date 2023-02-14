@@ -87,9 +87,9 @@
 }
 
 .bio-room {
-    &:hover {
-        stroke: #a4dddb;
-    } 
+    // &:hover {
+    //     stroke: #a4dddb;
+    // } 
     &__container {
         &-right {
             position: absolute;
@@ -186,7 +186,8 @@
 }
 
 .clicked {
-    opacity: 0;
+    fill: transparent;
+    stroke-width: 4px;
 }
 
 

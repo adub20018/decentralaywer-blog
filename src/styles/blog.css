@@ -397,9 +397,6 @@
   transform: rotate(-90deg);
 }
 
-.bio-room:hover {
-  stroke: #a4dddb;
-}
 .bio-room__container-right {
   position: absolute;
   grid-area: 2/3/3/4;
@@ -496,7 +493,8 @@
 }
 
 .clicked {
-  opacity: 0;
+  fill: transparent;
+  stroke-width: 4px;
 }
 
 @media screen and (max-width: 1550px) {
