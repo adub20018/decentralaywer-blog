@@ -358,15 +358,10 @@
 @media screen and (max-height: 900px) {
     .svg {
         width: 600px;
+        margin-top: -1rem;
     }
     .popup-content {
         height: 45rem;
-    }
-}
-
-@media screen and (max-height: 770px) {
-    .svg {
-        margin-top: -1rem;
     }
 }
 
