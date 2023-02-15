@@ -226,6 +226,23 @@
     }
 }
 
+@media screen and (min-width:1376px) {
+    .skills-room {
+        &__popup {
+            &-title {
+                margin-left: -12rem;
+                margin-top: -10rem;
+            }
+        }
+    }
+    .skills-pointer {
+        width: 120px;
+        margin-left: -15rem;
+        margin-top: -8rem;
+        transform: rotate(90deg);
+    }
+}
+
 @media screen and (max-width: 1375px) {
     .svg {
         position: absolute;
@@ -365,12 +382,12 @@
     .bio-room {
         &__popup {
             &-title {
-                margin-top: -2rem;
+                margin-top: -6rem;
             }
         }
     }
     .bio-pointer {
-        margin-top: 17rem;
+        margin-top: 20rem;
     }
 }
 
