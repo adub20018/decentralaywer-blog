@@ -1,4 +1,3 @@
-
 .main-heading {
     text-align: center;
     &__title {
@@ -65,7 +64,7 @@
             text-decoration: underline;
             font-size: 4rem;
             position: absolute;
-            margin-top: -10.9rem;
+            margin-top: -10.3rem;
             margin-left: -8rem;
             color: $color-blue;
         }
@@ -77,10 +76,10 @@
 }
 .skills-pointer {
     z-index: -1;
-    height: 180px;
+    height: 200px;
     stroke: $color-blue;
     position: absolute;
-    margin-left: -22rem;
+    margin-left: -24rem;
     margin-top: -11.85rem;
 }
 
@@ -109,6 +108,7 @@
             font-size: 4rem;
             text-decoration: underline;
             margin-left: -8rem;
+            margin-top: -1.9rem;
         }
         &-text {
             font-size: 0.8rem;
@@ -124,10 +124,10 @@
     z-index: -1;
     stroke: #a4dddb;
     stroke-width: 3px;
-    height: 180px;
+    height: 140px;
     position: absolute;
-    margin-top: 20.8rem;
-    margin-left: -28rem;
+    margin-top: 20rem;
+    margin-left: -25rem;
 }
 
 .contact-room {
@@ -224,7 +224,7 @@
         &__popup {
             &-title {
                 margin-left: -8rem;
-                margin-top: -8rem;
+                margin-top: -7.4rem;
             }
         }
     }
@@ -398,6 +398,9 @@
     .svg {
         grid-area: 2/1/3/2;
         width: 550px;
+    }
+    .feature-text {
+        width: 320px;
     }
     .skills-room {
         &__container {
