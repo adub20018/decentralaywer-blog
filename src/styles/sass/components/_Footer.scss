@@ -1,7 +1,7 @@
 .footer {
     width: 100%;
     position: relative;
-    bottom: -42rem;
+    top: 42rem;
     &__container {
         display: flex;
         justify-content: flex-end;
@@ -21,7 +21,7 @@
 
 @media screen and (max-height:905px) {
     .footer {
-        bottom: -38.5rem;
+        top: 39rem;
     }
 }
 

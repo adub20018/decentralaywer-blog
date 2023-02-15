@@ -299,7 +299,7 @@
 .footer {
   width: 100%;
   position: relative;
-  bottom: -42rem;
+  top: 42rem;
 }
 .footer__container {
   display: flex;
@@ -326,7 +326,7 @@
 }
 @media screen and (max-height: 905px) {
   .footer {
-    bottom: -38.5rem;
+    top: 39rem;
   }
 }
 @media screen and (max-width: 765px) {
