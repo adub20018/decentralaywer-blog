@@ -108,7 +108,7 @@
   width: 30px;
   height: 3px;
   background-color: #ebede9;
-  transition: all 0.1s cubic-bezier(0.1, 0.82, 0.76, 0.965);
+  transition: all 0.2s cubic-bezier(0.1, 0.82, 0.76, 0.965);
 }
 .menu-button {
   margin-bottom: 0;
