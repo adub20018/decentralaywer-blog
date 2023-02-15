@@ -625,7 +625,6 @@
 @media screen and (max-height: 900px) {
   .svg {
     width: 600px;
-    margin-top: 0rem;
   }
   .popup-content {
     height: 45rem;
@@ -639,7 +638,8 @@
     margin-top: -9rem;
   }
   .skills-pointer {
-    margin-top: -10rem;
+    height: 100px;
+    margin-top: -2rem;
   }
   .bio-room__popup-title {
     margin-top: -2rem;
