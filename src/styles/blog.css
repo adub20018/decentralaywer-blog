@@ -630,6 +630,11 @@
     height: 45rem;
   }
 }
+@media screen and (max-height: 770px) {
+  .svg {
+    margin-top: -1rem;
+  }
+}
 @media screen and (max-width: 765px) {
   .main-heading {
     text-align: center;
