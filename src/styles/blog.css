@@ -457,7 +457,7 @@
   stroke-width: 3px;
   height: 180px;
   position: absolute;
-  margin-top: 19rem;
+  margin-top: 20.8rem;
   margin-left: -28rem;
 }
 
@@ -516,9 +516,12 @@
 
 .feature-text {
   text-align: left;
+  font-family: "MotionControl", serif;
   font-weight: 800;
-  font-size: 1rem;
-  text-decoration: underline;
+  font-size: 2.4rem;
+  line-height: 40px;
+  margin-bottom: 0.6rem;
+  color: #73bed3;
 }
 
 .blue {
@@ -527,10 +530,6 @@
 
 .underline {
   text-decoration: underline !important;
-}
-
-.shadow {
-  box-shadow: 5px 5px 5px #73bed3;
 }
 
 .skills-room, .bio-room, .contact-room {
@@ -575,18 +574,20 @@
   }
   .skills-pointer {
     height: 120px;
-    margin-left: -8rem;
-    margin-top: -2rem;
+    margin-left: -12rem;
+    margin-top: 1.6rem;
     transform: rotate(90deg);
   }
   .skills-room__popup-title {
     margin-left: -6rem;
-    margin-top: -9.5rem;
+    margin-top: -6rem;
   }
   .skills-room__popup-left {
+    width: 18rem;
     margin-right: -5rem;
   }
   .skills-room__popup-right {
+    width: 18rem;
     margin-left: -5rem;
     margin-bottom: 5rem;
   }
@@ -595,6 +596,7 @@
     opacity: 0.8;
     padding: 1rem;
     font-size: 0.65rem;
+    width: 18rem;
   }
   .bio-room__popup-left, .bio-room__popup-right {
     width: 15rem;
@@ -607,7 +609,7 @@
   }
   .bio-room__popup-title {
     margin-left: -8rem;
-    margin-top: -4rem;
+    margin-top: -6rem;
   }
   .bio-pointer {
     height: 120px;
@@ -627,6 +629,12 @@
     margin-left: 1rem;
     margin-top: -2.3rem;
   }
+  .feature-text {
+    font-size: 2rem;
+    background-color: #090a14;
+    opacity: 0.8;
+    padding: 1rem;
+  }
 }
 @media screen and (max-width: 1000px) {
   .popup-content {
@@ -634,12 +642,12 @@
     grid-template-rows: 2fr 3fr 2fr;
   }
   .skills-room__popup-title {
-    margin-top: -10rem;
-    margin-left: 1rem;
+    margin-top: -6rem;
+    margin-left: -6rem;
   }
   .skills-pointer {
-    margin-top: -2.5rem;
-    margin-left: -2rem;
+    margin-top: 1.5rem;
+    margin-left: -12rem;
   }
   .bio-room__popup-title {
     margin-left: 2rem;
