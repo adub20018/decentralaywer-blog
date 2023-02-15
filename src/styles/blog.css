@@ -331,7 +331,7 @@
 }
 @media screen and (max-width: 765px) {
   .footer {
-    bottom: -125rem;
+    top: 125rem;
   }
   .footer__content {
     font-size: 0.8rem;
@@ -339,12 +339,12 @@
 }
 @media screen and (max-width: 570px) {
   .footer {
-    bottom: -124rem;
+    top: 124rem;
   }
 }
 @media screen and (max-width: 420px) {
   .footer {
-    bottom: -118rem;
+    top: 118rem;
   }
 }
 .main-heading {
