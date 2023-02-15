@@ -146,23 +146,23 @@ let permalink = 'https://decentralawyer.netlify.app/'; // ADD URL HERE
 				// detects hover
 				room.addEventListener("mouseover", function() {
 					showPopup(room, popup, nav, color);
-					nav.style.borderBottom = "2px solid " + color;
+					nav.classList.add("underline");
 					nav.style.color = color;
 					room.classList.add("clicked");
 					room.style.stroke = color;
 				});
 
-				// detects click
-				room.addEventListener("click", function () {
-					showPopup(room, popup, nav, color);
-					room.classList.toggle("clicked")
+				// detects click [OUT OF USE SINCE HOVER KEEPS CONTENT]
+				// room.addEventListener("click", function () {
+				// 	showPopup(room, popup, nav, color);
+				// 	room.classList.add("clicked")
 
-					  // reset previously clicked nav element
-					if (clickedNav !== null && clickedNav !== nav) {
-						clickedNav.style.color = "";
-					}
-					clickedNav = nav;
-				});
+				// 	  // reset previously clicked nav element
+				// 	if (clickedNav !== null && clickedNav !== nav) {
+				// 		clickedNav.style.color = "";
+				// 	}
+				// 	clickedNav = nav;
+				// });
 
 				// detects mouse off unless room is clicked
 				room.addEventListener("mouseout", function() {
@@ -179,9 +179,6 @@ let permalink = 'https://decentralawyer.netlify.app/'; // ADD URL HERE
 					room.style.fill = "transparent";
 					clickedRoom.style.stroke = color;
 					}
-				});
-				nav.addEventListener("mouseover", function() {
-					nav.style.borderBottom = "";
 				});
 			}
 			
@@ -212,14 +209,14 @@ let permalink = 'https://decentralawyer.netlify.app/'; // ADD URL HERE
 					clickedRoom.style.fill = "";
 					clickedRoom.style.stroke = "";
 					clickedNav.style.borderBottom = "none";
+					clickedNav.classList.remove("underline");
 				}
 
 				// updates the clicked room/nav to display only the new text
 				clickedRoom = room;
 				room.popup = popup;
 				clickedNav = nav;
-				nav.style.color = room.color;
-				clickedNav.style.borderBottom = "2px solid " + room.color;
+				nav.style.color = color;
 
 				// loops through popup elements and sets display to block
 				if (popup instanceof NodeList) {
