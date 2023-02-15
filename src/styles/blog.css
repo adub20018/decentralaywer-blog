@@ -393,13 +393,12 @@
 }
 
 .skills-pointer {
-  stroke-width: 3px;
+  z-index: -1;
   height: 180px;
   stroke: #73bed3;
   position: absolute;
-  margin-left: -17.5rem;
-  margin-top: -15rem;
-  transform: rotate(-90deg);
+  margin-left: -22rem;
+  margin-top: -11.85rem;
 }
 
 .bio-room__container-right {
@@ -431,12 +430,13 @@
 }
 
 .bio-pointer {
+  z-index: -1;
   stroke: #a4dddb;
   stroke-width: 3px;
   height: 180px;
   position: absolute;
-  margin-top: 18.7rem;
-  margin-left: -16.2rem;
+  margin-top: 19rem;
+  margin-left: -28rem;
 }
 
 .contact-room__popup {
@@ -484,12 +484,12 @@
 }
 
 .contact-pointer {
+  z-index: -1;
+  position: absolute;
   stroke: #df84a5;
   stroke-width: 3px;
-  height: 180px;
-  position: absolute;
-  margin-left: 7rem;
-  margin-top: -1.35rem;
+  margin-top: -3em;
+  margin-right: -15rem;
 }
 
 .feature-text {
@@ -541,8 +541,10 @@
     width: 650px;
   }
   .skills-pointer {
-    margin-left: -10rem;
-    margin-top: -13.5rem;
+    height: 120px;
+    margin-left: -8rem;
+    margin-top: -2rem;
+    transform: rotate(90deg);
   }
   .skills-room__popup-title {
     margin-left: -6rem;
@@ -571,7 +573,13 @@
     padding: 1rem;
   }
   .bio-room__popup-title {
-    margin-left: -2rem;
+    margin-left: -8rem;
+    margin-top: -4rem;
+  }
+  .bio-pointer {
+    height: 120px;
+    margin-top: 22rem;
+    margin-left: -20rem;
   }
   .contact-room__popup {
     margin-bottom: -8rem;
@@ -582,22 +590,29 @@
     opacity: 0.8;
     padding: 1rem;
   }
+  .contact-pointer {
+    margin-left: 1rem;
+    margin-top: -2.3rem;
+  }
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
   .popup-content {
     grid-template-columns: 2fr 2fr 2fr;
     grid-template-rows: 2fr 3fr 2fr;
   }
-  .skills-pointer {
-    margin-top: -15rem;
-    margin-left: -6rem;
-  }
   .skills-room__popup-title {
-    margin-top: -11rem;
+    margin-top: -10rem;
     margin-left: 1rem;
+  }
+  .skills-pointer {
+    margin-top: -2.5rem;
+    margin-left: -2rem;
   }
   .bio-room__popup-title {
     margin-left: 2rem;
+  }
+  .bio-pointer {
+    margin-left: -9rem;
   }
 }
 @media screen and (max-height: 900px) {
@@ -607,14 +622,6 @@
   }
   .popup-content {
     height: 45rem;
-  }
-  .skills-pointer {
-    margin-left: -18rem;
-    margin-top: -14.2rem;
-  }
-  .skills-room__popup-title {
-    margin-left: -8rem;
-    margin-top: -10rem;
   }
 }
 @media screen and (max-height: 770px) {
