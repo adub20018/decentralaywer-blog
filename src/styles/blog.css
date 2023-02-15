@@ -385,20 +385,20 @@
   font-size: 4rem;
   color: #73bed3;
   position: absolute;
-  margin-top: -11.9rem;
+  margin-top: -10.9rem;
   margin-left: -8rem;
 }
 .skills-room__popup-text {
   width: 20rem;
 }
 
-.svg-pointer {
+.skills-pointer {
   stroke-width: 3px;
   height: 180px;
   stroke: #73bed3;
   position: absolute;
   margin-left: -17.5rem;
-  margin-top: -16.2rem;
+  margin-top: -15rem;
   transform: rotate(-90deg);
 }
 
@@ -428,6 +428,15 @@
 }
 .bio-room__popup-text, .bio-room__popup-title {
   color: #a4dddb;
+}
+
+.bio-pointer {
+  stroke: #a4dddb;
+  stroke-width: 3px;
+  height: 180px;
+  position: absolute;
+  margin-top: 18.7rem;
+  margin-left: -16.2rem;
 }
 
 .contact-room__popup {
@@ -472,6 +481,15 @@
 }
 .contact-room__popup-img-email {
   height: 20px;
+}
+
+.contact-pointer {
+  stroke: #df84a5;
+  stroke-width: 3px;
+  height: 180px;
+  position: absolute;
+  margin-left: 7rem;
+  margin-top: -1.35rem;
 }
 
 .feature-text {
@@ -522,7 +540,7 @@
     position: absolute;
     width: 650px;
   }
-  .svg-pointer {
+  .skills-pointer {
     margin-left: -10rem;
     margin-top: -13.5rem;
   }
@@ -570,7 +588,7 @@
     grid-template-columns: 2fr 2fr 2fr;
     grid-template-rows: 2fr 3fr 2fr;
   }
-  .svg-pointer {
+  .skills-pointer {
     margin-top: -15rem;
     margin-left: -6rem;
   }
@@ -590,7 +608,7 @@
   .popup-content {
     height: 45rem;
   }
-  .svg-pointer {
+  .skills-pointer {
     margin-left: -18rem;
     margin-top: -14.2rem;
   }
@@ -623,7 +641,7 @@
   .skills-room, .bio-room, .contact-room {
     opacity: 0;
   }
-  .svg-pointer {
+  .skills-pointer {
     display: none;
   }
   .popup-content {
