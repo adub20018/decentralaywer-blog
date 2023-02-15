@@ -203,7 +203,8 @@
   flex-direction: column;
   padding-bottom: 2rem;
   border-bottom: 3px solid #ebede9;
-  width: 85vw;
+  width: 60vw;
+  max-width: 60rem;
 }
 .post-preview__header {
   text-align: left;
@@ -213,6 +214,8 @@
   font-weight: 700;
   color: #ebede9;
   text-align: left;
+}
+.post-preview__title:hover {
   text-decoration: underline;
 }
 .post-preview__date {
@@ -238,6 +241,9 @@
 }
 
 @media screen and (max-width: 850px) {
+  .post-preview {
+    width: 85vw;
+  }
   .post-preview__title {
     font-size: 2rem;
   }
@@ -790,6 +796,7 @@
 .blog-header {
   border-bottom: 2px solid #73bed3;
   width: 60vw;
+  max-width: 60rem;
   text-align: center;
 }
 .blog-header__title {
@@ -942,6 +949,11 @@ blockquote .source {
   font-size: 1rem;
 }
 
+@media screen and (max-width: 850px) {
+  .blog-header {
+    width: 85vw;
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;

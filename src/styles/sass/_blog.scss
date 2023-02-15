@@ -1,6 +1,7 @@
 .blog-header {
   border-bottom: 2px solid $color-blue;
   width: 60vw;
+  max-width: 60rem;
   text-align: center;
   &__title {
   margin-top: 4rem;
@@ -177,4 +178,10 @@ blockquote {
 blockquote .source {
   font-weight: 500;
   font-size: 1rem;
+}
+
+@media screen and (max-width: 850px) {
+  .blog-header {
+    width: 85vw;
+  }
 }
