@@ -211,6 +211,19 @@
         grid-template-columns: 1.5fr 3fr 1.5fr;
         grid-template-rows: 2fr 3fr 2fr;
     }
+
+    .skills-room {
+        &__popup {
+            &-title {
+                margin-left: -8rem;
+                margin-top: -8rem;
+            }
+        }
+    }
+    
+    .skills-pointer {
+        margin-top: -9rem;
+    }
 }
 
 @media screen and (max-width: 1375px) {
@@ -341,9 +354,23 @@
     .skills-room {
         &__popup {
             &-title {
-                margin-top: -10rem;
+                margin-top: -9rem;
             }
         }
+    }
+    .skills-pointer {
+        margin-top: -10rem;
+    }
+
+    .bio-room {
+        &__popup {
+            &-title {
+                margin-top: -2rem;
+            }
+        }
+    }
+    .bio-pointer {
+        margin-top: 17rem;
     }
 }
 
