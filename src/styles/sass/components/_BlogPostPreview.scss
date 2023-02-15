@@ -10,7 +10,7 @@
     flex-direction: column;
     padding-bottom: 2rem;
     border-bottom: 3px solid $theme-divider;
-    width: 60vw;
+    width: 85vw;
 
     &__header {
         text-align: left;
@@ -20,6 +20,7 @@
         font-weight: 700;
         color: $color-white;
         text-align: left;
+        text-decoration: underline;
     }
     &__date {
         margin-top: 1rem;
@@ -32,4 +33,12 @@
     @include nav-slider-animation($color-blue);
     width: 9rem;
     margin-bottom: -1.5rem;
+}
+
+@media screen and (max-width: 850px) {
+    .post-preview {
+        &__title {
+            font-size: 2rem;
+        }
+    }
 }

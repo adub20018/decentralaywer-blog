@@ -10,13 +10,15 @@
         flex-direction: column;
         align-items: center;
         width: 70vw;
+        max-width: 60rem;
         padding-bottom: 2rem;
         margin-top: 3rem;
         margin-bottom: 2rem;
         border-bottom: 4px solid $theme-divider;
     }
     &__content {
-        max-width: 50vw;
+        max-width: 50rem;
+        width: 60vw;
         margin-bottom: 2rem;
         margin-top: 2rem;
         display: flex;
@@ -34,10 +36,20 @@
     }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 850px) {
     .blog-post {
         &__content {
-            max-width: 70vw;
+            width: 70vw;
+        }
+        &__title {
+            font-size: 2.2rem;
+        }
+    }
+}
+@media screen and (max-width: 700px) {
+    .blog-post {
+        &__content {
+            width: 85vw;
         }
     }
 }

@@ -1,3 +1,15 @@
+.blog-header {
+  border-bottom: 2px solid $color-blue;
+  width: 60vw;
+  text-align: center;
+  &__title {
+  margin-top: 4rem;
+  font-size: 5rem;
+  text-decoration: underline;
+  color: $color-blue;
+  }
+}
+
 .admin-footer {
     text-align: center;
     margin-top: 1.5rem;
