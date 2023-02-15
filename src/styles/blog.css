@@ -637,7 +637,9 @@
     font-size: 2rem;
     background-color: #090a14;
     opacity: 0.8;
-    padding: 1rem;
+    padding: 15px;
+    padding-bottom: 10px;
+    padding-top: 10px;
   }
 }
 @media screen and (max-width: 1000px) {
