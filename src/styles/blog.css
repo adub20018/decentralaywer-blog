@@ -648,7 +648,7 @@
   .skills-room, .bio-room, .contact-room {
     opacity: 0;
   }
-  .skills-pointer {
+  .skills-pointer, .bio-pointer, .contact-pointer {
     display: none;
   }
   .popup-content {
