@@ -33,8 +33,18 @@ $font-mono: "IBM Plex Mono", Consolas, "Andale Mono WT", "Andale Mono",
 $color-white: #ebede9;
 $color-black: #090a14;
 $color-blue: #73bed3;
-$color-theme-bg: #10141f;
+$color-theme-dark: #10141f;
 $color-pink: #df84a5;
-$theme-divider: $color-white;
-$theme-text-light: $color-blue;
-$color-black-dimmed: #090a1485;
+
+// light variables
+$light-bg: $color-white;
+$light-banner: blue; // get better color
+$light-text: $color-black;
+$light-theme-divider: $color-theme-dark;
+
+
+// Dark variables
+$dark-bg: $color-theme-dark;
+$dark-banner: $color-black;
+$dark-text: $color-white;
+$dark-theme-divider: #bec0be;

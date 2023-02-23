@@ -202,7 +202,7 @@
   display: flex;
   flex-direction: column;
   padding-bottom: 2rem;
-  border-bottom: 3px solid #ebede9;
+  border-bottom: 3px solid #bec0be;
   width: 60vw;
   max-width: 60rem;
 }
@@ -262,7 +262,7 @@
   padding-bottom: 2rem;
   margin-top: 3rem;
   margin-bottom: 2rem;
-  border-bottom: 4px solid #ebede9;
+  border-bottom: 4px solid #bec0be;
 }
 .blog-post__content {
   max-width: 50rem;
@@ -957,7 +957,7 @@ blockquote {
   margin-left: -1.25rem;
   margin-right: -1.25rem;
   background: transparent;
-  border-left: 0.625rem solid #ebede9;
+  border-left: 0.625rem solid #bec0be;
   border-radius: 0;
 }
 
