@@ -2,12 +2,13 @@
     width: 100%;
     position: relative;
     top: 42rem;
+    border-top: 2px solid $theme-divider;
     &__container {
         display: flex;
         justify-content: flex-end;
         align-items: flex-end;
         height: 6rem;
-        background-color: $dark-banner;
+        background-color: $bg-banner;
     }
     &__content {
         font-family: $font-dogica;
@@ -16,6 +17,7 @@
         @include nav-slider-animation($color-white);
     }
     &__subitem {
+        color: $text;
     }
 }
 

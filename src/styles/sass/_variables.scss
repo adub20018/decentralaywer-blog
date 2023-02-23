@@ -35,16 +35,21 @@ $color-black: #090a14;
 $color-blue: #73bed3;
 $color-theme-dark: #10141f;
 $color-pink: #df84a5;
+$color-gray: #bec0be;
 
 // light variables
-$light-bg: $color-white;
-$light-banner: blue; // get better color
-$light-text: $color-black;
-$light-theme-divider: $color-theme-dark;
+$bg-color: $color-white;
+$bg-banner: #0099db;
+$text: $color-theme-dark;
+$theme-divider: $color-theme-dark;
 
 
-// Dark variables
-$dark-bg: $color-theme-dark;
-$dark-banner: $color-black;
+// dark variables
+$dark-bg-color: $color-theme-dark;
+$dark-bg-banner: $color-black;
 $dark-text: $color-white;
-$dark-theme-divider: #bec0be;
+$dark-theme-divider: $color-gray;
+
+body.theme-dark {
+
+}

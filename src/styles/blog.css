@@ -19,33 +19,13 @@
 }
 .top-nav {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   height: 70px;
   padding: 0;
   margin: 0;
-  background-color: #090a14;
-  border-bottom: 2px solid #bec0be;
-}
-.top-nav__title {
-  font-family: "MotionControl", serif;
-  font-size: 2.2rem;
-  padding: 0.8rem 1rem;
-  font-weight: 700;
-  display: inline-block;
-  line-height: 30px;
-}
-.top-nav__title:after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 3px;
-  background: #73bed3;
-  transition: width 0.3s;
-}
-.top-nav__title:hover::after {
-  width: 100%;
+  background-color: #0099db;
+  border-bottom: 2px solid #10141f;
 }
 .top-nav__subitem {
   font-family: "MotionControl", serif;
@@ -54,6 +34,7 @@
   font-weight: 700;
   line-height: 30px;
   display: inline-block;
+  color: #10141f;
 }
 .top-nav__subitem:after {
   content: "";
@@ -262,7 +243,7 @@
   padding-bottom: 2rem;
   margin-top: 3rem;
   margin-bottom: 2rem;
-  border-bottom: 4px solid #bec0be;
+  border-bottom: 4px solid #10141f;
 }
 .blog-post__content {
   max-width: 50rem;
@@ -300,13 +281,14 @@
   width: 100%;
   position: relative;
   top: 42rem;
+  border-top: 2px solid #10141f;
 }
 .footer__container {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
   height: 6rem;
-  background-color: #090a14;
+  background-color: #0099db;
 }
 .footer__content {
   font-family: "Dogica", sans-serif;
@@ -324,6 +306,10 @@
 .footer__content:hover::after {
   width: 100%;
 }
+.footer__subitem {
+  color: #10141f;
+}
+
 @media screen and (max-height: 905px) {
   .footer {
     top: 39rem;
@@ -354,6 +340,7 @@
   font-size: 6rem;
   font-weight: 700;
   margin-bottom: -1.3rem;
+  color: #10141f;
 }
 .main-heading__bio {
   font-size: 1rem;
@@ -989,7 +976,7 @@ body {
   font-family: "Dogica", sans-serif;
   font-size: 1rem;
   line-height: 1.9;
-  background: #10141f;
+  background: #ebede9;
   text-align: justify;
 }
 
