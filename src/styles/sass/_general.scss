@@ -13,16 +13,31 @@ a, a:focus {
   outline: 0;
 }
 
+a {
+  color: $text;
+}
+
 body {
   font-family: $font-dogica;
   font-size: 1rem;
   line-height: 1.9;
   background: $bg-color;
   text-align: justify;
+  color: $text;
 }
 
 .content {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+// dark mode
+body.theme-dark {
+  background-color: $dark-bg-color;
+  color: $dark-text;
+}
+
+a.theme-dark {
+  color: $dark-text;
 }

@@ -28,13 +28,12 @@
   border-bottom: 2px solid #10141f;
 }
 .top-nav__subitem {
-  font-family: "MotionControl", serif;
-  font-size: 2.2rem;
+  font-family: "Dogica", sans-serif;
+  font-size: 1.1rem;
   padding: 0.8rem 1rem;
   font-weight: 700;
   line-height: 30px;
   display: inline-block;
-  color: #10141f;
 }
 .top-nav__subitem:after {
   content: "";
@@ -132,6 +131,15 @@
 #menu-toggle:checked + .menu-button-container .menu-button::after {
   margin-top: 0px;
   transform: rotate(-45deg);
+}
+
+.top-nav.theme-dark {
+  background-color: #090a14;
+  border-bottom: 2px solid #bec0be;
+}
+
+.top-nav__subitem.theme-dark {
+  color: #ebede9;
 }
 
 @media (max-width: 765px) {
@@ -282,13 +290,13 @@
   position: relative;
   top: 42rem;
   border-top: 2px solid #10141f;
+  background-color: #0099db;
 }
 .footer__container {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
   height: 6rem;
-  background-color: #0099db;
 }
 .footer__content {
   font-family: "Dogica", sans-serif;
@@ -306,8 +314,9 @@
 .footer__content:hover::after {
   width: 100%;
 }
-.footer__subitem {
-  color: #10141f;
+footer.theme-dark {
+  background-color: #090a14;
+  border-top: 2px solid #bec0be;
 }
 
 @media screen and (max-height: 905px) {
@@ -340,11 +349,9 @@
   font-size: 6rem;
   font-weight: 700;
   margin-bottom: -1.3rem;
-  color: #10141f;
 }
 .main-heading__bio {
-  font-size: 1rem;
-  color: #73bed3;
+  font-size: 1.2rem;
   padding: 0;
   margin: 0;
 }
@@ -825,7 +832,6 @@ h1 {
   font-size: clamp(2.488rem, 1.924rem + 1.41vw, 3.052rem);
   font-family: "MotionControl", serif;
   letter-spacing: 2px;
-  color: #ebede9;
 }
 
 h2 {
@@ -855,7 +861,6 @@ small,
 }
 
 a {
-  color: #ebede9;
   font-weight: 400;
   text-underline-offset: 0.08em;
   text-decoration: none;
@@ -972,18 +977,32 @@ a, a:focus {
   outline: 0;
 }
 
+a {
+  color: #10141f;
+}
+
 body {
   font-family: "Dogica", sans-serif;
   font-size: 1rem;
   line-height: 1.9;
   background: #ebede9;
   text-align: justify;
+  color: #10141f;
 }
 
 .content {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+body.theme-dark {
+  background-color: #10141f;
+  color: #ebede9;
+}
+
+a.theme-dark {
+  color: #ebede9;
 }
 
 .privacy__header {

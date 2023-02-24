@@ -36,7 +36,6 @@ h1 {
   font-size: clamp(2.488rem, 1.924rem + 1.41vw, 3.052rem);
   font-family: $font-heading;
   letter-spacing: 2px;
-  color: $color-white;
 }
 
 h2 {
@@ -66,7 +65,6 @@ small,
 }
 
 a {
-  color: $color-white;
   font-weight: 400;
   text-underline-offset: 0.08em;
   text-decoration: none;
