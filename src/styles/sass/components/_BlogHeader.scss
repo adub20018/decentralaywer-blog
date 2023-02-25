@@ -13,7 +13,8 @@
         padding: 0.8rem 1rem;
         font-weight: 700;
         line-height: 30px;
-        display: inline-block; 
+        display: inline-block;
+        color: $text-banner; 
         @include nav-slider-animation($color-blue);
     }
     &__content {
@@ -106,6 +107,10 @@
     }
 }
 
+#themeToggle {
+    display: none;
+}
+
 .top-nav.theme-dark {
     background-color: $dark-bg-banner;
     border-bottom: 2px solid $dark-theme-divider;
@@ -115,6 +120,14 @@
     color: $dark-text;
 }
 
+.night-mode-toggle {
+    display: flex;
+    align-items: center;
+    padding-right: 1rem;
+}
+.pixel-moon {
+    height: 26px;
+}
   
 @media (max-width: 765px) {
     .menu {

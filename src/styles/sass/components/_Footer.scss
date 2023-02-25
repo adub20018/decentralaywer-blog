@@ -18,6 +18,7 @@
         @include nav-slider-animation($color-white);
     }
     &__subitem {
+        color: $text-banner; 
     }
 }
 
