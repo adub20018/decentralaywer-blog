@@ -44,7 +44,7 @@ footer.theme-dark {
 @media screen and (max-width:765px) {
     .footer {
         &-filler {
-            height: 125rem;
+            height: 124rem;
         }
         &__content {
             font-size: 0.8rem;
@@ -54,9 +54,16 @@ footer.theme-dark {
 
 @media screen and (max-width:570px) {
     .footer-filler {
-        height: 124rem;
+        height: 122rem;
     }
 }
+
+@media screen and (max-width:480px) {
+    .footer-filler {
+        height: 120rem;
+    }
+}
+
 
 @media screen and (max-width:420px) {
     .footer-filler {
