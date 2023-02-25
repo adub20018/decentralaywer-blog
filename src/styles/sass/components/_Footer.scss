@@ -1,7 +1,7 @@
 .footer {
     width: 100%;
     position: relative;
-    top: 42rem;
+    // top: 42rem;
     border-top: 2px solid $theme-divider;
     background-color: $bg-banner;
     &__container {
@@ -20,6 +20,9 @@
     &__subitem {
         color: $text-banner; 
     }
+    &-filler {
+        height: 42rem;
+    }
 }
 
 footer.theme-dark {
@@ -28,14 +31,16 @@ footer.theme-dark {
 }
 
 @media screen and (max-height:905px) {
-    .footer {
-        top: 39rem;
+    .footer-filler {
+        height: 39rem;
     }
 }
 
 @media screen and (max-width:765px) {
     .footer {
-        top: 125rem;
+        &-filler {
+            height: 125rem;
+        }
         &__content {
             font-size: 0.8rem;
         }
@@ -43,13 +48,13 @@ footer.theme-dark {
 }
 
 @media screen and (max-width:570px) {
-    .footer {
-        top: 124rem;
+    .footer-filler {
+        height: 124rem;
     }
 }
 
 @media screen and (max-width:420px) {
-    .footer {
-        top: 118rem;
+    .footer-filler {
+        height: 118rem;
     }
 }
