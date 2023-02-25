@@ -3,22 +3,21 @@ import { SITE } from '../config';
 let { title } = SITE;
 ---
 <section class="top-nav">
-    <input id="menu-toggle" type="checkbox" />
-    <label class='menu-button-container' for="menu-toggle">
-    <div class='menu-button'>
-    </div>
+  <input id="menu-toggle" type="checkbox" />
+  <label class='menu-button-container' for="menu-toggle">
+    <div class='menu-button'></div>
   </label>
-    <ul class="menu">
-      <li><a class="top-nav__subitem skillsNav">Skills</a></li>
-      <li><a class="top-nav__subitem bioNav">Bio</a></li>
-      <li><a class="top-nav__subitem contactNav">Contact</a></li>
-      <li><a class="top-nav__subitem" href="/blog/">Blog</a></li>
+  <ul class="menu">
+    { Astro.url.pathname !== '/' && <li><a href="/" class="top-nav__subitem">Home</a></li> }
+    <li><a class="top-nav__subitem skillsNav">Skills</a></li>
+    <li><a class="top-nav__subitem bioNav">Bio</a></li>
+    <li><a class="top-nav__subitem contactNav">Contact</a></li>
+    <li><a class="top-nav__subitem" href="/blog/">Blog</a></li>
 
-		  <!-- dark mode toggle -->
-      <label for="themeToggle" class="night-mode-toggle">
-        <input type="checkbox" id="themeToggle">
-        <img class="pixel-moon" src="/assets/images/pixel-moon.png">
-      </label>
-
-    </ul>
-  </section>
+    <!-- dark mode toggle -->
+    <label for="themeToggle" class="night-mode-toggle">
+      <input type="checkbox" id="themeToggle">
+      <img class="pixel-moon" src="/assets/images/pixel-moon.png">
+    </label>
+  </ul>
+</section>

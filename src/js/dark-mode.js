@@ -1,8 +1,6 @@
 const topNav = document.querySelector('.top-nav');
 const topNavText = document.querySelectorAll('a');
-
 const footer = document.querySelector('.footer')
-
 const themeToggle = document.querySelector('#themeToggle');
 
 
@@ -25,7 +23,21 @@ function applyTheme(theme) {
     // footer elements
     footer.classList.remove("theme-light", "theme-dark");
     footer.classList.add(`theme-${theme}`);	
+
+    // Store the theme preference in localStorage
+    localStorage.setItem("theme", theme);
 }
+
+    // Retrieve the theme preference from localStorage, if it exists
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      applyTheme(savedTheme);
+
+      // Update the toggle switch to match the saved theme
+      if (savedTheme === "dark") {
+        themeToggle.checked = true;
+      }
+    }
 
 themeToggle.addEventListener('change', () => {
     if (themeToggle.checked) {
@@ -34,4 +46,3 @@ themeToggle.addEventListener('change', () => {
       applyTheme('light');
     }
   });
-// console.log(applyTheme('dark'));
