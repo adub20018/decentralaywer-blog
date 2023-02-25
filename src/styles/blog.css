@@ -314,30 +314,26 @@
 .footer {
   width: 100%;
   position: relative;
+  margin-top: 2rem;
   border-top: 2px solid #10141f;
   background-color: #0072ce;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 .footer__container {
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  height: 6rem;
+  align-items: center;
+  height: 5rem;
 }
 .footer__content {
   font-family: "Dogica", sans-serif;
   font-size: 1rem;
   padding: 1rem 1.5rem;
+  margin-bottom: 0;
 }
-.footer__content:after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 3px;
-  background: #ebede9;
-  transition: width 0.3s;
-}
-.footer__content:hover::after {
-  width: 100%;
+.footer__content:hover {
+  text-decoration: underline;
 }
 .footer__subitem {
   color: #ebede9;

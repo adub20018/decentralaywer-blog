@@ -1,21 +1,26 @@
 .footer {
     width: 100%;
     position: relative;
-    // top: 42rem;
+    margin-top: 2rem;
     border-top: 2px solid $theme-divider;
     background-color: $bg-banner;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     &__container {
         display: flex;
-        justify-content: flex-end;
-        align-items: flex-end;
-        height: 6rem;
+        align-items: center;
+        height: 5rem;
 
     }
     &__content {
         font-family: $font-dogica;
         font-size: 1rem;
         padding: 1rem 1.5rem;
-        @include nav-slider-animation($color-white);
+        margin-bottom: 0;
+        &:hover {
+            text-decoration: underline;
+        }
     }
     &__subitem {
         color: $text-banner; 
