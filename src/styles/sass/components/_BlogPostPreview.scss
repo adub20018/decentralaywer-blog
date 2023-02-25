@@ -31,12 +31,14 @@
 
 .read-more {
     margin-top: 1rem;
-    @include nav-slider-animation($color-blue);
     width: 6.2rem;
     line-height: 1.5rem;
     font-size: 1.3rem;
     font-weight: 600;
     margin-bottom: -1.8rem;
+    &:hover {
+        text-decoration: underline !important;
+    }
 }
 
 @media screen and (max-width: 850px) {

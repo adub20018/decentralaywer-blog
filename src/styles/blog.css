@@ -246,16 +246,8 @@
   font-weight: 600;
   margin-bottom: -1.8rem;
 }
-.read-more:after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 3px;
-  background: #73bed3;
-  transition: width 0.3s;
-}
-.read-more:hover::after {
-  width: 100%;
+.read-more:hover {
+  text-decoration: underline !important;
 }
 
 @media screen and (max-width: 850px) {
@@ -831,7 +823,7 @@ footer.theme-dark {
   }
 }
 .blog-header {
-  border-bottom: 2px solid;
+  border-bottom: 3px solid #bec0be;
   width: 60vw;
   max-width: 60rem;
   text-align: center;
