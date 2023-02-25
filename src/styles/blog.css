@@ -824,7 +824,7 @@ footer.theme-dark {
   }
 }
 .blog-header {
-  border-bottom: 2px solid #73bed3;
+  border-bottom: 2px solid;
   width: 60vw;
   max-width: 60rem;
   text-align: center;
@@ -833,7 +833,6 @@ footer.theme-dark {
   margin-top: 4rem;
   font-size: 5rem;
   text-decoration: underline;
-  color: #73bed3;
 }
 
 .admin-footer {
