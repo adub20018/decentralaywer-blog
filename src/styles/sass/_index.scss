@@ -39,7 +39,7 @@
             justify-self: flex-start;
             align-self: flex-end;
             position: absolute;
-            margin-bottom: -8rem;
+            margin-bottom: -4.1rem;
             color: $color-blue;
         }
         &-left {
@@ -63,8 +63,8 @@
             text-decoration: underline;
             font-size: 4rem;
             position: absolute;
-            margin-top: -10.3rem;
-            margin-left: -8rem;
+            // margin-top: -10rem;
+            // margin-left: -8rem;
             color: $color-blue;
         }
         &-text {
@@ -107,7 +107,7 @@
             font-size: 4rem;
             text-decoration: underline;
             margin-left: -8rem;
-            margin-top: -1.9rem;
+            margin-top: 5.4rem;
         }
         &-text {
             margin-bottom: 4rem;
@@ -170,13 +170,12 @@
     position: absolute;
     stroke: $color-pink;
     stroke-width: 3px;
-    margin-top: -3em;
+    margin-top: -2.3rem;
     margin-right: -15rem;
 }
 
 .feature-text {
     text-align: justify;
-    font-family: $font-body;
     font-weight: 800;
     font-size: 1.6rem;
     line-height: 40px;
