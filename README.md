@@ -1,10 +1,10 @@
-<h1 align="center">Decentralawyer Blog</h1>
+<h1>Decentralawyer Blog</h1>
 
 This site/blog is for the [Decentralawyer law firm][twitter].
 
 Built with Astro, JavaScript, SCSS, and managed/hosted on [Netlify CMS][netlify]
 
-The blog-cms integration is built upon [Delucid'sopen source Astro Netlify CMS starter template][template]
+The cms integration is built upon [Delucid's open source Astro Netlify CMS starter template][template]
 
 ## Deployment
 
