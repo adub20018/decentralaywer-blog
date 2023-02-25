@@ -9,9 +9,9 @@ let { title } = SITE;
   </label>
   <ul class="menu">
     { Astro.url.pathname !== '/' && <li><a href="/" class="top-nav__subitem">Home</a></li> }
-    <li><a class="top-nav__subitem skillsNav">Skills</a></li>
-    <li><a class="top-nav__subitem bioNav">Bio</a></li>
-    <li><a class="top-nav__subitem contactNav">Contact</a></li>
+    <li><a class="top-nav__subitem skillsNav" href={ Astro.url.pathname !== '/' ? '/#skillsID' : null}>Skills</a></li>
+    <li><a class="top-nav__subitem bioNav" href={ Astro.url.pathname !== '/' ? '/#bioID' : null}>Bio</a></li>
+    <li><a class="top-nav__subitem contactNav" href={ Astro.url.pathname !== '/' ? '/#contactID' : null}>Contact</a></li>
     <li><a class="top-nav__subitem" href="/blog/">Blog</a></li>
 
     <!-- dark mode toggle -->

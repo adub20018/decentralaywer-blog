@@ -47,6 +47,7 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
+    z-index: 1;
 
     & > li {
         margin: 0 1rem;
@@ -169,5 +170,10 @@
             padding: 0.5em;
             transition: height 200ms cubic-bezier(0.23, 1, 0.32, 1);
         }
+    }
+    .pixel-moon {
+        position: absolute;
+        top: -3rem;
+        right: 4rem;
     }
 }
