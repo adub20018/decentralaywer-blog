@@ -168,6 +168,7 @@
             opacity: 0.8;
             padding: 1rem;
             font-size: 1.2rem;
+            color: $color-white;
             &-container {
                 @include nav-slider-animation($color-pink);
                 margin-bottom: -20px;
