@@ -401,7 +401,7 @@ footer.theme-dark {
   justify-self: flex-start;
   align-self: flex-end;
   position: absolute;
-  margin-bottom: -4.1rem;
+  margin-bottom: -8rem;
   color: #73bed3;
 }
 .skills-room__container-left {
@@ -422,11 +422,20 @@ footer.theme-dark {
   text-decoration: underline;
   font-size: 4rem;
   position: absolute;
+  margin-top: -10.3rem;
+  margin-left: -8rem;
   color: #73bed3;
+  background-color: #090a14;
+  opacity: 0.8;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
 }
 .skills-room__popup-text {
   width: 20rem;
   font-size: 1.2rem;
+  background-color: #090a14;
+  opacity: 0.8;
+  padding: 1rem;
 }
 
 .skills-pointer {
@@ -459,11 +468,19 @@ footer.theme-dark {
   font-size: 4rem;
   text-decoration: underline;
   margin-left: -8rem;
-  margin-top: 5.4rem;
+  margin-top: -4.5rem;
+  background-color: #090a14;
+  opacity: 0.8;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  width: 6.3rem;
 }
 .bio-room__popup-text {
   margin-bottom: 4rem;
   font-size: 1.2rem;
+  background-color: #090a14;
+  opacity: 0.8;
+  padding: 1rem;
 }
 .bio-room__popup-text, .bio-room__popup-title {
   color: #a4dddb;
@@ -491,6 +508,10 @@ footer.theme-dark {
   color: #df84a5;
   text-decoration: underline;
   font-size: 4rem;
+  background-color: #090a14;
+  opacity: 0.8;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
 }
 .contact-room__popup-text {
   display: flex;
@@ -538,6 +559,9 @@ footer.theme-dark {
   font-size: 1.6rem;
   line-height: 40px;
   margin-bottom: 0.6rem;
+  background-color: #090a14;
+  opacity: 0.8;
+  padding: 0.8rem;
 }
 
 .blue {
@@ -591,12 +615,12 @@ footer.theme-dark {
   .skills-pointer {
     height: 120px;
     margin-left: -12rem;
-    margin-top: 1.6rem;
+    margin-top: -1rem;
     transform: rotate(90deg);
   }
   .skills-room__popup-title {
     margin-left: -6rem;
-    margin-top: -6rem;
+    margin-top: -8.6rem;
   }
   .skills-room__popup-left {
     width: 18rem;
@@ -608,9 +632,6 @@ footer.theme-dark {
     margin-bottom: 5rem;
   }
   .skills-room__popup-text {
-    background-color: #090a14;
-    opacity: 0.8;
-    padding: 1rem;
     font-size: 1rem;
     width: 18rem;
   }
@@ -619,13 +640,10 @@ footer.theme-dark {
   }
   .bio-room__popup-text {
     font-size: 1rem;
-    background-color: #090a14;
-    opacity: 0.8;
-    padding: 1rem;
   }
   .bio-room__popup-title {
     margin-left: -8rem;
-    margin-top: -6rem;
+    margin-top: -3.8rem;
   }
   .bio-pointer {
     height: 120px;
@@ -637,19 +655,13 @@ footer.theme-dark {
   }
   .contact-room__popup-text {
     font-size: 1rem;
-    background-color: #090a14;
-    opacity: 0.8;
-    padding: 1rem;
   }
   .contact-pointer {
     margin-left: 1rem;
-    margin-top: -2.3rem;
+    margin-top: -1.8rem;
   }
   .feature-text {
     font-size: 1.4rem;
-    background-color: #090a14;
-    opacity: 0.8;
-    padding: 15px;
     padding-bottom: 10px;
     padding-top: 10px;
   }

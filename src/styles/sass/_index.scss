@@ -39,7 +39,7 @@
             justify-self: flex-start;
             align-self: flex-end;
             position: absolute;
-            margin-bottom: -4.1rem;
+            margin-bottom: -8rem;
             color: $color-blue;
         }
         &-left {
@@ -63,13 +63,20 @@
             text-decoration: underline;
             font-size: 4rem;
             position: absolute;
-            // margin-top: -10rem;
-            // margin-left: -8rem;
+            margin-top: -10.3rem;
+            margin-left: -8rem;
             color: $color-blue;
+            background-color: $color-black;
+            opacity: 0.8;
+            padding-left: 0.8rem;
+            padding-right: 0.8rem;
         }
         &-text {
             width: 20rem;
             font-size: 1.2rem;
+            background-color: $color-black;
+            opacity: 0.8;
+            padding: 1rem;
         }
     }
 }
@@ -107,11 +114,19 @@
             font-size: 4rem;
             text-decoration: underline;
             margin-left: -8rem;
-            margin-top: 5.4rem;
+            margin-top: -4.5rem;
+            background-color: $color-black;
+            opacity: 0.8;
+            padding-left: 0.8rem;
+            padding-right: 0.8rem;
+            width: 6.3rem;
         }
         &-text {
             margin-bottom: 4rem;
             font-size: 1.2rem;
+            background-color: $color-black;
+            opacity: 0.8;
+            padding: 1rem;
         }
         &-text, &-title {
             color: #a4dddb;
@@ -141,6 +156,10 @@
             color: $color-pink;
             text-decoration: underline;
             font-size: 4rem;
+            background-color: $color-black;
+            opacity: 0.8;
+            padding-left: 0.8rem;
+            padding-right: 0.8rem;
         }
         &-text {
             display: flex;
@@ -180,6 +199,9 @@
     font-size: 1.6rem;
     line-height: 40px;
     margin-bottom: 0.6rem;
+    background-color: $color-black;
+    opacity: 0.8;
+    padding: 0.8rem;
 }
 
 .blue {
@@ -239,14 +261,14 @@
     .skills-pointer {
         height: 120px;
         margin-left: -12rem;
-        margin-top: 1.6rem;
+        margin-top: -1rem;
         transform: rotate(90deg);
     }
     .skills-room {
         &__popup {
             &-title {
                 margin-left: -6rem;
-                margin-top: -6rem;
+                margin-top: -8.6rem;
             }
             &-left {
                 width: 18rem;
@@ -259,9 +281,6 @@
 
             }
             &-text {
-                background-color: $color-black;
-                opacity: 0.8;
-                padding: 1rem;
                 font-size: 1rem;
                 width: 18rem;
             }
@@ -276,14 +295,11 @@
             }
             &-text {
                 font-size: 1rem;
-                background-color: $color-black;
-                opacity: 0.8;
-                padding: 1rem;
   
             }
             &-title {
                 margin-left: -8rem;
-                margin-top: -6rem;
+                margin-top: -3.8rem;
             }
         }
     }
@@ -299,21 +315,15 @@
             margin-bottom: -8rem;
             &-text {
                 font-size: 1rem;
-                background-color: $color-black;
-                opacity: 0.8;
-                padding: 1rem;
             }
         }
     }
     .contact-pointer {
         margin-left: 1rem;
-        margin-top: -2.3rem;
+        margin-top: -1.8rem;
     }
     .feature-text {
         font-size: 1.4rem;
-        background-color: $color-black;
-        opacity: 0.8;
-        padding: 15px;
         padding-bottom: 10px;
         padding-top: 10px;
     }
