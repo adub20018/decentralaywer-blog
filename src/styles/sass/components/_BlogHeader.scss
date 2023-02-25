@@ -6,7 +6,7 @@
     padding: 0;
     margin: 0;
     background-color: $bg-banner;
-    border-bottom: 2px solid $theme-divider;
+    // border-bottom: 2px solid $theme-divider;
     &__subitem {
         font-family: $font-dogica;
         font-size: 1.1rem;
@@ -114,7 +114,7 @@
 
 .top-nav.theme-dark {
     background-color: $dark-bg-banner;
-    border-bottom: 2px solid $dark-theme-divider;
+    // border-bottom: 2px solid $dark-theme-divider;
 }
 
 .top-nav__subitem.theme-dark {

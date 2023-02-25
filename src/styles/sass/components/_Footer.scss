@@ -2,7 +2,7 @@
     width: 100%;
     position: relative;
     margin-top: 2rem;
-    border-top: 2px solid $theme-divider;
+    // border-top: 2px solid $theme-divider;
     background-color: $bg-banner;
     display: flex;
     justify-content: flex-end;
@@ -32,7 +32,7 @@
 
 footer.theme-dark {
     background-color: $dark-bg-banner;
-    border-top: 2px solid $dark-theme-divider;
+    // border-top: 2px solid $dark-theme-divider;
 }
 
 @media screen and (max-height:905px) {

@@ -31,7 +31,6 @@
   padding: 0;
   margin: 0;
   background-color: #0072ce;
-  border-bottom: 2px solid #10141f;
 }
 .top-nav__subitem {
   font-family: "Dogica", sans-serif;
@@ -147,7 +146,6 @@
 
 .top-nav.theme-dark {
   background-color: #090a14;
-  border-bottom: 2px solid #bec0be;
 }
 
 .top-nav__subitem.theme-dark {
@@ -307,7 +305,6 @@
   width: 100%;
   position: relative;
   margin-top: 2rem;
-  border-top: 2px solid #10141f;
   background-color: #0072ce;
   display: flex;
   justify-content: flex-end;
@@ -336,7 +333,6 @@
 
 footer.theme-dark {
   background-color: #090a14;
-  border-top: 2px solid #bec0be;
 }
 
 @media screen and (max-height: 905px) {
