@@ -20,7 +20,15 @@
     font-style: normal;
   }  
 
+  @font-face {
+    font-family: "Eurostile";
+    src: url("/assets/fonts/Eurostile.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+  }
+
 // font variables
+$font-body: "Eurostile", sans-serif;
 $font-heading: "MotionControl", serif;
 $font-dogica: "Dogica", sans-serif;
 $font-dogica-bold: "DogicaBold", sans-serif;
