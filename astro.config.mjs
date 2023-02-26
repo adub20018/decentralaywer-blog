@@ -10,7 +10,6 @@ export default defineConfig({
         backend: {
           name: 'git-gateway',
           branch: 'latest',
-          token: '<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>',
         },
         // Configure where our media assets are stored & served from
         media_folder: 'public/assets/blog',
