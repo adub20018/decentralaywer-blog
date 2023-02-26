@@ -1002,6 +1002,18 @@ blockquote .source {
     grid-template-rows: 220px 260px 420px 425px 330px 300px 500px;
   }
 }
+@media screen and (max-width: 765px) {
+  .reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+  }
+  .reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;

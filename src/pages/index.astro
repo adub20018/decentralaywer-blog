@@ -62,8 +62,8 @@ let permalink = 'https://decentralawyer.netlify.app/';
 										<path d="M25.11210823059082,182.06277465820312C25.11210823059082,182.06277465820312,779.3721923828125,184.75335693359375,779.3721923828125,184.75335693359375" stroke-width="3" stroke-opacity="0.81"></path>
 									</svg>
 								</div>
-									<h1 class="skills-room__popup-title">Skills</h1>
-									<p class="skills-room__popup-text">
+									<h1 class="skills-room__popup-title reveal">Skills</h1>
+									<p class="skills-room__popup-text reveal">
 										<span class="feature-text">Welcome to TechLaw Firm</span> <br>
 										Where we specialize in providing legal services to cutting edge technology companies. Our team has a deep understanding of the complex legal issues surrounding the latest advancements in the tech industry.
 									</p>
@@ -71,7 +71,7 @@ let permalink = 'https://decentralawyer.netlify.app/';
 							</div>
 							<div class="skills-room__container-left">
 								<div class="skills-room__popup-left">
-									<p class="skills-room__popup-text">
+									<p class="skills-room__popup-text reveal">
 										<span class="feature-text">From patent law to data privacy</span> <br>
 										regulations we have the expertise to protect your business and help you navigate the constantly evolving legal landscape.
 									</p>
@@ -85,16 +85,16 @@ let permalink = 'https://decentralawyer.netlify.app/';
 												<path d="M25.11210823059082,182.06277465820312C25.11210823059082,182.06277465820312,779.3721923828125,184.75335693359375,779.3721923828125,184.75335693359375" stroke-width="3" stroke-opacity="0.81"></path>
 											</svg>
 										</div>
-										<p class="bio-room__popup-text">
+										<p class="bio-room__popup-text reveal">
 											<span class="feature-text">Whether you're a startup</span> <br>
 											 or a well-established company we have the knowledge and resources to help you succeed. Contact us today to schedule a consultation and learn how we can help your business thrive.
 										</p>
-										<h1 class="bio-room__popup-title">Bio</h1>
+										<h1 class="bio-room__popup-title reveal">Bio</h1>
 									</div>
 								</div>
 								<div class="bio-room__container-left">
 									<div class="bio-room__popup-left">
-										<p class="bio-room__popup-text">
+										<p class="bio-room__popup-text reveal">
 											<span class="feature-text">John Doe, a partner at TechLaw Firm</span> <br>
 											 John has over a decade of experience in the tech industry and is a leading expert in patent law. He has successfully represented clients in a wide range of technology fields.
 										</p>
@@ -107,9 +107,9 @@ let permalink = 'https://decentralawyer.netlify.app/';
 										</svg>
 									</div>
 									<h1 class="contact-room__popup-title">Contact</h1>									
-									<h2 class="contact-room__popup-text-container">
+									<h2 class="contact-room__popup-text-container reveal">
 										<a class="contact-room__popup-text blue" href="https://calendly.com/decentralawyer"><img src="/assets/images/blue.png" class="contact-room__popup-img" alt="blue contact button icon">Book a Meeting</a></h2> <br>
-									<h2 class="contact-room__popup-text-container">
+									<h2 class="contact-room__popup-text-container reveal">
 										<a class="contact-room__popup-text" href="mailto: gaurav@decentralaw.ai"><img src="/assets/images/email.png" class="contact-room__popup-img-email" alt="email button icon">Send an Email</a>
 									</h2>
 
@@ -219,7 +219,7 @@ let permalink = 'https://decentralawyer.netlify.app/';
 				// loops through popup elements and sets display to block
 				if (popup instanceof NodeList) {
 					for (let i = 0; i < popup.length; i++) {
-						var popupElem = popup[i];
+						let popupElem = popup[i];
 						popupElem.style.display = "block";
 					}
 				} else {
@@ -243,6 +243,25 @@ let permalink = 'https://decentralawyer.netlify.app/';
 					}
 				}
 			}
+
+			// reveal text on scroll
+			function reveal() {
+				const reveals = document.querySelectorAll(".reveal");
+
+				for (let i = 0; i < reveals.length; i++) {
+					const windowHeight = window.innerHeight;
+					const elementTop = reveals[i].getBoundingClientRect().top;
+
+					if (elementTop < windowHeight) {
+					reveals[i].classList.add("active");
+					} else {
+					reveals[i].classList.remove("active");
+					}
+				}
+				}
+
+			window.addEventListener("scroll", reveal);
+
 		</script>
 	</body>
 </html>
