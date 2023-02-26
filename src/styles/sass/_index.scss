@@ -9,6 +9,9 @@
         font-size: 1.8rem;
         padding: 0;
         margin: 0;
+        &:not(:first-child) {
+            margin-top: 0rem;
+          }
     }
 }
 

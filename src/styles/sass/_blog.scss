@@ -23,13 +23,13 @@
   line-height: 1.3;
 }
 
-// :is(h1, h2) {
-//   max-width: 40ch;
-// }
+:is(h1, h2) {
+  max-width: 40ch;
+}
 
-// :is(h2, h3):not(:first-child) {
-//   margin-top: 3rem;
-// }
+:is(h2, h3):not(:first-child) {
+  margin-top: 3rem;
+}
 
 h1 {
   font-size: clamp(2.488rem, 1.924rem + 1.41vw, 3.052rem);
