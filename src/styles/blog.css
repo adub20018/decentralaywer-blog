@@ -345,7 +345,7 @@ footer.theme-dark {
 }
 @media screen and (max-width: 765px) {
   .footer-filler {
-    height: 152rem;
+    height: 154rem;
   }
   .footer__content {
     font-size: 0.8rem;
@@ -353,12 +353,12 @@ footer.theme-dark {
 }
 @media screen and (max-width: 570px) {
   .footer-filler {
-    height: 136rem;
+    height: 140rem;
   }
 }
 @media screen and (max-width: 486px) {
   .footer-filler {
-    height: 130rem;
+    height: 134rem;
   }
 }
 .blog-header {
