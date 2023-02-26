@@ -229,6 +229,10 @@
     stroke-width: 4px;
 }
 
+.scroll-down {
+    display: none;
+}
+
 @media screen and (max-width: 1550px) {
     .svg {
         width: 650px;
@@ -375,6 +379,7 @@
 
 @media screen and (max-width: 765px) {
     .main-heading {
+        margin-top: 2rem;
         text-align: center;
         &__title {
             font-size: 3.5rem;
@@ -393,11 +398,13 @@
     
     .popup-content {
         grid-template-columns: 1fr;
-        grid-template-rows: 150px 400px 450px 420px 320px 320px 500px;
+        grid-template-rows: 150px 60vh 150px 350px 400px 250px 500px 280px;
     }
     .svg {
         grid-area: 2/1/3/2;
         width: 550px;
+        align-self: center;
+        margin-top: 5rem;
     }
     polygon {
         display: none;
@@ -408,7 +415,7 @@
     .skills-room {
         &__container {
             &-right {
-                grid-area: 4/1/5/2;
+                grid-area: 5/1/6/2;
                 justify-self: center;
                 align-self: center;
                 display: block;
@@ -416,7 +423,7 @@
                 width: 320px;
             }
             &-left {
-                grid-area: 5/1/6/2;
+                grid-area: 6/1/7/2;
                 justify-self: center;
                 align-self: flex-start;
                 display: block;
@@ -448,14 +455,14 @@
     .bio-room {
         &__container {
             &-right {
-                grid-area: 6/1/7/2;
+                grid-area: 7/1/8/2;
                 max-width: 20rem;
                 justify-self: center;
                 align-self: center;
                 width: 320px;
             }
             &-left {
-                grid-area: 7/1/8/2;
+                grid-area: 8/1/9/2;
                 justify-self: center;
                 max-width: 20rem;
                 align-self: center;
@@ -480,12 +487,18 @@
     .contact-room {
         &__popup {
             display:block;
-            grid-area: 3/1/4/2;
+            grid-area: 4/1/5/2;
             justify-self: center;
-            align-self: center;
+            align-self: flex-start;
             margin: 0;
             text-align: center;
         }
+    }
+    .scroll-down {
+        display: block;
+        grid-area: 3/1/4/2;
+        justify-self: center;
+        align-self: center;
     }
 }
 
@@ -497,17 +510,10 @@
         }
     }
     .svg {
-        margin-top: 1rem;
         width: 400px;
-    }
-    .popup-content {
-        grid-template-rows: 150px 320px 420px 425px 330px 300px 500px;
     }
 }
 @media screen and (max-width: 486px) {
-    .popup-content {
-        grid-template-rows: 220px 300px 420px 425px 330px 300px 500px;
-    }
 
     .main-heading {
         &__title {
@@ -535,8 +541,6 @@
 
     .popup-content {
         height: 100rem;
-        grid-template-columns: 1fr;
-        grid-template-rows: 220px 260px 420px 425px 330px 300px 500px;
     }
 }
 

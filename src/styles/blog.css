@@ -345,7 +345,7 @@ footer.theme-dark {
 }
 @media screen and (max-width: 765px) {
   .footer-filler {
-    height: 148rem;
+    height: 156rem;
   }
   .footer__content {
     font-size: 0.8rem;
@@ -353,17 +353,17 @@ footer.theme-dark {
 }
 @media screen and (max-width: 570px) {
   .footer-filler {
-    height: 126rem;
+    height: 140rem;
   }
 }
-@media screen and (max-width: 488px) {
+@media screen and (max-width: 486px) {
   .footer-filler {
-    height: 122rem;
+    height: 134rem;
   }
 }
 @media screen and (max-width: 420px) {
   .footer-filler {
-    height: 120rem;
+    height: 134rem;
   }
 }
 .blog-header {
@@ -759,6 +759,10 @@ blockquote .source {
   stroke-width: 4px;
 }
 
+.scroll-down {
+  display: none;
+}
+
 @media screen and (max-width: 1550px) {
   .svg {
     width: 650px;
@@ -865,6 +869,7 @@ blockquote .source {
 }
 @media screen and (max-width: 765px) {
   .main-heading {
+    margin-top: 2rem;
     text-align: center;
   }
   .main-heading__title {
@@ -882,11 +887,13 @@ blockquote .source {
   }
   .popup-content {
     grid-template-columns: 1fr;
-    grid-template-rows: 150px 400px 450px 420px 320px 320px 500px;
+    grid-template-rows: 150px 60vh 150px 350px 400px 250px 500px 280px;
   }
   .svg {
     grid-area: 2/1/3/2;
     width: 550px;
+    align-self: center;
+    margin-top: 5rem;
   }
   polygon {
     display: none;
@@ -895,7 +902,7 @@ blockquote .source {
     width: 320px;
   }
   .skills-room__container-right {
-    grid-area: 4/1/5/2;
+    grid-area: 5/1/6/2;
     justify-self: center;
     align-self: center;
     display: block;
@@ -903,7 +910,7 @@ blockquote .source {
     width: 320px;
   }
   .skills-room__container-left {
-    grid-area: 5/1/6/2;
+    grid-area: 6/1/7/2;
     justify-self: center;
     align-self: flex-start;
     display: block;
@@ -929,14 +936,14 @@ blockquote .source {
     margin-left: 0;
   }
   .bio-room__container-right {
-    grid-area: 6/1/7/2;
+    grid-area: 7/1/8/2;
     max-width: 20rem;
     justify-self: center;
     align-self: center;
     width: 320px;
   }
   .bio-room__container-left {
-    grid-area: 7/1/8/2;
+    grid-area: 8/1/9/2;
     justify-self: center;
     max-width: 20rem;
     align-self: center;
@@ -956,11 +963,17 @@ blockquote .source {
   }
   .contact-room__popup {
     display: block;
+    grid-area: 4/1/5/2;
+    justify-self: center;
+    align-self: flex-start;
+    margin: 0;
+    text-align: center;
+  }
+  .scroll-down {
+    display: block;
     grid-area: 3/1/4/2;
     justify-self: center;
     align-self: center;
-    margin: 0;
-    text-align: center;
   }
 }
 @media screen and (max-width: 570px) {
@@ -971,17 +984,10 @@ blockquote .source {
     padding-bottom: 15rem;
   }
   .svg {
-    margin-top: 1rem;
     width: 400px;
-  }
-  .popup-content {
-    grid-template-rows: 150px 320px 420px 425px 330px 300px 500px;
   }
 }
 @media screen and (max-width: 486px) {
-  .popup-content {
-    grid-template-rows: 220px 300px 420px 425px 330px 300px 500px;
-  }
   .main-heading__title {
     margin-top: 1rem;
     line-height: 60px;
@@ -1002,8 +1008,6 @@ blockquote .source {
   }
   .popup-content {
     height: 100rem;
-    grid-template-columns: 1fr;
-    grid-template-rows: 220px 260px 420px 425px 330px 300px 500px;
   }
 }
 @media screen and (max-width: 765px) {
