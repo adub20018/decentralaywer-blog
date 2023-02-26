@@ -156,18 +156,14 @@ let permalink = 'https://decentralawyer.netlify.app/';
 					room.style.stroke = color;
 				});
 
-				// detects click [OUT OF USE SINCE HOVER KEEPS CONTENT]
-				// room.addEventListener("click", function () {
-				// 	showPopup(room, popup, nav, color);
-				// 	room.classList.add("clicked")
-
-				// 	  // reset previously clicked nav element
-				// 	if (clickedNav !== null && clickedNav !== nav) {
-				// 		clickedNav.style.color = "";
-				// 	}
-				// 	clickedNav = nav;
-				// });
-
+				// detect click off
+				document.addEventListener("click", function () {
+					const isImageClick = event.target.closest('svg');
+					if (!isImageClick && room.classList.contains("clicked")) {
+						hidePopup(popup);
+					}
+				});
+				
 				// detects mouse off unless room is clicked
 				room.addEventListener("mouseout", function() {
 					if (!room.classList.contains("clicked")) {
