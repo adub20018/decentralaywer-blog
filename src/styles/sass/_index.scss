@@ -10,7 +10,7 @@
         padding: 0;
         margin: 0;
         &:not(:first-child) {
-            margin-top: 0rem;
+            margin-top: 0.2rem;
           }
     }
 }
@@ -380,7 +380,7 @@
             font-size: 3.5rem;
         }
         &__bio {
-            margin-top: 0.8rem;
+            margin-top: 2rem;
             font-size: 1.4rem;
         }
     }
@@ -516,6 +516,9 @@
         }
         &__bio {
             margin-top: 1.2rem;
+            &:not(:first-child) {
+                margin-top: 0.8rem;
+              }
         }
     }
 }

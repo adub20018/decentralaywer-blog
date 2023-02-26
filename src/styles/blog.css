@@ -345,7 +345,7 @@ footer.theme-dark {
 }
 @media screen and (max-width: 765px) {
   .footer-filler {
-    height: 145rem;
+    height: 148rem;
   }
   .footer__content {
     font-size: 0.8rem;
@@ -353,17 +353,17 @@ footer.theme-dark {
 }
 @media screen and (max-width: 570px) {
   .footer-filler {
-    height: 122rem;
+    height: 126rem;
   }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 488px) {
   .footer-filler {
-    height: 120rem;
+    height: 122rem;
   }
 }
 @media screen and (max-width: 420px) {
   .footer-filler {
-    height: 118rem;
+    height: 120rem;
   }
 }
 .blog-header {
@@ -545,7 +545,7 @@ blockquote .source {
   margin: 0;
 }
 .main-heading__bio:not(:first-child) {
-  margin-top: 0rem;
+  margin-top: 0.2rem;
 }
 
 .popup-content {
@@ -871,7 +871,7 @@ blockquote .source {
     font-size: 3.5rem;
   }
   .main-heading__bio {
-    margin-top: 0.8rem;
+    margin-top: 2rem;
     font-size: 1.4rem;
   }
   .skills-room, .bio-room, .contact-room {
@@ -988,6 +988,9 @@ blockquote .source {
   }
   .main-heading__bio {
     margin-top: 1.2rem;
+  }
+  .main-heading__bio:not(:first-child) {
+    margin-top: 0.8rem;
   }
 }
 @media screen and (max-width: 420px) {
