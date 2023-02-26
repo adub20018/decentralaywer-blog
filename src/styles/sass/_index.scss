@@ -169,6 +169,9 @@
             &-container {
                 @include nav-slider-animation($color-pink);
                 margin-bottom: -20px;
+                &:not(:first-child) {
+                    margin-top: 0rem;
+                  }
             }
         }
         &-img {

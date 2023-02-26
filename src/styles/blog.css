@@ -699,6 +699,9 @@ blockquote .source {
 .contact-room__popup-text-container:hover::after {
   width: 100%;
 }
+.contact-room__popup-text-container:not(:first-child) {
+  margin-top: 0rem;
+}
 .contact-room__popup-img {
   height: 30px;
   width: 33px;
