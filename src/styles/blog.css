@@ -321,6 +321,9 @@
   padding: 1rem 1.5rem;
   margin-bottom: 0;
 }
+.footer__content:not(:first-child) {
+  margin-top: 0rem;
+}
 .footer__content:hover {
   text-decoration: underline;
 }
