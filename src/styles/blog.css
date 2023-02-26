@@ -426,16 +426,14 @@ footer.theme-dark {
   margin-top: -10.3rem;
   margin-left: -8rem;
   color: #73bed3;
-  background-color: #090a14;
-  opacity: 0.8;
+  background-color: rgba(9, 10, 20, 0.8431372549);
   padding-left: 0.8rem;
   padding-right: 0.8rem;
 }
 .skills-room__popup-text {
   width: 20rem;
   font-size: 1.2rem;
-  background-color: #090a14;
-  opacity: 0.8;
+  background-color: rgba(9, 10, 20, 0.8431372549);
   padding: 1rem;
 }
 
@@ -469,9 +467,8 @@ footer.theme-dark {
   font-size: 4rem;
   text-decoration: underline;
   margin-left: -8rem;
-  margin-top: -4.5rem;
-  background-color: #090a14;
-  opacity: 0.8;
+  margin-top: -2.4rem;
+  background-color: rgba(9, 10, 20, 0.8431372549);
   padding-left: 0.8rem;
   padding-right: 0.8rem;
   width: 6.3rem;
@@ -479,8 +476,7 @@ footer.theme-dark {
 .bio-room__popup-text {
   margin-bottom: 4rem;
   font-size: 1.2rem;
-  background-color: #090a14;
-  opacity: 0.8;
+  background-color: rgba(9, 10, 20, 0.8431372549);
   padding: 1rem;
 }
 .bio-room__popup-text, .bio-room__popup-title {
@@ -509,16 +505,14 @@ footer.theme-dark {
   color: #df84a5;
   text-decoration: underline;
   font-size: 4rem;
-  background-color: #090a14;
-  opacity: 0.8;
+  background-color: rgba(9, 10, 20, 0.8431372549);
   padding-left: 0.8rem;
   padding-right: 0.8rem;
 }
 .contact-room__popup-text {
   display: flex;
   justify-content: space-between;
-  background-color: #090a14;
-  opacity: 0.8;
+  background-color: rgba(9, 10, 20, 0.8431372549);
   padding: 1rem;
   font-size: 1.2rem;
   color: #ebede9;
@@ -561,7 +555,6 @@ footer.theme-dark {
   font-size: 1.6rem;
   line-height: 40px;
   margin-bottom: 0.6rem;
-  background-color: #090a14;
 }
 
 .blue {
@@ -615,12 +608,12 @@ footer.theme-dark {
   .skills-pointer {
     height: 120px;
     margin-left: -12rem;
-    margin-top: -1rem;
+    margin-top: -3rem;
     transform: rotate(90deg);
   }
   .skills-room__popup-title {
     margin-left: -6rem;
-    margin-top: -8.6rem;
+    margin-top: -10.6rem;
   }
   .skills-room__popup-left {
     width: 18rem;
@@ -643,7 +636,7 @@ footer.theme-dark {
   }
   .bio-room__popup-title {
     margin-left: -8rem;
-    margin-top: -3.8rem;
+    margin-top: -2rem;
   }
   .bio-pointer {
     height: 120px;
@@ -658,7 +651,7 @@ footer.theme-dark {
   }
   .contact-pointer {
     margin-left: 1rem;
-    margin-top: -1.8rem;
+    margin-top: -2.1rem;
   }
   .feature-text {
     font-size: 1.4rem;
@@ -668,7 +661,7 @@ footer.theme-dark {
 }
 @media screen and (max-width: 1000px) {
   .popup-content {
-    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-columns: 1.8fr 2fr 1.8fr;
     grid-template-rows: 2fr 3fr 2fr;
   }
   .skills-room__popup-title {
