@@ -22,6 +22,7 @@ All commands are run from the root of the project, from a terminal:
 | `pnpm run dev`     | Starts local dev & Netlify CMS proxy servers       |
 | `pnpm run build`   | Build your production site to `./dist/`            |
 | `pnpm run preview` | Serve `./dist/` & run the Netlify CMS proxy server |
+| `sass --watch src/styles/sass/style.scss:src/styless/blog.css` | Compile Sass to css |
 
 > **Note**
 > These commands are using [`pnpm`][pnpm], a fast and efficient package manager.
