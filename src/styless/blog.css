@@ -732,10 +732,6 @@ blockquote .source {
   color: #73bed3;
 }
 
-.underline {
-  text-decoration: underline !important;
-}
-
 .skills-room, .bio-room, .contact-room {
   fill: black;
   opacity: 0.5;
